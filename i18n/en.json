@@ -360,25 +360,26 @@
   "gallery": {
     "title": "Sketches gallery",
     "intro": "Early sketches and notes will go here.",
-    "add": "Add your sketch",
     "open": "Enlarge sketch",
     "captions": [
-      "Sketch 1: overall layout",
-      "Sketch 2: bypass valve",
-      "Sketch 3: Venturi and turbines",
-      "Sketch 4: TEG collar",
-      "Sketch 5: cooling fins",
-      "Sketch 6: cartridge layers",
-      "Sketch 7: cartridge handle",
-      "Sketch 8: ECU box"
+      "Stage 1: Initial Hand-Drawn Layout Sketch",
+      "Stage 1: Hand-Drawn Multi-Turbine Concept",
+      "Stage 2: Early Digital Prototype",
+      "Stage 3: Final System Architecture"
+    ],
+    "alts": [
+      "Stage 1: Initial Hand-Drawn Layout Sketch",
+      "Stage 1: Hand-Drawn Multi-Turbine Concept",
+      "Stage 2: Early Digital Prototype",
+      "Stage 3: Final System Architecture"
     ]
   },
   "footer": {
-    "authors": "Co-Authors: Ahmed Shady & Lara Mohamed",
+    "authors": "Developed collaboratively by a 9-student team (Team AeroTurbine) across research and competition phases. | Harvard VISION 2026 Proposal Co-Authors: Ahmed Shady & Lara Mohamed.",
     "country": "Egypt",
     "submitted": "Submitted to Harvard VISION 2026, Community Project Pitch Competition",
     "disclaimer": "Under development: this is a demo of the filter concept, not a finished or field-tested machine.",
-    "contact": "Contact: add your email or link here",
+    "contact": "Contact:",
     "top": "Back to top"
   }
 }

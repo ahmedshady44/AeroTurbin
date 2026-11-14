@@ -360,25 +360,26 @@
   "gallery": {
     "title": "Galería de bocetos",
     "intro": "Aquí irán los primeros bocetos y notas.",
-    "add": "Añade tu boceto",
     "open": "Ampliar boceto",
     "captions": [
-      "Boceto 1: diseño general",
-      "Boceto 2: válvula de derivación",
-      "Boceto 3: Venturi y turbinas",
-      "Boceto 4: collar TEG",
-      "Boceto 5: aletas de enfriamiento",
-      "Boceto 6: capas del cartucho",
-      "Boceto 7: asa del cartucho",
-      "Boceto 8: caja ECU"
+      "Etapa 1: Boceto inicial dibujado a mano",
+      "Etapa 1: Boceto a mano del concepto multiturbina",
+      "Etapa 2: Prototipo digital inicial",
+      "Etapa 3: Arquitectura final del sistema"
+    ],
+    "alts": [
+      "Etapa 1: Boceto inicial dibujado a mano",
+      "Etapa 1: Boceto a mano del concepto multiturbina",
+      "Etapa 2: Prototipo digital inicial",
+      "Etapa 3: Arquitectura final del sistema"
     ]
   },
   "footer": {
-    "authors": "Coautores: Ahmed Shady & Lara Mohamed",
+    "authors": "Desarrollado colaborativamente por un equipo de 9 estudiantes (Team AeroTurbine) en diversas fases de investigación y competencias. | Coautores de la propuesta Harvard VISION 2026: Ahmed Shady y Lara Mohamed.",
     "country": "Egipto",
     "submitted": "Presentado a Harvard VISION 2026, concurso de presentación de proyectos comunitarios",
     "disclaimer": "En desarrollo: esta es una demo del concepto de filtro, no una máquina terminada ni probada en campo.",
-    "contact": "Contacto: añade aquí tu correo o enlace",
+    "contact": "Contacto:",
     "top": "Volver arriba"
   }
 }

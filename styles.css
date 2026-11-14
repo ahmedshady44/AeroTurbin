@@ -71,7 +71,7 @@ p { margin: 0 0 1em; }
 a { color: var(--copper); text-underline-offset: 3px; }
 .muted { color: var(--muted); }
 .small { font-size: .95rem; }
-bdi.ltr { unicode-bidi: isolate; direction: ltr; }
+bdi.ltr, span.ltr { unicode-bidi: isolate; direction: ltr; }
 sub { font-size: .7em; line-height: 0; }
 
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
@@ -405,27 +405,30 @@ input[type="range"] { inline-size: 100%; block-size: 32px; accent-color: var(--c
 @media (min-width: 640px) { .loop-steps { gap: 72px 120px; } .loop-steps li { padding: 16px 18px; } }
 
 /* ---------- Gallery ---------- */
-.gallery { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
-.tile { display: block; inline-size: 100%; padding: 0; background: transparent; border: 0; color: inherit; font: inherit; text-align: start; cursor: default; }
-.tile.has-img { cursor: zoom-in; }
-.ph { position: relative; display: grid; place-items: center; text-align: center; aspect-ratio: 4 / 3; border: 2px dashed var(--line); border-radius: 14px; background: var(--surface); color: var(--muted); font-weight: 700; overflow: hidden; padding: 8px; }
-.ph img { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; object-fit: cover; opacity: 0; }
-.tile.has-img .ph { border-style: solid; }
-.tile.has-img .ph img { opacity: 1; }
-.tile.has-img .ph span { visibility: hidden; }
-.tile .cap { display: block; margin-block-start: 8px; font-weight: 600; font-size: .98rem; }
+.gallery { list-style: none; margin-block: 24px 0; margin-inline: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 600px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.gallery > li { min-inline-size: 0; display: flex; }
+.tile { display: flex; flex-direction: column; inline-size: 100%; padding: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); color: inherit; font: inherit; text-align: start; cursor: zoom-in; min-inline-size: 0; }
+.tile:hover { border-color: var(--copper); }
+.ph { position: relative; display: grid; place-items: center; inline-size: 100%; aspect-ratio: 4 / 3; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-2); overflow: hidden; padding: 6px; }
+.ph picture { display: flex; align-items: center; justify-content: center; inline-size: 100%; block-size: 100%; }
+.ph img { inline-size: 100%; block-size: 100%; object-fit: contain; display: block; }
+.tile .cap { display: block; margin-block-start: 10px; font-weight: 600; font-size: .98rem; line-height: 1.45; overflow-wrap: anywhere; }
 
 /* ---------- Footer ---------- */
 .site-footer { border-block-start: 1px solid var(--border); background: var(--surface-2); padding-block: 40px 56px; }
-.site-footer p { margin-block-end: .5em; }
-.f-authors { font-weight: 800; font-size: 1.15rem; }
+.site-footer p { margin-block-end: .5em; overflow-wrap: anywhere; }
+.f-authors { font-weight: 800; font-size: 1.1rem; line-height: 1.55; }
+@media (max-width: 760px) { .f-authors .f-co { display: block; margin-block-start: 4px; } }
+.f-contact a { overflow-wrap: anywhere; word-break: break-word; }
 .f-disc { padding: 10px 14px; border: 2px solid var(--copper-fill); border-radius: 12px; font-weight: 700; max-inline-size: 60ch; margin-block: 14px; }
 
 /* ---------- Lightbox ---------- */
 .lightbox { border: 0; padding: 0; background: transparent; max-inline-size: 96vw; max-block-size: 96vh; overflow: visible; color: #fff; }
 .lightbox::backdrop { background: rgba(5, 10, 20, .88); }
 .lightbox img { display: block; max-inline-size: 96vw; max-block-size: 82vh; inline-size: auto; block-size: auto; margin-inline: auto; border-radius: 10px; background: #fff; }
-.lightbox p { text-align: center; margin: 10px 0 0; font-weight: 600; }
+.lightbox p { text-align: center; margin-block: 10px 0; margin-inline: 0; font-weight: 600; overflow-wrap: anywhere; }
 .lb-close { position: absolute; inset-block-start: -4px; inset-inline-end: -4px; z-index: 2; transform: translateY(-100%); }
 @media (max-width: 600px) { .lb-close { inset-block-start: 8px; inset-inline-end: 8px; transform: none; background: var(--bg); } }
 

@@ -360,25 +360,26 @@
   "gallery": {
     "title": "Galerie de croquis",
     "intro": "Les premiers croquis et notes iront ici.",
-    "add": "Ajoutez votre croquis",
     "open": "Agrandir le croquis",
     "captions": [
-      "Croquis 1 : disposition générale",
-      "Croquis 2 : soupape de dérivation",
-      "Croquis 3 : Venturi et turbines",
-      "Croquis 4 : collier TEG",
-      "Croquis 5 : ailettes de refroidissement",
-      "Croquis 6 : couches de la cartouche",
-      "Croquis 7 : poignée de la cartouche",
-      "Croquis 8 : boîtier ECU"
+      "Étape 1 : Croquis initial dessiné à la main",
+      "Étape 1 : Croquis à la main du concept multiturbine",
+      "Étape 2 : Prototype numérique initial",
+      "Étape 3 : Architecture finale du système"
+    ],
+    "alts": [
+      "Étape 1 : Croquis initial dessiné à la main",
+      "Étape 1 : Croquis à la main du concept multiturbine",
+      "Étape 2 : Prototype numérique initial",
+      "Étape 3 : Architecture finale du système"
     ]
   },
   "footer": {
-    "authors": "Co-auteurs : Ahmed Shady & Lara Mohamed",
+    "authors": "Développé collaborativement par une équipe de 9 étudiants (Team AeroTurbine) à travers différentes phases de recherche et de compétitions. | Co-auteurs de la proposition Harvard VISION 2026 : Ahmed Shady et Lara Mohamed.",
     "country": "Égypte",
     "submitted": "Soumis à Harvard VISION 2026, concours de présentation de projets communautaires",
     "disclaimer": "En cours de développement : ceci est une démo du concept de filtre, pas une machine terminée ni testée sur le terrain.",
-    "contact": "Contact : ajoutez votre e-mail ou un lien ici",
+    "contact": "Contact :",
     "top": "Retour en haut"
   }
 }

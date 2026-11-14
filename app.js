@@ -50,7 +50,7 @@
     { x: 900, hl: ['g-sensors'] }
   ];
 
-  const GALLERY_COUNT = 8; // tiles in the sketches gallery (needs matching captions in the JSON files)
+  const CONTACT_EMAIL = 'ahmedshadysaad12@gmail.com';
   const SVG_W = 1000;      // blueprint viewBox width, used to mirror labels in RTL
 
   /* Simulator constants. 50.6, 72.0 and 70 come from the design targets.
@@ -104,12 +104,15 @@
     'NOx \\+ NH3 → N2 \\+ H2O',
     'CO \\+ O2 → CO2',
     'HC \\+ O2 → CO2 \\+ H2O',
+    'Team AeroTurbine',
+    'Harvard VISION 2026',
     'PM2\\.5', 'CaSO4', 'CaCO3', 'LiFePO4', 'NO2', 'SO2', 'CO2', 'NOx', 'NH3', '70:20:10',
     '(?<![A-Za-z\\d.])\\+?\\d+(?:[.,]\\d+)?(?:–\\d+(?:[.,]\\d+)?)?(?:\\s?(?:µg\\/m³|°C|Wh|W|%|h|USD)(?![A-Za-z]))?'
   ].join('|'), 'g');
   function rich(text) {
     return esc(text).replace(RICH_RE, (m) => {
-      const inner = /^[\d+]/.test(m) ? m : m.replace(/(PM)(2\.5)/, '$1<sub>$2</sub>').replace(/([A-Za-z)])(\d)/g, '$1<sub>$2</sub>');
+      const isChem = /^(?:Ca|NO|CO|HC|PM|SO|Li|NH)/.test(m);
+      const inner = isChem ? m.replace(/(PM)(2\.5)/, '$1<sub>$2</sub>').replace(/([A-Za-z)])(\d)/g, '$1<sub>$2</sub>') : m;
       return '<bdi class="ltr" dir="ltr">' + inner + '</bdi>';
     });
   }
@@ -117,7 +120,14 @@
   function translate(root) {
     $$('[data-i18n]', root).forEach((el) => {
       const v = t(el.getAttribute('data-i18n'));
-      if (el instanceof SVGElement) el.textContent = v; else el.innerHTML = rich(v);
+      if (el instanceof SVGElement) {
+        el.textContent = v;
+      } else if (el.classList.contains('f-authors') && v.includes(' | ')) {
+        const parts = v.split(' | ');
+        el.innerHTML = rich(parts[0]) + ' | <span class="f-co">' + rich(parts.slice(1).join(' | ')) + '</span>';
+      } else {
+        el.innerHTML = rich(v);
+      }
     });
     $$('[data-i18n-attr]', root).forEach((el) => {
       el.getAttribute('data-i18n-attr').split(';').forEach((pair) => {
@@ -441,20 +451,21 @@
      9. Gallery
      ============================================================================================= */
   function initGallery() {
-    const ul = $('#gallery-grid');
-    for (let i = 0; i < GALLERY_COUNT; i++) {
-      const li = el('li');
-      const b = el('button', 'tile');
-      b.type = 'button';
-      b.disabled = true;
-      b.innerHTML = '<span class="ph"><span data-i18n="gallery.add"></span><img src="assets/sketches/sketch-' + (i + 1) + '.jpg" loading="lazy" width="800" height="600" alt="" data-i18n-attr="alt:gallery.captions.' + i + '"></span><span class="cap" data-i18n="gallery.captions.' + i + '"></span>';
+    $$('#gallery-grid .tile').forEach((b, i) => {
       const img = $('img', b);
-      const ok = () => { b.classList.add('has-img'); b.disabled = false; b.setAttribute('data-i18n-attr', 'aria-label:gallery.captions.' + i); translate(b); };
-      img.addEventListener('load', ok);
-      if (img.complete && img.naturalWidth) ok();
-      b.addEventListener('click', () => { if (b.classList.contains('has-img')) openLightbox(img.currentSrc || img.src, img.alt, $('.cap', b).textContent); });
-      li.appendChild(b);
-      ul.appendChild(li);
+      const src = $('source', b);
+      if (src) {
+        img.addEventListener('error', () => { if (src.parentNode) src.remove(); }, { once: true });
+      }
+      b.addEventListener('click', () => {
+        openLightbox(img.currentSrc || img.src, t('gallery.alts.' + i), t('gallery.captions.' + i));
+      });
+    });
+    const cl = $('#contact-email');
+    if (cl) {
+      cl.href = 'mailto:' + CONTACT_EMAIL;
+      const sp = $('span', cl);
+      if (sp) sp.textContent = CONTACT_EMAIL;
     }
   }
 

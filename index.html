@@ -372,7 +372,52 @@ document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
   <div class="wrap">
     <h2 id="gal-title" data-i18n="gallery.title"></h2>
     <p class="intro" data-i18n="gallery.intro"></p>
-    <ul class="gallery" id="gallery-grid"></ul>
+    <ul class="gallery" id="gallery-grid">
+      <li>
+        <button type="button" class="tile" data-i18n-attr="title:gallery.open">
+          <span class="ph">
+            <picture>
+              <source type="image/webp" srcset="assets/sketches/stage1-layout.webp">
+              <img src="assets/sketches/stage1-layout.jpg" loading="lazy" decoding="async" width="768" height="1024" alt="" data-i18n-attr="alt:gallery.alts.0">
+            </picture>
+          </span>
+          <span class="cap" data-i18n="gallery.captions.0"></span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="tile" data-i18n-attr="title:gallery.open">
+          <span class="ph">
+            <picture>
+              <source type="image/webp" srcset="assets/sketches/stage1-multiturbine.webp">
+              <img src="assets/sketches/stage1-multiturbine.jpg" loading="lazy" decoding="async" width="768" height="1024" alt="" data-i18n-attr="alt:gallery.alts.1">
+            </picture>
+          </span>
+          <span class="cap" data-i18n="gallery.captions.1"></span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="tile" data-i18n-attr="title:gallery.open">
+          <span class="ph">
+            <picture>
+              <source type="image/webp" srcset="assets/sketches/stage2-digital.webp">
+              <img src="assets/sketches/stage2-digital.jpg" loading="lazy" decoding="async" width="1024" height="444" alt="" data-i18n-attr="alt:gallery.alts.2">
+            </picture>
+          </span>
+          <span class="cap" data-i18n="gallery.captions.2"></span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="tile" data-i18n-attr="title:gallery.open">
+          <span class="ph">
+            <picture>
+              <source type="image/webp" srcset="assets/sketches/stage3-final.webp">
+              <img src="assets/sketches/stage3-final.jpg" loading="lazy" decoding="async" width="1024" height="579" alt="" data-i18n-attr="alt:gallery.alts.3">
+            </picture>
+          </span>
+          <span class="cap" data-i18n="gallery.captions.3"></span>
+        </button>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -384,7 +429,7 @@ document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
     <p data-i18n="footer.country"></p>
     <p data-i18n="footer.submitted"></p>
     <p class="f-disc" data-i18n="footer.disclaimer"></p>
-    <p class="muted" data-i18n="footer.contact"></p>
+    <p class="muted f-contact"><span data-i18n="footer.contact"></span> <a id="contact-email" href="mailto:ahmedshadysaad12@gmail.com"><span class="ltr" dir="ltr">ahmedshadysaad12@gmail.com</span></a></p>
     <p><a href="#hero" data-i18n="footer.top"></a></p>
   </div>
 </footer>
