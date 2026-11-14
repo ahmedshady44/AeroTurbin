@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "title": "AeroTurbine | De l'air plus propre, alimenté par l'échappement (démo de conception)",
+    "description": "AeroTurbine est un concept d'intercepteur d'échappement autonome. Il produit son énergie à partir des gaz et filtre les polluants. Démo d'ingénierie, pas un produit fini."
+  },
+  "skip": "Aller au contenu",
+  "lang": {
+    "label": "Langue"
+  },
+  "theme": {
+    "toLight": "Passer au thème clair",
+    "toDark": "Passer au thème sombre"
+  },
+  "banner": {
+    "text": "En cours de développement : ceci est une démo du concept de filtre, pas une machine terminée ni testée sur le terrain.",
+    "dismiss": "Fermer cet avis"
+  },
+  "nav": {
+    "label": "Sections de la page",
+    "health": "Santé",
+    "blueprint": "Plan",
+    "simulator": "Simulateur",
+    "economy": "Coût et boucle",
+    "gallery": "Croquis"
+  },
+  "tag": {
+    "target": "Objectif de conception",
+    "concept": "Concept de conception",
+    "model": "Estimation modélisée",
+    "sim": "Simulation"
+  },
+  "hero": {
+    "title": "AeroTurbine",
+    "summary": "De l'air plus propre, alimenté par l'échappement lui-même.",
+    "badge": "Étape : plan d'ingénierie et de simulation | Soumis à Harvard VISION 2026",
+    "note": "AeroTurbine est encore en cours de conception. Cette page présente une démo de l'idée du filtre et un plan d'ingénierie. Tous les chiffres ici sont des objectifs de conception ou des valeurs de simulation, pas des résultats mesurés.",
+    "cta1": "Explorer le plan",
+    "cta2": "Essayer le simulateur",
+    "target": "Objectif de conception : jusqu'à 70 % de polluants et de particules en moins.",
+    "bgLabel": "Lignes animées décoratives qui évoquent un flux d'air"
+  },
+  "health": {
+    "title": "Pourquoi c'est important ici",
+    "intro": "Un air pollué rend malade. C'est un gros problème dans les zones industrielles.",
+    "globalLabel": "La pollution de l'air extérieur est liée à environ ce nombre de décès prématurés chaque année dans le monde :",
+    "globalValue": "6,7 à 7,9 millions",
+    "placesTitle": "Helwan et Shubra El-Kheima, Égypte",
+    "placesText": "Les usines, la circulation et les groupes électrogènes diesel de secours rejettent ces polluants :",
+    "sources": {
+      "factories": "Usines",
+      "traffic": "Circulation",
+      "generators": "Groupes électrogènes diesel de secours"
+    },
+    "pollutants": "PM2.5, NO2, SO2, CO et COV",
+    "pollutantList": {
+      "pm": "PM2.5",
+      "no2": "NO2",
+      "so2": "SO2",
+      "co": "CO",
+      "voc": "COV"
+    },
+    "effectsTitle": "Ce que les études de santé associent aux PM2.5 et au NO2",
+    "pmTitle": "PM2.5 (particules fines)",
+    "pmText": "Chaque hausse de 10 µg/m³ est liée à environ 10–20 % de décès en plus par maladie cardiaque et AVC.",
+    "pmChart": "Barre de 10 % à 20 % de décès en plus par maladie cardiaque et AVC",
+    "no2Title": "NO2 (dioxyde d'azote)",
+    "no2Text": "Chaque hausse de 10 µg/m³ est liée à un risque relatif de 1,09 pour l'asthme de l'enfant.",
+    "no2Chart": "Risque relatif de 1,09 par rapport à la base de 1,00",
+    "baseline": "base 1,00",
+    "note": "Ce sont des liens trouvés dans des études de santé. Ce ne sont pas des résultats d'AeroTurbine.",
+    "failTitle": "Pourquoi les épurateurs courants échouent ici",
+    "failColA": "Épurateurs courants",
+    "failColB": "L'approche d'AeroTurbine",
+    "failA1": "Ils consomment beaucoup d'électricité.",
+    "failA2": "Leurs sorbants cessent de bien fonctionner au-dessus de 60 °C. La chaleur fait s'échapper le gaz capturé.",
+    "failB1": "Il produit sa propre énergie à partir de l'échappement. Objectif de conception : jusqu'à 122,6 W.",
+    "failB2": "Les ailettes de refroidissement ramènent le gaz sous 60 °C avant la cartouche filtrante. C'est l'intention de conception."
+  },
+  "blueprint": {
+    "title": "Le plan en 3 zones",
+    "intro": "Choisissez une zone pour voir ce qu'elle contient. La flèche montre le sens du gaz.",
+    "diagramLabel": "Schéma en vue de côté de l'intercepteur d'échappement avec trois zones",
+    "chipsLabel": "Choisir une zone",
+    "flowTitle": "Comment le gaz circule",
+    "play": "Lecture",
+    "pause": "Pause",
+    "next": "Étape suivante",
+    "stepOf": "Étape {n} sur {total}",
+    "steps": [
+      "L'échappement chaud entre. La soupape de dérivation à ressort protège le moteur.",
+      "La buse Venturi accélère le gaz. Deux micro-turbines tournent. Le collier TEG ajoute de l'énergie.",
+      "Des étages catalytiques supplémentaires traitent les NOx, le CO et les hydrocarbures (concept de conception).",
+      "Les ailettes de refroidissement ramènent le gaz sous 60 °C.",
+      "Couche 1, zéolithe : piège l'humidité.",
+      "Couche 2, nid d'abeille en chaux sodée : capte le CO2 et le SO2.",
+      "Couche 3, charbon actif : retient les COV et autres toxines en phase gazeuse.",
+      "Un gaz plus propre sort. Les capteurs comparent l'air avant et après."
+    ],
+    "dg": {
+      "zone1": "Zone 1",
+      "zone2": "Zone 2",
+      "zone3": "Zone 3",
+      "inlet": "Entrée échappement",
+      "outlet": "Sortie gaz plus propre",
+      "valve": "Soupape de dérivation",
+      "bypass": "Sortie dérivation",
+      "venturi": "Venturi",
+      "turbines": "2 micro-turbines",
+      "teg": "Collier TEG",
+      "cat": "Étages catalytiques",
+      "concept": "(concept)",
+      "fins": "Ailettes",
+      "cartridge": "Cartouche amovible",
+      "l1": "Zéolithe",
+      "l2": "Chaux sodée",
+      "l3": "Charbon",
+      "handle": "Poignée",
+      "ecu": "ECU",
+      "battery": "Batterie",
+      "sensors": "Capteurs amont et aval",
+      "flowDir": "Sens du flux de gaz"
+    }
+  },
+  "panel": {
+    "label": "Détails",
+    "close": "Fermer les détails",
+    "components": "Composants",
+    "numbers": "Chiffres",
+    "partOf": "Fait partie de",
+    "ratioTitle": "Cartouche : ordre du flux et part en masse",
+    "ratioOrder": "Le gaz traverse les couches dans cet ordre :",
+    "ratioText": "Rapport massique, chaux sodée : zéolithe : charbon = 70:20:10",
+    "catTitle": "Étages catalytiques supplémentaires (concept de conception)",
+    "catNote": "Montrés dans le schéma de référence uniquement. Aucun chiffre de performance n'est disponible.",
+    "intent": "Intention de conception : toutes les couches se saturent à peu près en même temps, donc un seul remplacement d'entretien suffit."
+  },
+  "zones": {
+    "z1": {
+      "title": "Zone 1 : récupération d'énergie",
+      "short": "Récupération d'énergie",
+      "plain": "L'échappement fait tourner de petites turbines et chauffe un collier. Les deux produisent de l'électricité, donc l'appareil n'a pas besoin du moteur hôte.",
+      "components": [
+        "Soupape de dérivation à ressort. Si la contre-pression dépasse une limite sûre (dP > dP_crit), elle s'ouvre toute seule pour que le moteur hôte ne cale jamais.",
+        "Buse Venturi qui accélère le gaz.",
+        "Deux micro-turbines en série.",
+        "Collier générateur thermoélectrique (TEG) basé sur l'effet Seebeck.",
+        "Corps : réacteur en acier inoxydable 316L."
+      ],
+      "stats": [
+        {
+          "l": "Deux micro-turbines",
+          "v": "jusqu'à 50,6 W"
+        },
+        {
+          "l": "Collier TEG",
+          "v": "72,0 W"
+        },
+        {
+          "l": "Total : 50,6 + 72,0",
+          "v": "122,6 W"
+        }
+      ],
+      "statsNote": "Toutes les valeurs de puissance sont des objectifs de conception, pas des résultats mesurés. Le total doit alimenter l'électronique sans énergie du moteur hôte."
+    },
+    "z2": {
+      "title": "Zone 2 : refroidissement et filtration",
+      "short": "Refroidissement et filtration",
+      "plain": "Les ailettes refroidissent d'abord le gaz. Il traverse ensuite une cartouche amovible à trois couches.",
+      "components": [
+        "Ailettes de refroidissement externes en aluminium : elles ramènent le gaz sous 60 °C par convection naturelle.",
+        "Cartouche amovible à 3 couches dans une capsule en aluminium.",
+        "Poignée en caoutchouc noir isolée thermiquement pour un remplacement sans outil."
+      ],
+      "layers": [
+        {
+          "n": "Couche 1",
+          "name": "Zéolithe synthétique",
+          "pct": "20 %",
+          "role": "Piège à humidité."
+        },
+        {
+          "n": "Couche 2",
+          "name": "Nid d'abeille en chaux sodée",
+          "pct": "70 %",
+          "role": "Réaction du CO2 : Ca(OH)2 + CO2 → CaCO3 + H2O. Elle épure aussi le SO2."
+        },
+        {
+          "n": "Couche 3",
+          "name": "Charbon actif plissé",
+          "pct": "10 %",
+          "role": "COV et toxines en phase gazeuse."
+        }
+      ],
+      "stats": [
+        {
+          "l": "Objectif de refroidissement",
+          "v": "sous 60 °C"
+        },
+        {
+          "l": "Rapport massique (chaux sodée : zéolithe : charbon)",
+          "v": "70:20:10"
+        },
+        {
+          "l": "Objectif de conception, polluants et particules",
+          "v": "jusqu'à 70 % de réduction"
+        }
+      ],
+      "statsNote": "Le chiffre de 70 % est un objectif de conception. Un modèle estime aussi 15 à 22 % de visites aux urgences en moins pour asthme dans les communautés proches. C'est une estimation modélisée, pas un résultat mesuré."
+    },
+    "z3": {
+      "title": "Zone 3 : ECU intelligent",
+      "short": "ECU intelligent",
+      "plain": "Un petit ordinateur et une batterie sont placés sur une paroi extérieure fraîche. Des capteurs avant et après le filtre lui permettent de calculer l'efficacité du filtre.",
+      "components": [
+        "Contrôleur ESP-32.",
+        "Batterie LiFePO4 (APR18650M1B).",
+        "Jeux de capteurs amont et aval (BME680 + capteur de particules Bosch BMV080) pour calculer l'efficacité du filtre en temps réel.",
+        "Isolé sur une paroi extérieure fraîche."
+      ],
+      "stats": [],
+      "statsNote": "L'efficacité en temps réel est une fonction prévue. Elle n'a pas été testée sur le terrain."
+    }
+  },
+  "hotspots": {
+    "valve": {
+      "name": "Soupape de dérivation à ressort",
+      "desc": "S'ouvre toute seule si la contre-pression monte trop, pour que le moteur hôte ne cale jamais."
+    },
+    "venturi": {
+      "name": "Buse Venturi",
+      "desc": "Rétrécit le conduit pour accélérer le gaz et faire tourner les turbines."
+    },
+    "turbines": {
+      "name": "Deux micro-turbines",
+      "desc": "Tournent l'une après l'autre dans le gaz rapide. Objectif de conception : jusqu'à 50,6 W."
+    },
+    "scr": {
+      "name": "Catalyseur SCR passif",
+      "desc": "Réduit les NOx avec de l'ammoniac : NOx + NH3 → N2 + H2O. Concept de conception, pas encore de chiffres."
+    },
+    "urea": {
+      "name": "Canal de microdosage d'urée solide",
+      "desc": "Apporte une toute petite quantité de source d'ammoniac à l'étage SCR. Concept de conception."
+    },
+    "ptpd": {
+      "name": "Catalyseur d'oxydation Pt/Pd",
+      "desc": "Transforme le CO et les hydrocarbures en CO2 et en eau : CO + O2 → CO2 et HC + O2 → CO2 + H2O. Concept de conception."
+    },
+    "fins": {
+      "name": "Ailettes de refroidissement",
+      "desc": "Des ailettes en aluminium ramènent le gaz sous 60 °C par convection naturelle."
+    },
+    "lime": {
+      "name": "Cartouche nid d'abeille en chaux",
+      "desc": "Couche de chaux sodée. Capte le CO2 et épure le SO2. Elle représente 70 % de la masse de la cartouche."
+    },
+    "carbon": {
+      "name": "Cartouche de charbon actif",
+      "desc": "Couche de charbon plissée. Retient les COV et les toxines en phase gazeuse. Elle représente 10 % de la masse de la cartouche."
+    },
+    "ecu": {
+      "name": "ECU et batterie",
+      "desc": "Contrôleur ESP-32 et batterie LiFePO4, isolés sur une paroi extérieure fraîche."
+    }
+  },
+  "schematic": {
+    "title": "Illustration du concept",
+    "caption": "Illustration du concept de conception. Ce n'est pas un prototype construit ni testé.",
+    "alt": "Illustration 3D en coupe du concept AeroTurbine. L'échappement chaud entre à gauche par une soupape de dérivation et un Venturi avec deux micro-turbines dorées, traverse des étages catalytiques, des ailettes de refroidissement et une cartouche à trois couches, puis sort à droite. Un boîtier ECU avec batterie se trouve au-dessus.",
+    "hint": "Touchez un point numéroté pour en savoir plus sur une pièce.",
+    "englishOnly": "Les mots dans l'image sont en anglais uniquement. Utilisez la liste numérotée ci-dessous dans votre langue.",
+    "legendTitle": "Légende numérotée",
+    "tegNote": "Le collier TEG n'est pas montré dans l'illustration.",
+    "zoom": "Agrandir l'illustration",
+    "dots": "Pièces de l'illustration"
+  },
+  "lightbox": {
+    "close": "Fermer l'image agrandie",
+    "label": "Image agrandie"
+  },
+  "sim": {
+    "title": "Simulateur de paramètres en direct",
+    "intro": "Bougez les curseurs et regardez ce qui change. Les formules sont simples et affichées plus bas.",
+    "label": "Valeurs théoriques de simulation issues d'objectifs de conception, pas des données mesurées.",
+    "inputs": "Réglages",
+    "results": "Résultats",
+    "flow": "Débit d'échappement",
+    "hours": "Heures de fonctionnement par jour",
+    "texh": "Température d'échappement (côté chaud)",
+    "tcart": "Température du gaz à la cartouche",
+    "days": "Jours depuis le dernier remplacement de la cartouche",
+    "unitPct": "%",
+    "unitH": "h",
+    "unitC": "°C",
+    "unitD": "jours",
+    "unitW": "W",
+    "unitWh": "Wh",
+    "turbine": "Puissance des turbines",
+    "teg": "Puissance du TEG",
+    "total": "Puissance totale",
+    "max": "Max 122,6 W",
+    "barLabel": "Barre empilée de la puissance des turbines et du TEG. Le repère indique le maximum de 122,6 W.",
+    "energy": "Énergie par jour",
+    "reduction": "Réduction des polluants",
+    "reductionNote": "Objectif de conception : jusqu'à 70 %",
+    "health": "État du filtre",
+    "swapTitle": "Quand remplacer la cartouche",
+    "swapOk": "La cartouche va bien pour l'instant.",
+    "swapSoon": "Prévoyez un remplacement bientôt.",
+    "swapNow": "Remplacez-la maintenant.",
+    "swapDays": "Environ {d} jours d'utilisation restants avec ces réglages.",
+    "swapNoUse": "Aucune utilisation avec ces réglages, la cartouche ne s'use donc pas.",
+    "swapHot": "Le gaz dépasse 60 °C à la cartouche. Le sorbant fonctionne moins bien et peut laisser échapper du gaz. C'est pourquoi le refroidissement compte.",
+    "swapCool": "Le gaz est sous 60 °C à la cartouche. C'est bien.",
+    "formulas": "Afficher les formules",
+    "formulaList": [
+      "Puissance des turbines = 50,6 W × débit^1,5, où le débit va de 0 à 1.",
+      "Puissance du TEG = 72,0 W × facteurTemp × débit. facteurTemp = (température d'échappement − 100) ÷ 300, limité entre 0 et 1.",
+      "Puissance totale = turbines + TEG. Elle ne dépasse jamais 50,6 + 72,0 = 122,6 W.",
+      "Énergie par jour (Wh) = puissance totale (W) × heures de fonctionnement.",
+      "Réduction des polluants = 70 % × étatFiltre.",
+      "étatFiltre = (1 − 0,6 × charge²) × facteurChaleur. La charge est le nombre d'heures de fonctionnement depuis le remplacement divisé par 600 h, limité entre 0 et 1. Sans effet de la chaleur, l'état passe donc de 1 à 0,4 à saturation.",
+      "facteurChaleur = 1 quand le gaz à la cartouche est à 60 °C ou moins. Au-delà, il baisse de 0,6 par tranche de 40 °C, jusqu'à un minimum de 0,4."
+    ],
+    "assumptions": "Hypothèses de démo, pas des faits de conception : la plage de 100 à 400 °C du côté chaud, la durée de vie de 600 h de la cartouche et la pénalité de chaleur. Elles servent seulement à animer la démo. Remplacez-les par des valeurs mesurées une fois le prototype testé."
+  },
+  "economy": {
+    "title": "Ingénierie frugale et boucle circulaire",
+    "intro": "Le but est une unité peu coûteuse que les communautés peuvent se payer et faire fonctionner.",
+    "cards": [
+      {
+        "t": "Épurateur industriel",
+        "v": "Des milliers de dollars",
+        "n": "À titre de comparaison."
+      },
+      {
+        "t": "Prototype AeroTurbine",
+        "v": "175 à 255 USD",
+        "n": "Coût estimé du prototype."
+      },
+      {
+        "t": "AeroTurbine en production de masse",
+        "v": "70 à 90 USD par unité",
+        "n": "Coût visé à grande échelle."
+      }
+    ],
+    "costNote": "Les coûts sont des estimations et des objectifs, pas des devis.",
+    "loopTitle": "La boucle circulaire",
+    "loopConcept": "Concept",
+    "loopLabel": "Schéma de la boucle circulaire. Quatre étapes se répètent en cycle.",
+    "loopSteps": [
+      "Les communautés échangent les cartouches par abonnement.",
+      "Les cartouches usagées vont dans des centres de recyclage municipaux.",
+      "Les sous-produits (gypse industriel, CaSO4) sont vendus aux fabricants de ciment et de plaques de plâtre.",
+      "Les revenus aident à acheter du sorbant neuf pour de nouvelles cartouches."
+    ],
+    "pause": "Mettre l'animation en pause",
+    "play": "Lancer l'animation"
+  },
+  "gallery": {
+    "title": "Galerie de croquis",
+    "intro": "Les premiers croquis et notes iront ici.",
+    "add": "Ajoutez votre croquis",
+    "open": "Agrandir le croquis",
+    "captions": [
+      "Croquis 1 : disposition générale",
+      "Croquis 2 : soupape de dérivation",
+      "Croquis 3 : Venturi et turbines",
+      "Croquis 4 : collier TEG",
+      "Croquis 5 : ailettes de refroidissement",
+      "Croquis 6 : couches de la cartouche",
+      "Croquis 7 : poignée de la cartouche",
+      "Croquis 8 : boîtier ECU"
+    ]
+  },
+  "footer": {
+    "authors": "Co-auteurs : Ahmed Shady & Lara Mohamed",
+    "country": "Égypte",
+    "submitted": "Soumis à Harvard VISION 2026, concours de présentation de projets communautaires",
+    "disclaimer": "En cours de développement : ceci est une démo du concept de filtre, pas une machine terminée ni testée sur le terrain.",
+    "contact": "Contact : ajoutez votre e-mail ou un lien ici",
+    "top": "Retour en haut"
+  }
+}

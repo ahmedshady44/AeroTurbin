@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "title": "AeroTurbine | Clean air, powered by the exhaust (design demo)",
+    "description": "AeroTurbine is an off-grid exhaust interceptor concept. It makes its own power from exhaust and filters pollutants. Engineering design demo, not a finished product."
+  },
+  "skip": "Skip to content",
+  "lang": {
+    "label": "Language"
+  },
+  "theme": {
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme"
+  },
+  "banner": {
+    "text": "Under development: this is a demo of the filter concept, not a finished or field-tested machine.",
+    "dismiss": "Dismiss this notice"
+  },
+  "nav": {
+    "label": "Page sections",
+    "health": "Health",
+    "blueprint": "Blueprint",
+    "simulator": "Simulator",
+    "economy": "Cost and loop",
+    "gallery": "Sketches"
+  },
+  "tag": {
+    "target": "Design target",
+    "concept": "Design concept",
+    "model": "Modeled estimate",
+    "sim": "Simulation"
+  },
+  "hero": {
+    "title": "AeroTurbine",
+    "summary": "Clean air, powered by the exhaust itself.",
+    "badge": "Stage: Engineering Design & Simulation Blueprint | Submitted to Harvard VISION 2026",
+    "note": "AeroTurbine is still being designed. This page shows a demo of the filter idea and an engineering blueprint. Every number here is a design target or a simulation value, not a measured result.",
+    "cta1": "Explore the blueprint",
+    "cta2": "Try the simulator",
+    "target": "Design target: up to 70% fewer pollutants and particulates.",
+    "bgLabel": "Decorative moving lines that suggest air flow"
+  },
+  "health": {
+    "title": "Why this matters locally",
+    "intro": "Bad air makes people sick. It is a big problem in industrial areas.",
+    "globalLabel": "Outdoor air pollution is linked to about this many early deaths every year worldwide:",
+    "globalValue": "6.7 to 7.9 million",
+    "placesTitle": "Helwan and Shubra El-Kheima, Egypt",
+    "placesText": "Factories, traffic and diesel backup generators release these pollutants:",
+    "sources": {
+      "factories": "Factories",
+      "traffic": "Traffic",
+      "generators": "Diesel backup generators"
+    },
+    "pollutants": "PM2.5, NO2, SO2, CO and VOCs",
+    "pollutantList": {
+      "pm": "PM2.5",
+      "no2": "NO2",
+      "so2": "SO2",
+      "co": "CO",
+      "voc": "VOCs"
+    },
+    "effectsTitle": "What health studies link to PM2.5 and NO2",
+    "pmTitle": "PM2.5 (fine particles)",
+    "pmText": "Each +10 µg/m³ is linked to about 10 to 20% higher heart disease and stroke deaths.",
+    "pmChart": "Bar from 10% to 20% higher heart disease and stroke deaths",
+    "no2Title": "NO2 (nitrogen dioxide)",
+    "no2Text": "Each +10 µg/m³ is linked to a relative risk of 1.09 for childhood asthma.",
+    "no2Chart": "Relative risk 1.09 compared with 1.00 baseline",
+    "baseline": "baseline 1.00",
+    "note": "These are links found in health studies. They are not results from AeroTurbine.",
+    "failTitle": "Why common scrubbers fail here",
+    "failColA": "Common scrubbers",
+    "failColB": "AeroTurbine's approach",
+    "failA1": "They draw a lot of electricity.",
+    "failA2": "Their sorbents stop working properly above 60 °C. Heat makes captured gas escape.",
+    "failB1": "It makes its own power from the exhaust. Design target: up to 122.6 W.",
+    "failB2": "Cooling fins bring the gas below 60 °C before it reaches the filter cartridge. This is the design intent."
+  },
+  "blueprint": {
+    "title": "The 3-zone blueprint",
+    "intro": "Pick a zone to see what is inside. The arrow shows which way the gas flows.",
+    "diagramLabel": "Side-view diagram of the exhaust interceptor with three zones",
+    "chipsLabel": "Choose a zone",
+    "flowTitle": "How the gas flows",
+    "play": "Play",
+    "pause": "Pause",
+    "next": "Next step",
+    "stepOf": "Step {n} of {total}",
+    "steps": [
+      "Hot exhaust enters. The spring-loaded bypass valve protects the engine.",
+      "The Venturi nozzle speeds the gas up. Two micro-turbines spin. The TEG collar adds power.",
+      "Additional catalytic stages clean NOx, CO and hydrocarbons (design concept).",
+      "Cooling fins bring the gas below 60 °C.",
+      "Layer 1, zeolite, traps moisture.",
+      "Layer 2, soda lime honeycomb, captures CO2 and SO2.",
+      "Layer 3, activated carbon, catches VOCs and other gas-phase toxins.",
+      "Cleaner gas leaves. Sensors compare the air before and after."
+    ],
+    "dg": {
+      "zone1": "Zone 1",
+      "zone2": "Zone 2",
+      "zone3": "Zone 3",
+      "inlet": "Exhaust in",
+      "outlet": "Cleaner gas out",
+      "valve": "Bypass valve",
+      "bypass": "Bypass out",
+      "venturi": "Venturi",
+      "turbines": "2 micro-turbines",
+      "teg": "TEG collar",
+      "cat": "Catalytic stages",
+      "concept": "(design concept)",
+      "fins": "Cooling fins",
+      "cartridge": "Swappable cartridge",
+      "l1": "Zeolite",
+      "l2": "Soda lime",
+      "l3": "Carbon",
+      "handle": "Handle",
+      "ecu": "ECU",
+      "battery": "Battery",
+      "sensors": "Sensors in and out",
+      "flowDir": "Gas flow direction"
+    }
+  },
+  "panel": {
+    "label": "Details",
+    "close": "Close details",
+    "components": "Components",
+    "numbers": "Numbers",
+    "partOf": "Part of",
+    "ratioTitle": "Cartridge: flow order and mass share",
+    "ratioOrder": "Gas flows through the layers in this order:",
+    "ratioText": "Mass ratio, soda lime : zeolite : carbon = 70:20:10",
+    "catTitle": "Additional catalytic stages (design concept)",
+    "catNote": "Shown in the reference schematic only. No performance numbers are available.",
+    "intent": "Design intent: all layers fill up at about the same time, so there is one maintenance swap."
+  },
+  "zones": {
+    "z1": {
+      "title": "Zone 1: Power harvesting",
+      "short": "Power harvesting",
+      "plain": "The exhaust spins small turbines and heats a collar. Both make electricity, so the device needs no power from the host engine.",
+      "components": [
+        "Spring-loaded bypass valve. If backpressure rises above a safe limit (dP > dP_crit), it opens by itself so the host engine never stalls.",
+        "Venturi nozzle that speeds up the gas.",
+        "Two micro-turbines in sequence.",
+        "Thermoelectric generator (TEG) collar that uses the Seebeck effect.",
+        "Body: Stainless Steel 316L reactor."
+      ],
+      "stats": [
+        {
+          "l": "Two micro-turbines",
+          "v": "up to 50.6 W"
+        },
+        {
+          "l": "TEG collar",
+          "v": "72.0 W"
+        },
+        {
+          "l": "Total: 50.6 + 72.0",
+          "v": "122.6 W"
+        }
+      ],
+      "statsNote": "All power values are design targets, not measured results. The total is meant to power the electronics with no host power."
+    },
+    "z2": {
+      "title": "Zone 2: Cooling and filtration",
+      "short": "Cooling and filtration",
+      "plain": "Fins cool the gas first. Then it passes through a swappable cartridge with three layers.",
+      "components": [
+        "External aluminum cooling fins cool the gas below 60 °C by natural convection.",
+        "Swappable 3-layer cartridge in an aluminum capsule.",
+        "Thermally insulated black rubber handle for tool-free swapping."
+      ],
+      "layers": [
+        {
+          "n": "Layer 1",
+          "name": "Synthetic zeolite",
+          "pct": "20%",
+          "role": "Moisture trap."
+        },
+        {
+          "n": "Layer 2",
+          "name": "Soda lime honeycomb",
+          "pct": "70%",
+          "role": "CO2 reaction: Ca(OH)2 + CO2 → CaCO3 + H2O. Also scrubs SO2."
+        },
+        {
+          "n": "Layer 3",
+          "name": "Pleated activated carbon",
+          "pct": "10%",
+          "role": "VOCs and gas-phase toxins."
+        }
+      ],
+      "stats": [
+        {
+          "l": "Cooling target",
+          "v": "below 60 °C"
+        },
+        {
+          "l": "Mass ratio (soda lime : zeolite : carbon)",
+          "v": "70:20:10"
+        },
+        {
+          "l": "Design target, pollutants and particulates",
+          "v": "up to 70% reduction"
+        }
+      ],
+      "statsNote": "The 70% figure is a design target. A model also estimates 15 to 22% fewer asthma-related emergency room visits in nearby communities. That is a modeled estimate, not a measured result."
+    },
+    "z3": {
+      "title": "Zone 3: Smart ECU",
+      "short": "Smart ECU",
+      "plain": "A small computer and battery sit on a cool outer wall. Sensors before and after the filter let it work out how well the filter is doing.",
+      "components": [
+        "ESP-32 controller.",
+        "LiFePO4 battery pack (APR18650M1B).",
+        "Upstream and downstream sensor sets (BME680 + Bosch BMV080 particulate sensor) to calculate filter efficiency in real time.",
+        "Isolated on a cool external wall."
+      ],
+      "stats": [],
+      "statsNote": "Real-time efficiency is a design feature. It has not been field-tested."
+    }
+  },
+  "hotspots": {
+    "valve": {
+      "name": "Spring-loaded bypass valve",
+      "desc": "Opens by itself if backpressure gets too high, so the host engine never stalls."
+    },
+    "venturi": {
+      "name": "Venturi nozzle",
+      "desc": "Narrows the pipe to speed up the gas so it can spin the turbines."
+    },
+    "turbines": {
+      "name": "Two micro-turbines",
+      "desc": "Spin one after the other in the fast gas. Design target: up to 50.6 W."
+    },
+    "scr": {
+      "name": "Passive SCR catalyst",
+      "desc": "Reduces NOx with ammonia: NOx + NH3 → N2 + H2O. Design concept, no numbers yet."
+    },
+    "urea": {
+      "name": "Solid-urea micro-dosing channel",
+      "desc": "Feeds a tiny amount of ammonia source to the SCR stage. Design concept."
+    },
+    "ptpd": {
+      "name": "Pt/Pd oxidation catalyst",
+      "desc": "Turns CO and hydrocarbons into CO2 and water: CO + O2 → CO2 and HC + O2 → CO2 + H2O. Design concept."
+    },
+    "fins": {
+      "name": "Cooling fins",
+      "desc": "Aluminum fins cool the gas below 60 °C by natural convection."
+    },
+    "lime": {
+      "name": "Lime honeycomb cartridge",
+      "desc": "Soda lime layer. Captures CO2 and scrubs SO2. It is 70% of the cartridge mass."
+    },
+    "carbon": {
+      "name": "Activated carbon cartridge",
+      "desc": "Pleated carbon layer. Catches VOCs and gas-phase toxins. It is 10% of the cartridge mass."
+    },
+    "ecu": {
+      "name": "ECU and battery",
+      "desc": "ESP-32 controller and LiFePO4 battery, isolated on a cool outer wall."
+    }
+  },
+  "schematic": {
+    "title": "Concept illustration",
+    "caption": "Concept illustration of the design. Not a built or tested prototype.",
+    "alt": "3D cutaway illustration of the AeroTurbine concept. Hot exhaust enters on the left through a bypass valve and Venturi with two gold micro-turbines, then passes catalytic stages, cooling fins and a three-layer cartridge, and leaves on the right. An ECU box with a battery sits above.",
+    "hint": "Tap a numbered dot to learn about a part.",
+    "englishOnly": "The words inside the picture are in English only. Use the numbered list below in your language.",
+    "legendTitle": "Numbered legend",
+    "tegNote": "The TEG collar is not shown in the illustration.",
+    "zoom": "Enlarge the illustration",
+    "dots": "Parts of the illustration"
+  },
+  "lightbox": {
+    "close": "Close enlarged image",
+    "label": "Enlarged image"
+  },
+  "sim": {
+    "title": "Live parameter simulator",
+    "intro": "Move the sliders and watch what changes. The formulas are simple and shown below.",
+    "label": "Theoretical simulation values from design targets, not measured data.",
+    "inputs": "Settings",
+    "results": "Results",
+    "flow": "Exhaust flow rate",
+    "hours": "Operating hours per day",
+    "texh": "Exhaust temperature (hot side)",
+    "tcart": "Gas temperature at the cartridge",
+    "days": "Days since the last cartridge swap",
+    "unitPct": "%",
+    "unitH": "h",
+    "unitC": "°C",
+    "unitD": "days",
+    "unitW": "W",
+    "unitWh": "Wh",
+    "turbine": "Turbine power",
+    "teg": "TEG power",
+    "total": "Total power",
+    "max": "Max 122.6 W",
+    "barLabel": "Stacked bar of turbine and TEG power. The mark shows the 122.6 W maximum.",
+    "energy": "Daily energy",
+    "reduction": "Pollutant reduction",
+    "reductionNote": "Design target: up to 70%",
+    "health": "Filter health",
+    "swapTitle": "When to swap the cartridge",
+    "swapOk": "Cartridge is fine for now.",
+    "swapSoon": "Plan a swap soon.",
+    "swapNow": "Swap now.",
+    "swapDays": "About {d} days of use left at these settings.",
+    "swapNoUse": "No use at these settings, so the cartridge is not wearing out.",
+    "swapHot": "Gas is above 60 °C at the cartridge. The sorbent works worse and may let gas escape. This is why cooling matters.",
+    "swapCool": "Gas is below 60 °C at the cartridge. Good.",
+    "formulas": "Show the formulas",
+    "formulaList": [
+      "Turbine power = 50.6 W × flow^1.5, where flow is 0 to 1.",
+      "TEG power = 72.0 W × tempFactor × flow. tempFactor = (exhaust temperature − 100) ÷ 300, kept between 0 and 1.",
+      "Total power = turbine + TEG. The most it can reach is 50.6 + 72.0 = 122.6 W.",
+      "Daily energy (Wh) = total power (W) × operating hours.",
+      "Pollutant reduction = 70% × filterHealth.",
+      "filterHealth = (1 − 0.6 × load²) × heatFactor. Load is operating hours since the swap divided by 600 h, kept between 0 and 1. So without heat, health falls from 1 to 0.4 at saturation.",
+      "heatFactor = 1 when the cartridge gas is 60 °C or less. Above that it drops by 0.6 for every 40 °C, to a minimum of 0.4."
+    ],
+    "assumptions": "Demo assumptions, not design facts: the 100 to 400 °C hot-side range, the 600 h cartridge life and the heat penalty. They only make the demo move. Replace them with measured values once the prototype is tested."
+  },
+  "economy": {
+    "title": "Frugal engineering and a circular loop",
+    "intro": "The goal is a low-cost unit that communities can afford and keep running.",
+    "cards": [
+      {
+        "t": "Industrial scrubber",
+        "v": "Thousands of dollars",
+        "n": "Shown for comparison."
+      },
+      {
+        "t": "AeroTurbine prototype",
+        "v": "$175 to $255 USD",
+        "n": "Estimated prototype cost."
+      },
+      {
+        "t": "AeroTurbine mass production",
+        "v": "$70 to $90 USD per unit",
+        "n": "Target cost at scale."
+      }
+    ],
+    "costNote": "Costs are estimates and targets, not quotes.",
+    "loopTitle": "The circular loop",
+    "loopConcept": "Concept",
+    "loopLabel": "Circular loop diagram. Four steps repeat in a cycle.",
+    "loopSteps": [
+      "Communities swap cartridges through a subscription.",
+      "Spent cartridges go to municipal recycling centers.",
+      "By-products (industrial gypsum, CaSO4) are sold to cement and wallboard makers.",
+      "The revenue helps buy fresh sorbent for new cartridges."
+    ],
+    "pause": "Pause animation",
+    "play": "Play animation"
+  },
+  "gallery": {
+    "title": "Sketches gallery",
+    "intro": "Early sketches and notes will go here.",
+    "add": "Add your sketch",
+    "open": "Enlarge sketch",
+    "captions": [
+      "Sketch 1: overall layout",
+      "Sketch 2: bypass valve",
+      "Sketch 3: Venturi and turbines",
+      "Sketch 4: TEG collar",
+      "Sketch 5: cooling fins",
+      "Sketch 6: cartridge layers",
+      "Sketch 7: cartridge handle",
+      "Sketch 8: ECU box"
+    ]
+  },
+  "footer": {
+    "authors": "Co-Authors: Ahmed Shady & Lara Mohamed",
+    "country": "Egypt",
+    "submitted": "Submitted to Harvard VISION 2026, Community Project Pitch Competition",
+    "disclaimer": "Under development: this is a demo of the filter concept, not a finished or field-tested machine.",
+    "contact": "Contact: add your email or link here",
+    "top": "Back to top"
+  }
+}
