@@ -1,458 +1,110 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AeroTurbine</title>
-<meta name="description" content="AeroTurbine">
-<meta name="color-scheme" content="dark light">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A1628'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23D9822B'/%3E%3Cpath d='M16 4v8M16 20v8M4 16h8M20 16h8' stroke='%233DDBB0' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
-<script>
-/* Set the theme before first paint (no flash). Saved choice wins, then the OS setting. */
-(function(){try{var s=localStorage.getItem('aero-theme');
-var t=s||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');
-document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
-</script>
-<link rel="stylesheet" href="styles.css">
-<!-- Optional: lets the site work when opened straight from the file system (see README). Safe to delete when hosting. -->
-<script defer src="i18n/bundle.js"></script>
-<script defer src="app.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AeroTurbine: Off-Grid Exhaust Filter Concept (Demo)</title>
+  <meta name="description" content="AeroTurbine is an off-grid exhaust filter and power-harvesting concept under development. Explore the 3-zone engineering design demo and live simulator.">
+  <meta name="google-site-verification" content="KA3-D2_kJrgQopulkS2aWoSZgjs3Lr6LJp8BxyAy610">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://aeroturbin.vercel.app/en/">
+  <link rel="alternate" hreflang="en" href="https://aeroturbin.vercel.app/en/">
+  <link rel="alternate" hreflang="ar" href="https://aeroturbin.vercel.app/ar/">
+  <link rel="alternate" hreflang="fr" href="https://aeroturbin.vercel.app/fr/">
+  <link rel="alternate" hreflang="es" href="https://aeroturbin.vercel.app/es/">
+  <link rel="alternate" hreflang="x-default" href="https://aeroturbin.vercel.app/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AeroTurbine">
+  <meta property="og:title" content="AeroTurbine: Off-Grid Exhaust Filter Concept (Demo)">
+  <meta property="og:description" content="AeroTurbine is an off-grid exhaust filter and power-harvesting concept under development. Explore the 3-zone engineering design demo and live simulator.">
+  <meta property="og:url" content="https://aeroturbin.vercel.app/">
+  <meta property="og:image" content="https://aeroturbin.vercel.app/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="3D cutaway illustration of the AeroTurbine concept. Hot exhaust enters on the left through a bypass valve and Venturi with two gold micro-turbines, then passes catalytic stages, cooling fins and a three-layer cartridge, and leaves on the right. An ECU box with a battery sits above.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ar_AR">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AeroTurbine: Off-Grid Exhaust Filter Concept (Demo)">
+  <meta name="twitter:description" content="AeroTurbine is an off-grid exhaust filter and power-harvesting concept under development. Explore the 3-zone engineering design demo and live simulator.">
+  <meta name="twitter:image" content="https://aeroturbin.vercel.app/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="3D cutaway illustration of the AeroTurbine concept. Hot exhaust enters on the left through a bypass valve and Venturi with two gold micro-turbines, then passes catalytic stages, cooling fins and a three-layer cartridge, and leaves on the right. An ECU box with a battery sits above.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A1628'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23D9822B'/%3E%3Cpath d='M16 4v8M16 20v8M4 16h8M20 16h8' stroke='%233DDBB0' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://aeroturbin.vercel.app/#website","url":"https://aeroturbin.vercel.app/","name":"AeroTurbine","inLanguage":["en","ar","fr","es"]},{"@type":"WebPage","@id":"https://aeroturbin.vercel.app/#webpage","url":"https://aeroturbin.vercel.app/","name":"AeroTurbine: Off-Grid Exhaust Filter Concept (Demo)","description":"AeroTurbine is an off-grid exhaust filter and power-harvesting concept under development. Explore the 3-zone engineering design demo and live simulator.","inLanguage":"en","isPartOf":{"@id":"https://aeroturbin.vercel.app/#website"},"about":{"@id":"https://aeroturbin.vercel.app/#project"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://aeroturbin.vercel.app/assets/og-image.jpg","width":1200,"height":630,"caption":"Concept illustration of the design. Not a built or tested prototype."}},{"@type":"CreativeWork","@id":"https://aeroturbin.vercel.app/#project","name":"AeroTurbine","headline":"Clean air, powered by the exhaust itself.","description":"AeroTurbine is still being designed. This page shows a demo of the filter idea and an engineering blueprint. Every number here is a design target or a simulation value, not a measured result.","creativeWorkStatus":"Under development: this is a demo of the filter concept, not a finished or field-tested machine.","inLanguage":"en","author":[{"@type":"Person","name":"Ahmed Shady"},{"@type":"Person","name":"Lara Mohamed"}]}]}</script>
+  <style>:root{color-scheme:dark;--bg:#0A1628;--surface:#12233B;--surface-2:#0E1D33;--border:#1F3556;--line:#4A6A93;--text:#EAF1F8;--muted:#9FB3C8;--copper:#D9822B;--copper-fill:#D9822B;--on-copper:#0A1628;--mint:#3DDBB0;--coral:#E5604D}:root[data-theme="light"]{color-scheme:light;--bg:#F6EFE3;--surface:#FFFFFF;--surface-2:#FBF7EF;--border:#E2D6C0;--line:#8A7A5C;--text:#14213A;--muted:#5B6B82;--copper:#9A5410;--copper-fill:#D9822B;--on-copper:#14213A;--mint:#0B6B50;--coral:#B5301F}*,*::before,*::after{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:1.0625rem;line-height:1.65;overflow-x:hidden}.wrap{inline-size:100%;max-inline-size:1120px;margin-inline:auto;padding-inline:16px}.top{position:sticky;inset-block-start:0;z-index:50}.banner{display:flex;align-items:center;gap:8px;justify-content:space-between;background:var(--copper-fill);color:var(--on-copper);min-block-size:52px;padding:6px 12px;padding-inline-start:16px;font-weight:700;font-size:.95rem}</style>
+  <script>
+  (function(){
+    try {
+      var s = localStorage.getItem('aero-theme');
+      var th = s || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', th);
+      if (/[?&]noredirect=1/.test(location.search)) return;
+      if (/(bot|crawl|spider|slurp|facebookexternalhit|whatsapp|linkedinbot|twitterbot|google|bing|yandex|duckduckbot)/i.test(navigator.userAgent)) return;
+      var supported = ['en', 'ar', 'fr', 'es'];
+      var target = localStorage.getItem('aero-lang');
+      if (!target || supported.indexOf(target) === -1) {
+        var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+        target = 'en';
+        for (var i = 0; i < prefs.length; i++) {
+          var c = String(prefs[i]).toLowerCase().split('-')[0];
+          if (supported.indexOf(c) !== -1) { target = c; break; }
+        }
+      }
+      var tail = location.protocol === 'file:' ? '/index.html' : '/';
+      location.replace(target + tail + (location.hash || ''));
+    } catch (e) {}
+  })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip" href="#main" data-i18n="skip"></a>
-
 <div class="top">
-  <div class="banner" id="banner" role="region" aria-labelledby="banner-text">
-    <p id="banner-text" data-i18n="banner.text"></p>
-    <button type="button" class="banner-x" id="banner-close" data-i18n-attr="aria-label:banner.dismiss">
-      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
-    </button>
+  <div class="banner" role="region" aria-label="Development notice">
+    <p>Under development: this is a demo of the filter concept, not a finished or field-tested machine.</p>
   </div>
-
-  <header class="site-header">
-    <div class="wrap header-row">
-      <a class="brand" href="#hero">
-        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><circle cx="16" cy="16" r="4" fill="var(--copper-fill)"/><path d="M16 3v9M16 20v9M3 16h9M20 16h9" stroke="var(--mint)" stroke-width="3" stroke-linecap="round"/></svg>
-        <span data-i18n="hero.title"></span>
-      </a>
-      <nav class="nav" data-i18n-attr="aria-label:nav.label">
-        <ul>
-          <li><a href="#health" data-i18n="nav.health"></a></li>
-          <li><a href="#blueprint" data-i18n="nav.blueprint"></a></li>
-          <li><a href="#simulator" data-i18n="nav.simulator"></a></li>
-          <li><a href="#economy" data-i18n="nav.economy"></a></li>
-          <li><a href="#gallery" data-i18n="nav.gallery"></a></li>
-        </ul>
-      </nav>
-      <div class="tools">
-        <select id="lang-select" class="select" data-i18n-attr="aria-label:lang.label"></select>
-        <button type="button" id="theme-toggle" class="icon-btn">
-          <svg class="i-sun" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <svg class="i-moon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z" fill="currentColor"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
 </div>
-
-<main id="main">
-
-<!-- 1. HERO -->
-<section id="hero" class="hero" aria-labelledby="hero-title">
-  <svg class="airflow" viewBox="0 0 1200 400" preserveAspectRatio="none" role="img" data-i18n-attr="aria-label:hero.bgLabel">
-    <g fill="none" stroke-linecap="round">
-      <path class="af a1" d="M-50 80 C 250 20, 450 140, 700 80 S 1100 40, 1280 100"/>
-      <path class="af a2" d="M-50 150 C 200 100, 500 220, 760 150 S 1100 110, 1280 170"/>
-      <path class="af a3" d="M-50 220 C 300 170, 400 290, 700 220 S 1050 190, 1280 240"/>
-      <path class="af a4" d="M-50 290 C 250 240, 550 350, 800 290 S 1100 260, 1280 310"/>
-      <path class="af a5" d="M-50 350 C 300 310, 450 390, 750 350 S 1100 330, 1280 370"/>
-    </g>
-  </svg>
-  <div class="wrap hero-inner">
-    <p class="badge" data-i18n="hero.badge"></p>
-    <h1 id="hero-title" data-i18n="hero.title"></h1>
-    <p class="lead" data-i18n="hero.summary"></p>
-    <p class="hero-note" data-i18n="hero.note"></p>
-    <p class="hero-target"><span class="tag tag-target" data-i18n="tag.target"></span> <span data-i18n="hero.target"></span></p>
-    <div class="cta">
-      <a class="btn btn-primary" href="#blueprint"><span data-i18n="hero.cta1"></span> <svg class="dir-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></a>
-      <a class="btn btn-ghost" href="#simulator" data-i18n="hero.cta2"></a>
-    </div>
-  </div>
-</section>
-
-<!-- 2. HEALTH CONTEXT -->
-<section id="health" class="section" aria-labelledby="health-title">
+<main id="main" class="section">
   <div class="wrap">
-    <h2 id="health-title" data-i18n="health.title"></h2>
-    <p class="intro" data-i18n="health.intro"></p>
-
-    <div class="grid-2 gap-top">
-      <div class="card big-stat">
-        <p class="muted" data-i18n="health.globalLabel"></p>
-        <p class="big-num" data-i18n="health.globalValue"></p>
-      </div>
-      <div class="card">
-        <h3 data-i18n="health.placesTitle"></h3>
-        <p data-i18n="health.placesText"></p>
-        <ul class="sources">
-          <li>
-            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M2 21V11l6 4v-4l6 4V4h4v17z" fill="currentColor"/></svg>
-            <span data-i18n="health.sources.factories"></span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M3 15l2-6a2 2 0 0 1 2-1.5h10A2 2 0 0 1 19 9l2 6v3h-2.2a2.3 2.3 0 0 0-4.6 0H9.8a2.3 2.3 0 0 0-4.6 0H3z" fill="currentColor"/></svg>
-            <span data-i18n="health.sources.traffic"></span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M2 7h18v11H2zM20 10h2v5h-2z" fill="currentColor"/><path d="M11 9l-3 5h3l-1 3 4-5h-3l1-3z" fill="var(--surface)"/></svg>
-            <span data-i18n="health.sources.generators"></span>
-          </li>
-        </ul>
-        <ul class="chips" data-i18n-attr="aria-label:health.pollutants">
-          <li data-i18n="health.pollutantList.pm"></li>
-          <li data-i18n="health.pollutantList.no2"></li>
-          <li data-i18n="health.pollutantList.so2"></li>
-          <li data-i18n="health.pollutantList.co"></li>
-          <li data-i18n="health.pollutantList.voc"></li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 class="sub" data-i18n="health.effectsTitle"></h3>
-    <div class="grid-2">
-      <div class="card">
-        <h4 data-i18n="health.pmTitle"></h4>
-        <div class="meter" role="img" data-i18n-attr="aria-label:health.pmChart"><span class="meter-range" style="inset-inline-start:50%;inline-size:50%"></span></div>
-        <p data-i18n="health.pmText"></p>
-      </div>
-      <div class="card">
-        <h4 data-i18n="health.no2Title"></h4>
-        <div class="meter" role="img" data-i18n-attr="aria-label:health.no2Chart"><span class="meter-base"></span><span class="meter-range alt" style="inset-inline-start:0;inline-size:9%"></span></div>
-        <p class="muted small" data-i18n="health.baseline"></p>
-        <p data-i18n="health.no2Text"></p>
-      </div>
-    </div>
-    <p class="muted small" data-i18n="health.note"></p>
-
-    <h3 class="sub" data-i18n="health.failTitle"></h3>
-    <div class="grid-2 compare">
-      <div class="card bad">
-        <h4 data-i18n="health.failColA"></h4>
-        <ul class="ticks">
-          <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg><span data-i18n="health.failA1"></span></li>
-          <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg><span data-i18n="health.failA2"></span></li>
-        </ul>
-      </div>
-      <div class="card good">
-        <h4 data-i18n="health.failColB"></h4>
-        <ul class="ticks">
-          <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span data-i18n="health.failB1"></span></li>
-          <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span data-i18n="health.failB2"></span></li>
-        </ul>
-      </div>
+    <p class="badge">Stage: Engineering Design &amp; Simulation Blueprint | Submitted to <bdi class="ltr" dir="ltr">Harvard VISION 2026</bdi></p>
+    <h1>AeroTurbine</h1>
+    <p class="lead">Clean air, powered by the exhaust itself.</p>
+    <p class="hero-note">AeroTurbine is still being designed. This page shows a demo of the filter idea and an engineering blueprint. Every number here is a design target or a simulation value, not a measured result.</p>
+    <h2>Language / اللغة / Langue / Idioma</h2>
+    <div class="chooser-grid">
+      <a class="chooser-link" href="en/" lang="en" dir="ltr" hreflang="en" data-lang="en">
+        <strong>English</strong>
+        <span>Clean air, powered by the exhaust itself.</span>
+      </a>
+      <a class="chooser-link" href="ar/" lang="ar" dir="rtl" hreflang="ar" data-lang="ar">
+        <strong>العربية</strong>
+        <span>هواء أنظف، بطاقة يولّدها العادم نفسه.</span>
+      </a>
+      <a class="chooser-link" href="fr/" lang="fr" dir="ltr" hreflang="fr" data-lang="fr">
+        <strong>Français</strong>
+        <span>De l'air plus propre, alimenté par l'échappement lui-même.</span>
+      </a>
+      <a class="chooser-link" href="es/" lang="es" dir="ltr" hreflang="es" data-lang="es">
+        <strong>Español</strong>
+        <span>Aire más limpio, impulsado por el propio escape.</span>
+      </a>
     </div>
   </div>
-</section>
-
-<!-- 3. BLUEPRINT -->
-<section id="blueprint" class="section alt" aria-labelledby="bp-title">
-  <div class="wrap">
-    <h2 id="bp-title" data-i18n="blueprint.title"></h2>
-    <p class="intro" data-i18n="blueprint.intro"></p>
-
-    <!-- 3a. Interactive SVG -->
-    <div class="diagram-scroll card">
-      <svg id="bp" viewBox="0 0 1000 350" data-i18n-attr="aria-label:blueprint.diagramLabel" role="group">
-        <defs>
-          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
-        </defs>
-
-        <!-- Shapes: this group is flipped left-right in RTL. No text in here. -->
-        <g id="bp-shapes">
-          <path class="wire" d="M790 82 H30 V166"/>
-          <path class="wire" d="M850 120 V166"/>
-          <rect class="pipe" x="10" y="172" width="980" height="36" rx="4"/>
-          <rect class="gas-line" x="14" y="188" width="972" height="4"/>
-
-          <g id="g-teg"><rect class="teg" x="150" y="134" width="130" height="112" rx="10"/>
-            <path class="teg-lines" d="M170 134v112M190 134v112M210 134v112M230 134v112M250 134v112M270 134v112"/></g>
-          <g id="g-venturi"><rect class="body" x="142" y="150" width="148" height="80" rx="6"/>
-            <path class="gas" d="M142 168 L196 178 H236 L290 168 V212 L236 202 H196 L142 212 Z"/></g>
-          <g id="g-turbines">
-            <g transform="translate(205 190)"><g class="rotor"><circle r="10" class="rotor-c"/><path d="M-10 0H10M0 -10V10M-7 -7L7 7M-7 7L7 -7"/></g></g>
-            <g transform="translate(231 190)"><g class="rotor rev"><circle r="10" class="rotor-c"/><path d="M-10 0H10M0 -10V10M-7 -7L7 7M-7 7L7 -7"/></g></g>
-          </g>
-          <g id="g-valve"><rect class="body" x="60" y="148" width="82" height="84" rx="8"/>
-            <polyline class="spring" points="74,190 82,176 92,204 102,176 112,204 122,176 130,190"/>
-            <path class="bypass" d="M100 148 V112 H134" marker-end="url(#arr)"/></g>
-
-          <g id="g-cat"><rect class="concept" x="300" y="156" width="104" height="68" rx="6"/>
-            <rect class="scr" x="306" y="164" width="46" height="52"/>
-            <rect class="ptpd" x="358" y="164" width="40" height="52"/>
-            <rect class="urea" x="326" y="146" width="6" height="18"/></g>
-
-          <g id="g-fins"><rect class="body" x="410" y="160" width="80" height="60"/>
-            <path class="fins" d="M414 130v30M424 130v30M434 130v30M444 130v30M454 130v30M464 130v30M474 130v30M484 130v30M414 220v30M424 220v30M434 220v30M444 220v30M454 220v30M464 220v30M474 220v30M484 220v30"/></g>
-
-          <g id="g-cartridge">
-            <rect class="capsule" x="498" y="150" width="268" height="80" rx="16"/>
-            <rect id="g-l1" class="l1" x="506" y="158" width="48" height="64" rx="4"/>
-            <rect id="g-l2" class="l2" x="554" y="158" width="168" height="64" rx="4"/>
-            <rect id="g-l3" class="l3" x="722" y="158" width="24" height="64" rx="4"/>
-            <rect class="rubber" x="600" y="128" width="70" height="22" rx="8"/>
-          </g>
-          <g id="g-sensors"><circle class="sensor" cx="36" cy="168" r="7"/><circle class="sensor" cx="850" cy="168" r="7"/></g>
-          <g id="g-ecu"><rect class="ecu" x="790" y="40" width="170" height="80" rx="8"/><circle class="led" cx="805" cy="52" r="3"/><circle class="led" cx="817" cy="52" r="3"/></g>
-
-          <path class="flow-arrow" d="M20 28 H110" marker-end="url(#arr)"/>
-          <circle id="flow-dot" class="dot" r="9" cx="0" cy="190" style="transform:translate(60px,0)"/>
-
-          <!-- Clickable zone overlays -->
-          <g class="zone" id="zone-1" role="button" tabindex="0" aria-pressed="false" data-zone="1"><rect x="16" y="96" width="280" height="250" rx="14"/></g>
-          <g class="zone" id="zone-2" role="button" tabindex="0" aria-pressed="false" data-zone="2"><rect x="300" y="96" width="470" height="250" rx="14"/></g>
-          <g class="zone" id="zone-3" role="button" tabindex="0" aria-pressed="false" data-zone="3"><rect x="780" y="30" width="190" height="150" rx="14"/></g>
-        </g>
-
-        <!-- Labels: x/y are set from data-x / data-y by app.js (mirrored in RTL) -->
-        <g id="bp-labels" class="dg-text">
-          <text data-x="45" data-y="262" data-i18n="blueprint.dg.inlet"></text>
-          <text data-x="150" data-y="262" data-i18n="blueprint.dg.venturi"></text>
-          <text data-x="350" data-y="262" data-i18n="blueprint.dg.cat"></text>
-          <text data-x="350" data-y="316" data-i18n="blueprint.dg.concept" class="concept-t"></text>
-          <text data-x="534" data-y="262" data-i18n="blueprint.dg.l1"></text>
-          <text data-x="642" data-y="262" data-i18n="blueprint.dg.l2"></text>
-          <text data-x="738" data-y="262" data-i18n="blueprint.dg.l3"></text>
-          <text data-x="900" data-y="262" data-i18n="blueprint.dg.outlet"></text>
-          <text data-x="100" data-y="290" data-i18n="blueprint.dg.valve"></text>
-          <text data-x="235" data-y="290" data-i18n="blueprint.dg.turbines"></text>
-          <text data-x="450" data-y="290" data-i18n="blueprint.dg.fins"></text>
-          <text data-x="632" data-y="290" data-i18n="blueprint.dg.cartridge"></text>
-          <text data-x="165" data-y="104" data-i18n="blueprint.dg.bypass" class="sm"></text>
-          <text data-x="240" data-y="124" data-i18n="blueprint.dg.teg" class="sm"></text>
-          <text data-x="875" data-y="76" data-i18n="blueprint.dg.ecu" class="strong"></text>
-          <text data-x="875" data-y="104" data-i18n="blueprint.dg.battery"></text>
-          <text data-x="875" data-y="148" data-i18n="blueprint.dg.sensors" class="sm"></text>
-          <text data-x="530" data-y="195" class="inbox">20%</text>
-          <text data-x="160" data-y="338" data-i18n="blueprint.dg.zone1" class="zt"></text>
-          <text data-x="535" data-y="338" data-i18n="blueprint.dg.zone2" class="zt"></text>
-          <text data-x="875" data-y="22" data-i18n="blueprint.dg.zone3" class="zt"></text>
-          <text data-x="122" data-y="33" data-anchor="start" data-i18n="blueprint.dg.flowDir" class="sm"></text>
-          <text data-x="638" data-y="195" class="inbox">70%</text>
-          <text data-x="734" data-y="195" class="inbox">10%</text>
-        </g>
-      </svg>
-    </div>
-
-    <div class="chips-row" role="group" data-i18n-attr="aria-label:blueprint.chipsLabel">
-      <button type="button" class="chip-btn" data-zone="1" aria-pressed="false"><span class="zn">1</span> <span data-i18n="zones.z1.short"></span></button>
-      <button type="button" class="chip-btn" data-zone="2" aria-pressed="false"><span class="zn">2</span> <span data-i18n="zones.z2.short"></span></button>
-      <button type="button" class="chip-btn" data-zone="3" aria-pressed="false"><span class="zn">3</span> <span data-i18n="zones.z3.short"></span></button>
-    </div>
-
-    <div class="card flow-card">
-      <h3 data-i18n="blueprint.flowTitle"></h3>
-      <p class="flow-step-no muted small" id="flow-no"></p>
-      <p class="flow-text" id="flow-text" aria-live="polite"></p>
-      <div class="flow-btns">
-        <button type="button" class="btn btn-ghost" id="flow-play"></button>
-        <button type="button" class="btn btn-primary" id="flow-next"><span data-i18n="blueprint.next"></span> <svg class="dir-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button>
-      </div>
-    </div>
-
-    <!-- 3b. Reference schematic -->
-    <h3 class="sub" data-i18n="schematic.title"></h3>
-    <figure class="schematic">
-      <div class="img-wrap" dir="ltr">
-        <picture id="schem-pic" data-webp="assets/schematic.webp">
-          <img id="schem-img" data-src="assets/schematic.jpg" width="1024" height="571" loading="lazy" decoding="async" alt="" data-i18n-attr="alt:schematic.alt">
-        </picture>
-        <div id="hotspots" role="group" data-i18n-attr="aria-label:schematic.dots"></div>
-        <button type="button" class="zoom-btn" id="schem-zoom" data-i18n-attr="aria-label:schematic.zoom;title:schematic.zoom">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="2.4" fill="none"/><path d="M15 15l6 6M10 7v6M7 10h6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
-        </button>
-      </div>
-      <figcaption>
-        <span class="tag tag-concept" data-i18n="tag.concept"></span>
-        <span data-i18n="schematic.caption"></span>
-      </figcaption>
-    </figure>
-    <p class="muted small" data-i18n="schematic.hint"></p>
-    <p class="muted small" data-i18n="schematic.englishOnly"></p>
-    <h4 data-i18n="schematic.legendTitle"></h4>
-    <ol id="legend" class="legend"></ol>
-    <p class="note-box" data-i18n="schematic.tegNote"></p>
-  </div>
-</section>
-
-<!-- 4. SIMULATOR -->
-<section id="simulator" class="section" aria-labelledby="sim-title">
-  <div class="wrap">
-    <h2 id="sim-title" data-i18n="sim.title"></h2>
-    <p class="intro" data-i18n="sim.intro"></p>
-    <p class="sim-label" role="note"><span class="tag tag-sim" data-i18n="tag.sim"></span> <strong data-i18n="sim.label"></strong></p>
-
-    <div class="sim-grid">
-      <div class="card">
-        <h3 data-i18n="sim.inputs"></h3>
-        <div class="slider"><div class="s-top"><label for="s-flow" data-i18n="sim.flow"></label><output id="o-flow" for="s-flow"></output></div><input type="range" id="s-flow" min="0" max="100" step="1" value="70"></div>
-        <div class="slider"><div class="s-top"><label for="s-hours" data-i18n="sim.hours"></label><output id="o-hours" for="s-hours"></output></div><input type="range" id="s-hours" min="0" max="12" step="1" value="8"></div>
-        <div class="slider"><div class="s-top"><label for="s-texh" data-i18n="sim.texh"></label><output id="o-texh" for="s-texh"></output></div><input type="range" id="s-texh" min="100" max="400" step="10" value="300"></div>
-        <div class="slider"><div class="s-top"><label for="s-tcart" data-i18n="sim.tcart"></label><output id="o-tcart" for="s-tcart"></output></div><input type="range" id="s-tcart" min="30" max="100" step="1" value="45"></div>
-        <div class="slider"><div class="s-top"><label for="s-days" data-i18n="sim.days"></label><output id="o-days" for="s-days"></output></div><input type="range" id="s-days" min="0" max="60" step="1" value="10"></div>
-      </div>
-
-      <div class="card results" aria-live="polite">
-        <h3 data-i18n="sim.results"></h3>
-        <p class="sim-label small-label"><strong data-i18n="sim.label"></strong></p>
-        <div class="bar-wrap">
-          <div class="bar-head"><span data-i18n="sim.total"></span> <strong id="r-total"></strong></div>
-          <div class="bar" role="img" data-i18n-attr="aria-label:sim.barLabel">
-            <span class="seg turbine" id="bar-turbine"></span><span class="seg teg" id="bar-teg"></span>
-            <span class="maxmark"><i></i><b data-i18n="sim.max"></b></span>
-          </div>
-          <ul class="legend-dots">
-            <li><i class="d turbine"></i><span data-i18n="sim.turbine"></span> <strong id="r-turbine"></strong></li>
-            <li><i class="d teg"></i><span data-i18n="sim.teg"></span> <strong id="r-teg"></strong></li>
-          </ul>
-        </div>
-        <dl class="stats">
-          <div><dt data-i18n="sim.energy"></dt><dd id="r-energy"></dd></div>
-          <div><dt data-i18n="sim.reduction"></dt><dd id="r-reduction" class="mint"></dd><dd class="muted small" data-i18n="sim.reductionNote"></dd></div>
-          <div><dt data-i18n="sim.health"></dt><dd id="r-health"></dd></div>
-        </dl>
-        <div class="swap ok" id="swap">
-          <h4 data-i18n="sim.swapTitle"></h4>
-          <p class="swap-state" id="swap-state"></p>
-          <p class="small" id="swap-days"></p>
-          <p class="small" id="swap-heat"></p>
-        </div>
-      </div>
-    </div>
-
-    <details class="formulas">
-      <summary data-i18n="sim.formulas"></summary>
-      <ol id="formula-list"></ol>
-      <p class="muted small" data-i18n="sim.assumptions"></p>
-    </details>
-  </div>
-</section>
-
-<!-- 5. ECONOMY -->
-<section id="economy" class="section alt" aria-labelledby="eco-title">
-  <div class="wrap">
-    <h2 id="eco-title" data-i18n="economy.title"></h2>
-    <p class="intro" data-i18n="economy.intro"></p>
-    <div class="cost-grid" id="cost-cards">
-      <div class="card cost c0"><h3 data-i18n="economy.cards.0.t"></h3><p class="cost-v" data-i18n="economy.cards.0.v"></p><p class="muted small" data-i18n="economy.cards.0.n"></p></div>
-      <div class="card cost c1"><span class="tag tag-target" data-i18n="tag.model"></span><h3 data-i18n="economy.cards.1.t"></h3><p class="cost-v" data-i18n="economy.cards.1.v"></p><p class="muted small" data-i18n="economy.cards.1.n"></p></div>
-      <div class="card cost c2"><span class="tag tag-target" data-i18n="tag.target"></span><h3 data-i18n="economy.cards.2.t"></h3><p class="cost-v" data-i18n="economy.cards.2.v"></p><p class="muted small" data-i18n="economy.cards.2.n"></p></div>
-    </div>
-    <p class="muted small" data-i18n="economy.costNote"></p>
-
-    <h3 class="sub"><span data-i18n="economy.loopTitle"></span> <span class="tag tag-concept" data-i18n="economy.loopConcept"></span></h3>
-    <div class="loop" id="loop" role="group" data-i18n-attr="aria-label:economy.loopLabel">
-      <svg class="loop-ring" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" id="loop-svg">
-        <ellipse cx="50" cy="50" rx="35.4" ry="35.4" class="ring" vector-effect="non-scaling-stroke"/>
-        <circle r="2.2" class="orbit"><animateMotion dur="9s" repeatCount="indefinite" path="M50 14.6 A35.4 35.4 0 1 1 49.99 14.6"/></circle>
-      </svg>
-      <ol class="loop-steps">
-        <li class="n1"><b>1</b><span data-i18n="economy.loopSteps.0"></span></li>
-        <li class="n2"><b>2</b><span data-i18n="economy.loopSteps.1"></span></li>
-        <li class="n3"><b>3</b><span data-i18n="economy.loopSteps.2"></span></li>
-        <li class="n4"><b>4</b><span data-i18n="economy.loopSteps.3"></span></li>
-      </ol>
-    </div>
-    <button type="button" class="btn btn-ghost" id="loop-toggle"></button>
-  </div>
-</section>
-
-<!-- 6. GALLERY -->
-<section id="gallery" class="section" aria-labelledby="gal-title">
-  <div class="wrap">
-    <h2 id="gal-title" data-i18n="gallery.title"></h2>
-    <p class="intro" data-i18n="gallery.intro"></p>
-    <ul class="gallery" id="gallery-grid">
-      <li>
-        <button type="button" class="tile" data-i18n-attr="title:gallery.open">
-          <span class="ph">
-            <picture>
-              <source type="image/webp" srcset="assets/sketches/stage1-layout.webp">
-              <img src="assets/sketches/stage1-layout.jpg" loading="lazy" decoding="async" width="768" height="1024" alt="" data-i18n-attr="alt:gallery.alts.0">
-            </picture>
-          </span>
-          <span class="cap" data-i18n="gallery.captions.0"></span>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="tile" data-i18n-attr="title:gallery.open">
-          <span class="ph">
-            <picture>
-              <source type="image/webp" srcset="assets/sketches/stage1-multiturbine.webp">
-              <img src="assets/sketches/stage1-multiturbine.jpg" loading="lazy" decoding="async" width="768" height="1024" alt="" data-i18n-attr="alt:gallery.alts.1">
-            </picture>
-          </span>
-          <span class="cap" data-i18n="gallery.captions.1"></span>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="tile" data-i18n-attr="title:gallery.open">
-          <span class="ph">
-            <picture>
-              <source type="image/webp" srcset="assets/sketches/stage2-digital.webp">
-              <img src="assets/sketches/stage2-digital.jpg" loading="lazy" decoding="async" width="1024" height="444" alt="" data-i18n-attr="alt:gallery.alts.2">
-            </picture>
-          </span>
-          <span class="cap" data-i18n="gallery.captions.2"></span>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="tile" data-i18n-attr="title:gallery.open">
-          <span class="ph">
-            <picture>
-              <source type="image/webp" srcset="assets/sketches/stage3-final.webp">
-              <img src="assets/sketches/stage3-final.jpg" loading="lazy" decoding="async" width="1024" height="579" alt="" data-i18n-attr="alt:gallery.alts.3">
-            </picture>
-          </span>
-          <span class="cap" data-i18n="gallery.captions.3"></span>
-        </button>
-      </li>
-    </ul>
-  </div>
-</section>
-
 </main>
-
 <footer class="site-footer">
   <div class="wrap">
-    <p class="f-authors" data-i18n="footer.authors"></p>
-    <p data-i18n="footer.country"></p>
-    <p data-i18n="footer.submitted"></p>
-    <p class="f-disc" data-i18n="footer.disclaimer"></p>
-    <p class="muted f-contact"><span data-i18n="footer.contact"></span> <a id="contact-email" href="mailto:ahmedshadysaad12@gmail.com"><span class="ltr" dir="ltr">ahmedshadysaad12@gmail.com</span></a></p>
-    <p><a href="#hero" data-i18n="footer.top"></a></p>
+    <p class="f-authors">Developed collaboratively by a <bdi class="ltr" dir="ltr">9</bdi>-student team (<bdi class="ltr" dir="ltr">Team AeroTurbine</bdi>) across research and competition phases. | <bdi class="ltr" dir="ltr">Harvard VISION 2026</bdi> Proposal Co-Authors: Ahmed Shady &amp; Lara Mohamed.</p>
+    <p class="f-disc">Under development: this is a demo of the filter concept, not a finished or field-tested machine.</p>
+    <p class="muted f-contact"><span>Contact:</span> <a href="mailto:ahmedshadysaad12@gmail.com"><span class="ltr" dir="ltr">ahmedshadysaad12@gmail.com</span></a></p>
   </div>
 </footer>
-
-<!-- Details panel: bottom sheet on mobile, side panel on desktop -->
-<aside id="panel" class="panel" role="dialog" aria-modal="false" aria-labelledby="panel-title" data-i18n-attr="aria-label:panel.label">
-  <div class="panel-head">
-    <h2 id="panel-title" tabindex="-1"></h2>
-    <button type="button" class="icon-btn" id="panel-close" data-i18n-attr="aria-label:panel.close;title:panel.close">
-      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
-    </button>
-  </div>
-  <div id="panel-body" class="panel-body"></div>
-</aside>
-
-<!-- Lightbox -->
-<dialog id="lightbox" class="lightbox" data-i18n-attr="aria-label:lightbox.label">
-  <button type="button" class="icon-btn lb-close" id="lb-close" data-i18n-attr="aria-label:lightbox.close;title:lightbox.close">
-    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
-  </button>
-  <img id="lb-img" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
-  <p id="lb-cap"></p>
-</dialog>
-
+<script>
+document.querySelectorAll('a[data-lang]').forEach(function(a){
+  a.addEventListener('click', function(){
+    try { localStorage.setItem('aero-lang', a.getAttribute('data-lang')); } catch (e) {}
+  });
+});
+</script>
 </body>
 </html>

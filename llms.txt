@@ -1,0 +1,43 @@
+# AeroTurbine
+
+AeroTurbine is an off-grid exhaust interceptor concept under development that harvests energy from exhaust flow and heat to power its own electronics while filtering pollutants. This website presents an interactive engineering design blueprint and a demo of the filter concept, not a finished or field-tested product. Every power, efficiency, cost, and health figure is a theoretical design target or simulation value, not a measured result.
+
+## Language Pages & Sitemap
+
+- [English (x-default)](https://aeroturbin.vercel.app/en/)
+- [Arabic / العربية](https://aeroturbin.vercel.app/ar/)
+- [French / Français](https://aeroturbin.vercel.app/fr/)
+- [Spanish / Español](https://aeroturbin.vercel.app/es/)
+- [XML Sitemap](https://aeroturbin.vercel.app/sitemap.xml)
+
+## Key Design Targets & Engineering Blueprint (Not Measured Results)
+
+- **Stage:** Engineering Design & Simulation Blueprint | Submitted to Harvard VISION 2026 (Community Project Pitch Competition).
+- **Team & Proposal Co-Authors:** Developed collaboratively by a 9-student team (Team AeroTurbine) in Egypt; Harvard VISION 2026 Proposal Co-Authors: Ahmed Shady and Lara Mohamed.
+- **Zone 1 — Power Harvesting (Design Targets):**
+  - Stainless Steel 316L reactor body with a spring-loaded mechanical bypass valve (`dP > dP_crit` fail-safe so the host engine never stalls).
+  - Venturi nozzle accelerating exhaust gas through two sequential micro-turbines: design target up to **50.6 W**.
+  - Thermoelectric generator (TEG) collar using the Seebeck effect: design target **72.0 W**.
+  - Combined theoretical power target: **50.6 + 72.0 = 122.6 W** (self-powered electronics with zero host engine power draw).
+- **Zone 2 — Cooling and Filtration (Design Targets & Concepts):**
+  - External aluminum cooling fins designed to lower gas temperature below **60 °C** via natural convection before sorbent contact.
+  - Swappable 3-layer cartridge with a **70:20:10** mass ratio (soda lime : synthetic zeolite : pleated activated carbon) and flow order: Layer 1 synthetic zeolite (20%, moisture trap) → Layer 2 soda lime honeycomb (70%, `Ca(OH)2 + CO2 → CaCO3 + H2O` and `SO2` scrubbing) → Layer 3 pleated activated carbon (10%, VOCs and gas-phase toxins).
+  - Additional catalytic stages (design concept only, no performance numbers): passive SCR catalyst with solid-urea micro-dosing (`NOx + NH3 → N2 + H2O`) and Pt/Pd oxidation catalyst (`CO + O2 → CO2`, `HC + O2 → CO2 + H2O`).
+  - Filtration design target: up to **70% reduction** in pollutants and particulates (modeled community estimate: 15 to 22% fewer asthma-related emergency room visits).
+- **Zone 3 — Smart ECU (Design Feature):**
+  - Thermally isolated external enclosure housing an ESP-32 controller, `LiFePO4` battery pack (`APR18650M1B`), and upstream/downstream sensor pairs (`BME680` + Bosch `BMV080`) to compute real-time filtration efficiency.
+- **Cost Targets & Circular Economy Concept:**
+  - Prototype cost estimate: **$175 to $255 USD**.
+  - Mass-production target cost: **$70 to $90 USD per unit** (compared with thousands of dollars for industrial scrubbers).
+  - Circular loop concept: community cartridge-swap subscription → municipal recycling collection → industrial gypsum (`CaSO4`) by-product sold to cement and wallboard manufacturers → revenue funds fresh sorbent.
+
+---
+
+## ملخص المشروع بالعربية (AeroTurbine)
+
+مشروع **AeroTurbine** هو مفهوم هندسي قيد التطوير لجهاز مستقل عن الشبكة الكهربائية يعترض العادم ليولّد طاقته ذاتيًا ويرشّح الملوثات. يعرض هذا الموقع نموذجًا تجريبيًا لفكرة المرشّح ومخططًا للتصميم الهندسي والمحاكاة، وليس آلة جاهزة أو مجرَّبة في الميدان؛ وجميع أرقام الطاقة والكفاءة والتكلفة والأثر الصحي هي أهداف تصميمية أو تقديرات محاكاة نظرية وليست نتائج مقيسة.
+
+- **المنطقة 1 (توليد الطاقة - أهداف تصميمية):** صمام تحويل نابضي لحماية المحرك، وفوهة فنتوري مع توربينتين صغيرتين على التتابع (هدف تصميمي حتى `50.6 W`)، وطوق مولّد كهرحراري TEG بتأثير سيبك (`72.0 W`)، بإجمالي نظري مستهدف قدره **`122.6 W`** في هيكل من الفولاذ المقاوم للصدأ `316L`.
+- **المنطقة 2 (التبريد والترشيح - أهداف ومفاهيم تصميمية):** زعانف تبريد من الألمنيوم لخفض حرارة الغاز إلى أقل من `60 °C`، وخرطوشة قابلة للتبديل من 3 طبقات بنسبة كتلة **`70:20:10`** (جير صودي : زيوليت : كربون منشط) بترتيب جريان: زيوليت صناعي (20%) ← خلية نحل من الجير الصودي (70%) ← كربون منشط مطوي (10%)، مع هدف تصميمي لخفض الملوثات والجسيمات بنسبة تصل إلى **70%**.
+- **المنطقة 3 (وحدة التحكم الذكية ECU):** متحكم `ESP-32` وبطارية `LiFePO4` ومستشعرات `BME680` و`Bosch BMV080` قبل المرشّح وبعده على جدار خارجي بارد.
+- **التكلفة المستهدفة والدورة المغلقة (تقديرات ومفاهيم):** تكلفة تقديرية للنموذج الأولي بين **175 و255 دولارًا أمريكيًا**، وتكلفة مستهدفة للإنتاج الكبير بين **70 و90 دولارًا أمريكيًا للوحدة**، مع مفهوم دورة مغلقة لبيع الجبس الصناعي الناتج (`CaSO4`) لتمويل المواد الماصة الجديدة.

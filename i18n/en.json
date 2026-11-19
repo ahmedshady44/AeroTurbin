@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "AeroTurbine | Clean air, powered by the exhaust (design demo)",
-    "description": "AeroTurbine is an off-grid exhaust interceptor concept. It makes its own power from exhaust and filters pollutants. Engineering design demo, not a finished product."
+    "title": "AeroTurbine: Off-Grid Exhaust Filter Concept (Demo)",
+    "description": "AeroTurbine is an off-grid exhaust filter and power-harvesting concept under development. Explore the 3-zone engineering design demo and live simulator."
   },
   "skip": "Skip to content",
   "lang": {
@@ -368,10 +368,10 @@
       "Stage 3: Final System Architecture"
     ],
     "alts": [
-      "Stage 1: Initial Hand-Drawn Layout Sketch",
-      "Stage 1: Hand-Drawn Multi-Turbine Concept",
-      "Stage 2: Early Digital Prototype",
-      "Stage 3: Final System Architecture"
+      "Stage 1: Initial Hand-Drawn Layout Sketch — pencil drawing of exhaust pipe flow paths and cartridge slot on paper",
+      "Stage 1: Hand-Drawn Multi-Turbine Concept — pencil sketch of sequential micro-turbines mounted along a shaft",
+      "Stage 2: Early Digital Prototype — 2D diagram showing water cooling, turbine array, DC motors, and sorbent stages",
+      "Stage 3: Final System Architecture — block flow diagram from bypass valve and catalysis to cooling, 70:20:10 cartridge, and ECU"
     ]
   },
   "footer": {

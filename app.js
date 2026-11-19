@@ -76,15 +76,21 @@
 
   async function loadDict(code) {
     if (dicts[code]) return dicts[code];
-    try {
-      const r = await fetch('i18n/' + code + '.json');
-      if (!r.ok) throw new Error('http ' + r.status);
-      dicts[code] = await r.json();
-    } catch (e) {
-      // file:// or offline: fall back to the pre-built bundle (see README)
-      if (window.AERO_I18N && window.AERO_I18N[code]) dicts[code] = window.AERO_I18N[code];
-      else throw e;
+    const inline = $('#page-i18n');
+    if (inline && html.lang === code) {
+      try {
+        dicts[code] = JSON.parse(inline.textContent);
+        return dicts[code];
+      } catch (e) { /* fall through */ }
     }
+    if (window.AERO_I18N && window.AERO_I18N[code]) {
+      dicts[code] = window.AERO_I18N[code];
+      return dicts[code];
+    }
+    const base = document.body.dataset.prerendered === '1' ? '../i18n/' : 'i18n/';
+    const r = await fetch(base + code + '.json');
+    if (!r.ok) throw new Error('http ' + r.status);
+    dicts[code] = await r.json();
     return dicts[code];
   }
   const getPath = (obj, path) => path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), obj);
@@ -162,39 +168,30 @@
 
   async function setLang(code, save) {
     if (!LANGUAGES.some((l) => l.code === code)) code = DEFAULT_LANG;
-    if (code !== DEFAULT_LANG) { try { await loadDict(DEFAULT_LANG); } catch (e) { /* optional fallback */ } }
     await loadDict(code);
     cur = code;
     const L = LANGUAGES.find((l) => l.code === code);
     html.lang = code;
     html.dir = L.dir;
     if (save) store.set('aero-lang', code);
-    if (code === 'ar') loadArabicFont();
 
-    translate(document);
-    document.title = t('meta.title');
-    const md = $('meta[name="description"]');
-    if (md) md.setAttribute('content', t('meta.description'));
+    const prerendered = document.body.dataset.prerendered === '1';
+    if (!prerendered) {
+      translate(document);
+      document.title = t('meta.title');
+      const md = $('meta[name="description"]');
+      if (md) md.setAttribute('content', t('meta.description'));
+      positionBlueprint();
+      updateHotspotLabels();
+      buildFormulas();
+    }
     $('#lang-select').value = code;
 
-    positionBlueprint();
-    updateHotspotLabels();
-    buildFormulas();
     flowRender();
     simRender();
     loopRender();
     themeLabel();
     renderPanel();
-  }
-
-  let fontLoaded = false;
-  function loadArabicFont() {
-    if (fontLoaded) return;
-    fontLoaded = true;
-    const l = document.createElement('link');
-    l.rel = 'stylesheet';
-    l.href = 'https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap';
-    document.head.appendChild(l); // optional: if offline, the system Arabic font is used
   }
 
   /* =============================================================================================
@@ -382,44 +379,39 @@
   function initSchematic() {
     const box = $('#hotspots');
     const leg = $('#legend');
+    const hasDom = box.children.length > 0;
     HOTSPOTS.forEach((h, i) => {
-      const b = el('button', 'hs' + (h.concept ? ' concept' : ''), String(i + 1));
-      b.type = 'button';
-      b.style.left = h.x + '%';   // physical left on purpose: the picture is never mirrored
-      b.style.top = h.y + '%';
-      b.dataset.hs = h.id;
+      let b = $('.hs[data-hs="' + h.id + '"]', box);
+      if (!b) {
+        b = el('button', 'hs' + (h.concept ? ' concept' : ''), '');
+        b.type = 'button';
+        b.dataset.num = String(i + 1);
+        b.style.left = h.x + '%';   // physical left on purpose: the picture is never mirrored
+        b.style.top = h.y + '%';
+        b.dataset.hs = h.id;
+        box.appendChild(b);
+      }
       b.addEventListener('click', () => openPanel({ type: 'hotspot', id: h.id }, b));
-      box.appendChild(b);
 
-      const li = el('li');
-      const lb = el('button', h.concept ? 'concept' : '');
-      lb.type = 'button';
-      lb.innerHTML = '<span class="num">' + (i + 1) + '</span><span><strong data-i18n="hotspots.' + h.id + '.name"></strong><span class="d" data-i18n="hotspots.' + h.id + '.desc"></span>' + (h.concept ? ' <span class="tag tag-concept" data-i18n="tag.concept"></span>' : '') + '</span>';
-      lb.addEventListener('click', () => openPanel({ type: 'hotspot', id: h.id }, lb));
-      li.appendChild(lb);
-      leg.appendChild(li);
+      let lb = $('button[data-hs="' + h.id + '"]', leg);
+      if (!lb && !hasDom) {
+        const li = el('li');
+        lb = el('button', h.concept ? 'concept' : '');
+        lb.type = 'button';
+        lb.dataset.hs = h.id;
+        lb.innerHTML = '<span class="num">' + (i + 1) + '</span><span><strong data-i18n="hotspots.' + h.id + '.name"></strong><span class="d" data-i18n="hotspots.' + h.id + '.desc"></span>' + (h.concept ? ' <span class="tag tag-concept" data-i18n="tag.concept"></span>' : '') + '</span>';
+        li.appendChild(lb);
+        leg.appendChild(li);
+      }
+      if (lb) lb.addEventListener('click', () => openPanel({ type: 'hotspot', id: h.id }, lb));
     });
 
-    // Load WebP when the browser can use it and the file exists; otherwise the JPG.
     const pic = $('#schem-pic');
     const img = $('#schem-img');
-    const loadImg = () => {
-      const probe = new Image();
-      probe.onload = () => {
-        const s = document.createElement('source');
-        s.type = 'image/webp';
-        s.srcset = pic.dataset.webp;
-        pic.insertBefore(s, img);
-        img.src = img.dataset.src;
-      };
-      probe.onerror = () => { img.src = img.dataset.src; };
-      probe.src = pic.dataset.webp;
-    };
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { io.disconnect(); loadImg(); } }, { rootMargin: '600px' });
-      io.observe(pic);
-    } else loadImg();
-
+    const src = $('source', pic);
+    if (src) {
+      img.addEventListener('error', () => { if (src.parentNode) src.remove(); }, { once: true });
+    }
     $('#schem-zoom').addEventListener('click', () => openLightbox(img.currentSrc || img.src, t('schematic.alt'), t('schematic.caption')));
   }
   function updateHotspotLabels() {
@@ -540,9 +532,14 @@
     (t('sim.formulaList') || []).forEach((s) => ol.appendChild(el('li', '', rich(s))));
   }
   function initSim() {
+    let simRaf = 0;
+    const onInput = () => {
+      if (simRaf) return;
+      simRaf = requestAnimationFrame(() => { simRaf = 0; simRender(); });
+    };
     ['flow', 'hours', 'texh', 'tcart', 'days'].forEach((k) => {
       inputs[k] = $('#s-' + k);
-      inputs[k].addEventListener('input', simRender);
+      inputs[k].addEventListener('input', onInput);
     });
   }
 
@@ -562,14 +559,35 @@
   /* =============================================================================================
      12. Header: language select + current section
      ============================================================================================= */
+  function navigateToLang(code) {
+    store.set('aero-lang', code);
+    if (document.body.dataset.prerendered === '1') {
+      const hash = window.location.hash || '';
+      const tail = window.location.protocol === 'file:' ? 'index.html' : '';
+      window.location.href = '../' + code + '/' + tail + hash;
+    } else {
+      setLang(code, true);
+    }
+  }
   function initHeader() {
     const sel = $('#lang-select');
-    LANGUAGES.forEach((l) => {
-      const o = document.createElement('option');
-      o.value = l.code; o.textContent = l.name; o.lang = l.code;
-      sel.appendChild(o);
+    if (!sel.options.length) {
+      LANGUAGES.forEach((l) => {
+        const o = document.createElement('option');
+        o.value = l.code; o.textContent = l.name; o.lang = l.code;
+        sel.appendChild(o);
+      });
+    }
+    sel.addEventListener('change', () => navigateToLang(sel.value));
+    $$('.f-langs a[data-lang]').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        store.set('aero-lang', a.dataset.lang);
+        if (window.location.hash) {
+          e.preventDefault();
+          window.location.href = a.getAttribute('href') + window.location.hash;
+        }
+      });
     });
-    sel.addEventListener('change', () => setLang(sel.value, true));
     if ('IntersectionObserver' in window) {
       const links = $$('.nav a');
       const io = new IntersectionObserver((es) => {
@@ -587,10 +605,11 @@
   async function init() {
     initHeader(); initTheme(); initBanner(); initBlueprint(); initSchematic();
     initLightbox(); initGallery(); initSim(); initLoop();
+    const initialLang = document.body.dataset.prerendered === '1' ? (html.lang || DEFAULT_LANG) : detectLang();
     try {
-      await setLang(detectLang(), false);
+      await setLang(initialLang, false);
     } catch (e) {
-      document.body.insertAdjacentHTML('afterbegin', '<p style="padding:16px;font:16px sans-serif">Could not load the translation files. Open the site through a web server, or run <code>node tools/build-i18n.mjs</code> (see README).</p>');
+      document.body.insertAdjacentHTML('afterbegin', '<p style="padding:16px;font:16px sans-serif">Could not load the translation files. Run <code>node scripts/build-pages.js</code> (see README).</p>');
       throw e;
     }
     html.classList.add('ready');

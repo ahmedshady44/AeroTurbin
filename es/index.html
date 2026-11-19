@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AeroTurbine: Concepto de filtro de escape autónomo (Demo)</title>
+  <meta name="description" content="AeroTurbine es un concepto en desarrollo de filtro de escape autónomo que capta energía. Explora la demo de diseño en 3 zonas y el simulador interactivo.">
+  <meta name="google-site-verification" content="KA3-D2_kJrgQopulkS2aWoSZgjs3Lr6LJp8BxyAy610">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://aeroturbin.vercel.app/es/">
+  <link rel="alternate" hreflang="en" href="https://aeroturbin.vercel.app/en/">
+  <link rel="alternate" hreflang="ar" href="https://aeroturbin.vercel.app/ar/">
+  <link rel="alternate" hreflang="fr" href="https://aeroturbin.vercel.app/fr/">
+  <link rel="alternate" hreflang="es" href="https://aeroturbin.vercel.app/es/">
+  <link rel="alternate" hreflang="x-default" href="https://aeroturbin.vercel.app/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AeroTurbine">
+  <meta property="og:title" content="AeroTurbine: Concepto de filtro de escape autónomo (Demo)">
+  <meta property="og:description" content="AeroTurbine es un concepto en desarrollo de filtro de escape autónomo que capta energía. Explora la demo de diseño en 3 zonas y el simulador interactivo.">
+  <meta property="og:url" content="https://aeroturbin.vercel.app/es/">
+  <meta property="og:image" content="https://aeroturbin.vercel.app/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ilustración 3D en corte del concepto AeroTurbine. El escape caliente entra por la izquierda a través de una válvula de derivación y un Venturi con dos microturbinas doradas, pasa por etapas catalíticas, aletas de enfriamiento y un cartucho de tres capas, y sale por la derecha. Arriba hay una caja ECU con batería.">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ar_AR">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AeroTurbine: Concepto de filtro de escape autónomo (Demo)">
+  <meta name="twitter:description" content="AeroTurbine es un concepto en desarrollo de filtro de escape autónomo que capta energía. Explora la demo de diseño en 3 zonas y el simulador interactivo.">
+  <meta name="twitter:image" content="https://aeroturbin.vercel.app/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="Ilustración 3D en corte del concepto AeroTurbine. El escape caliente entra por la izquierda a través de una válvula de derivación y un Venturi con dos microturbinas doradas, pasa por etapas catalíticas, aletas de enfriamiento y un cartucho de tres capas, y sale por la derecha. Arriba hay una caja ECU con batería.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A1628'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23D9822B'/%3E%3Cpath d='M16 4v8M16 20v8M4 16h8M20 16h8' stroke='%233DDBB0' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://aeroturbin.vercel.app/#website","url":"https://aeroturbin.vercel.app/","name":"AeroTurbine","inLanguage":["en","ar","fr","es"]},{"@type":"WebPage","@id":"https://aeroturbin.vercel.app/es/#webpage","url":"https://aeroturbin.vercel.app/es/","name":"AeroTurbine: Concepto de filtro de escape autónomo (Demo)","description":"AeroTurbine es un concepto en desarrollo de filtro de escape autónomo que capta energía. Explora la demo de diseño en 3 zonas y el simulador interactivo.","inLanguage":"es","isPartOf":{"@id":"https://aeroturbin.vercel.app/#website"},"about":{"@id":"https://aeroturbin.vercel.app/es/#project"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://aeroturbin.vercel.app/assets/og-image.jpg","width":1200,"height":630,"caption":"Ilustración del concepto de diseño. No es un prototipo construido ni probado."}},{"@type":"CreativeWork","@id":"https://aeroturbin.vercel.app/es/#project","name":"AeroTurbine","headline":"Aire más limpio, impulsado por el propio escape.","description":"AeroTurbine todavía se está diseñando. Esta página muestra una demo de la idea del filtro y un plano de ingeniería. Todos los números aquí son objetivos de diseño o valores de simulación, no resultados medidos.","creativeWorkStatus":"En desarrollo: esta es una demo del concepto de filtro, no una máquina terminada ni probada en campo.","inLanguage":"es","author":[{"@type":"Person","name":"Ahmed Shady"},{"@type":"Person","name":"Lara Mohamed"}]}]}</script>
+  <style>:root{color-scheme:dark;--bg:#0A1628;--surface:#12233B;--surface-2:#0E1D33;--border:#1F3556;--line:#4A6A93;--text:#EAF1F8;--muted:#9FB3C8;--copper:#D9822B;--copper-fill:#D9822B;--on-copper:#0A1628;--mint:#3DDBB0;--coral:#E5604D}:root[data-theme="light"]{color-scheme:light;--bg:#F6EFE3;--surface:#FFFFFF;--surface-2:#FBF7EF;--border:#E2D6C0;--line:#8A7A5C;--text:#14213A;--muted:#5B6B82;--copper:#9A5410;--copper-fill:#D9822B;--on-copper:#14213A;--mint:#0B6B50;--coral:#B5301F}*,*::before,*::after{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:1.0625rem;line-height:1.65;overflow-x:hidden}.wrap{inline-size:100%;max-inline-size:1120px;margin-inline:auto;padding-inline:16px}.top{position:sticky;inset-block-start:0;z-index:50}.banner{display:flex;align-items:center;gap:8px;justify-content:space-between;background:var(--copper-fill);color:var(--on-copper);min-block-size:52px;padding:6px 12px;padding-inline-start:16px;font-weight:700;font-size:.95rem}</style>
+  <script>
+  (function(){try{var s=localStorage.getItem('aero-theme');
+  var t=s||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');
+  document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+  </script>
+  <link rel="stylesheet" href="../styles.css">
+  <script id="page-i18n" type="application/json">{"meta":{"title":"AeroTurbine: Concepto de filtro de escape autónomo (Demo)","description":"AeroTurbine es un concepto en desarrollo de filtro de escape autónomo que capta energía. Explora la demo de diseño en 3 zonas y el simulador interactivo."},"skip":"Saltar al contenido","lang":{"label":"Idioma"},"theme":{"toLight":"Cambiar al tema claro","toDark":"Cambiar al tema oscuro"},"banner":{"text":"En desarrollo: esta es una demo del concepto de filtro, no una máquina terminada ni probada en campo.","dismiss":"Cerrar este aviso"},"nav":{"label":"Secciones de la página","health":"Salud","blueprint":"Plano","simulator":"Simulador","economy":"Costo y ciclo","gallery":"Bocetos"},"tag":{"target":"Objetivo de diseño","concept":"Concepto de diseño","model":"Estimación modelada","sim":"Simulación"},"hero":{"title":"AeroTurbine","summary":"Aire más limpio, impulsado por el propio escape.","badge":"Etapa: plano de ingeniería y simulación | Presentado a Harvard VISION 2026","note":"AeroTurbine todavía se está diseñando. Esta página muestra una demo de la idea del filtro y un plano de ingeniería. Todos los números aquí son objetivos de diseño o valores de simulación, no resultados medidos.","cta1":"Explorar el plano","cta2":"Probar el simulador","target":"Objetivo de diseño: hasta 70% menos contaminantes y partículas.","bgLabel":"Líneas en movimiento decorativas que sugieren el flujo de aire"},"health":{"title":"Por qué importa aquí","intro":"El aire contaminado enferma a la gente. Es un gran problema en zonas industriales.","globalLabel":"La contaminación del aire exterior se relaciona con cerca de esta cantidad de muertes prematuras al año en el mundo:","globalValue":"6,7 a 7,9 millones","placesTitle":"Helwan y Shubra El-Kheima, Egipto","placesText":"Las fábricas, el tráfico y los generadores diésel de respaldo liberan estos contaminantes:","sources":{"factories":"Fábricas","traffic":"Tráfico","generators":"Generadores diésel de respaldo"},"pollutants":"PM2.5, NO2, SO2, CO y COV","pollutantList":{"pm":"PM2.5","no2":"NO2","so2":"SO2","co":"CO","voc":"COV"},"effectsTitle":"Lo que los estudios de salud relacionan con PM2.5 y NO2","pmTitle":"PM2.5 (partículas finas)","pmText":"Cada aumento de 10 µg/m³ se relaciona con un 10–20% más de muertes por enfermedad cardíaca y derrame cerebral.","pmChart":"Barra de 10% a 20% más de muertes por enfermedad cardíaca y derrame cerebral","no2Title":"NO2 (dióxido de nitrógeno)","no2Text":"Cada aumento de 10 µg/m³ se relaciona con un riesgo relativo de 1,09 de asma infantil.","no2Chart":"Riesgo relativo de 1,09 frente a la base de 1,00","baseline":"base 1,00","note":"Son vínculos encontrados en estudios de salud. No son resultados de AeroTurbine.","failTitle":"Por qué fallan aquí los depuradores comunes","failColA":"Depuradores comunes","failColB":"El enfoque de AeroTurbine","failA1":"Consumen mucha electricidad.","failA2":"Sus sorbentes dejan de funcionar bien por encima de 60 °C. El calor hace que el gas capturado se escape.","failB1":"Genera su propia energía con el escape. Objetivo de diseño: hasta 122,6 W.","failB2":"Las aletas de enfriamiento bajan el gas de 60 °C antes de que llegue al cartucho filtrante. Esa es la intención del diseño."},"blueprint":{"title":"El plano de 3 zonas","intro":"Elige una zona para ver qué hay dentro. La flecha muestra hacia dónde fluye el gas.","diagramLabel":"Diagrama lateral del interceptor de escape con tres zonas","chipsLabel":"Elige una zona","flowTitle":"Cómo fluye el gas","play":"Reproducir","pause":"Pausa","next":"Paso siguiente","stepOf":"Paso {n} de {total}","steps":["Entra el escape caliente. La válvula de derivación con resorte protege el motor.","La boquilla Venturi acelera el gas. Dos microturbinas giran. El collar TEG suma energía.","Etapas catalíticas adicionales tratan NOx, CO e hidrocarburos (concepto de diseño).","Las aletas de enfriamiento bajan el gas de 60 °C.","Capa 1, zeolita: atrapa la humedad.","Capa 2, panal de cal sodada: captura CO2 y SO2.","Capa 3, carbón activado: retiene COV y otras toxinas en fase gaseosa.","Sale un gas más limpio. Los sensores comparan el aire antes y después."],"dg":{"zone1":"Zona 1","zone2":"Zona 2","zone3":"Zona 3","inlet":"Entrada de escape","outlet":"Salida de gas más limpio","valve":"Válvula de derivación","bypass":"Salida de derivación","venturi":"Venturi","turbines":"2 microturbinas","teg":"Collar TEG","cat":"Etapas catalíticas","concept":"(concepto)","fins":"Aletas","cartridge":"Cartucho reemplazable","l1":"Zeolita","l2":"Cal sodada","l3":"Carbón","handle":"Asa","ecu":"ECU","battery":"Batería","sensors":"Sensores antes y después","flowDir":"Dirección del flujo de gas"}},"panel":{"label":"Detalles","close":"Cerrar detalles","components":"Componentes","numbers":"Números","partOf":"Parte de","ratioTitle":"Cartucho: orden del flujo y proporción de masa","ratioOrder":"El gas pasa por las capas en este orden:","ratioText":"Proporción de masa, cal sodada : zeolita : carbón = 70:20:10","catTitle":"Etapas catalíticas adicionales (concepto de diseño)","catNote":"Solo aparecen en el esquema de referencia. No hay cifras de rendimiento.","intent":"Intención del diseño: todas las capas se llenan casi al mismo tiempo, así que basta un solo cambio de mantenimiento."},"zones":{"z1":{"title":"Zona 1: captación de energía","short":"Captación de energía","plain":"El escape hace girar pequeñas turbinas y calienta un collar. Ambos generan electricidad, así que el equipo no necesita energía del motor anfitrión.","components":["Válvula de derivación con resorte. Si la contrapresión sube de un límite seguro (dP > dP_crit), se abre sola para que el motor anfitrión nunca se cale.","Boquilla Venturi que acelera el gas.","Dos microturbinas en secuencia.","Collar generador termoeléctrico (TEG) que usa el efecto Seebeck.","Cuerpo: reactor de acero inoxidable 316L."],"stats":[{"l":"Dos microturbinas","v":"hasta 50,6 W"},{"l":"Collar TEG","v":"72,0 W"},{"l":"Total: 50,6 + 72,0","v":"122,6 W"}],"statsNote":"Todos los valores de potencia son objetivos de diseño, no resultados medidos. El total busca alimentar la electrónica sin energía del motor anfitrión."},"z2":{"title":"Zona 2: enfriamiento y filtración","short":"Enfriamiento y filtración","plain":"Primero las aletas enfrían el gas. Luego pasa por un cartucho reemplazable de tres capas.","components":["Aletas de enfriamiento externas de aluminio: bajan el gas de 60 °C por convección natural.","Cartucho reemplazable de 3 capas dentro de una cápsula de aluminio.","Asa de caucho negro con aislamiento térmico para cambiarlo sin herramientas."],"layers":[{"n":"Capa 1","name":"Zeolita sintética","pct":"20%","role":"Trampa de humedad."},{"n":"Capa 2","name":"Panal de cal sodada","pct":"70%","role":"Reacción del CO2: Ca(OH)2 + CO2 → CaCO3 + H2O. También depura el SO2."},{"n":"Capa 3","name":"Carbón activado plisado","pct":"10%","role":"COV y toxinas en fase gaseosa."}],"stats":[{"l":"Objetivo de enfriamiento","v":"por debajo de 60 °C"},{"l":"Proporción de masa (cal sodada : zeolita : carbón)","v":"70:20:10"},{"l":"Objetivo de diseño, contaminantes y partículas","v":"reducción de hasta 70%"}],"statsNote":"La cifra de 70% es un objetivo de diseño. Un modelo también estima entre 15 y 22% menos visitas a urgencias por asma en comunidades cercanas. Es una estimación modelada, no un resultado medido."},"z3":{"title":"Zona 3: ECU inteligente","short":"ECU inteligente","plain":"Un pequeño ordenador y una batería van en una pared exterior fría. Los sensores antes y después del filtro le permiten calcular qué tan bien trabaja el filtro.","components":["Controlador ESP-32.","Batería LiFePO4 (APR18650M1B).","Juegos de sensores antes y después (BME680 + sensor de partículas Bosch BMV080) para calcular la eficiencia del filtro en tiempo real.","Aislada en una pared exterior fría."],"stats":[],"statsNote":"La eficiencia en tiempo real es una función prevista. No se ha probado en campo."}},"hotspots":{"valve":{"name":"Válvula de derivación con resorte","desc":"Se abre sola si la contrapresión sube demasiado, para que el motor anfitrión nunca se cale."},"venturi":{"name":"Boquilla Venturi","desc":"Estrecha el conducto para acelerar el gas y hacer girar las turbinas."},"turbines":{"name":"Dos microturbinas","desc":"Giran una tras otra en el gas rápido. Objetivo de diseño: hasta 50,6 W."},"scr":{"name":"Catalizador SCR pasivo","desc":"Reduce los NOx con amoníaco: NOx + NH3 → N2 + H2O. Concepto de diseño, aún sin cifras."},"urea":{"name":"Canal de microdosificación de urea sólida","desc":"Aporta una cantidad mínima de fuente de amoníaco a la etapa SCR. Concepto de diseño."},"ptpd":{"name":"Catalizador de oxidación Pt/Pd","desc":"Convierte CO e hidrocarburos en CO2 y agua: CO + O2 → CO2 y HC + O2 → CO2 + H2O. Concepto de diseño."},"fins":{"name":"Aletas de enfriamiento","desc":"Aletas de aluminio que bajan el gas de 60 °C por convección natural."},"lime":{"name":"Cartucho de panal de cal","desc":"Capa de cal sodada. Captura CO2 y depura SO2. Es el 70% de la masa del cartucho."},"carbon":{"name":"Cartucho de carbón activado","desc":"Capa de carbón plisada. Retiene COV y toxinas en fase gaseosa. Es el 10% de la masa del cartucho."},"ecu":{"name":"ECU y batería","desc":"Controlador ESP-32 y batería LiFePO4, aislados en una pared exterior fría."}},"schematic":{"title":"Ilustración del concepto","caption":"Ilustración del concepto de diseño. No es un prototipo construido ni probado.","alt":"Ilustración 3D en corte del concepto AeroTurbine. El escape caliente entra por la izquierda a través de una válvula de derivación y un Venturi con dos microturbinas doradas, pasa por etapas catalíticas, aletas de enfriamiento y un cartucho de tres capas, y sale por la derecha. Arriba hay una caja ECU con batería.","hint":"Toca un punto numerado para conocer una pieza.","englishOnly":"Las palabras dentro de la imagen están solo en inglés. Usa la lista numerada de abajo en tu idioma.","legendTitle":"Leyenda numerada","tegNote":"El collar TEG no aparece en la ilustración.","zoom":"Ampliar la ilustración","dots":"Piezas de la ilustración"},"lightbox":{"close":"Cerrar imagen ampliada","label":"Imagen ampliada"},"sim":{"title":"Simulador de parámetros en vivo","intro":"Mueve los controles y mira qué cambia. Las fórmulas son simples y están más abajo.","label":"Valores teóricos de simulación a partir de objetivos de diseño, no datos medidos.","inputs":"Ajustes","results":"Resultados","flow":"Caudal de escape","hours":"Horas de operación por día","texh":"Temperatura del escape (lado caliente)","tcart":"Temperatura del gas en el cartucho","days":"Días desde el último cambio de cartucho","unitPct":"%","unitH":"h","unitC":"°C","unitD":"días","unitW":"W","unitWh":"Wh","turbine":"Potencia de turbinas","teg":"Potencia del TEG","total":"Potencia total","max":"Máx. 122,6 W","barLabel":"Barra apilada de la potencia de turbinas y TEG. La marca indica el máximo de 122,6 W.","energy":"Energía diaria","reduction":"Reducción de contaminantes","reductionNote":"Objetivo de diseño: hasta 70%","health":"Estado del filtro","swapTitle":"Cuándo cambiar el cartucho","swapOk":"El cartucho está bien por ahora.","swapSoon":"Planea un cambio pronto.","swapNow":"Cámbialo ahora.","swapDays":"Quedan unos {d} días de uso con estos ajustes.","swapNoUse":"No hay uso con estos ajustes, así que el cartucho no se desgasta.","swapHot":"El gas supera 60 °C en el cartucho. El sorbente funciona peor y puede dejar escapar gas. Por eso importa el enfriamiento.","swapCool":"El gas está por debajo de 60 °C en el cartucho. Bien.","formulas":"Mostrar las fórmulas","formulaList":["Potencia de turbinas = 50,6 W × caudal^1,5, donde el caudal va de 0 a 1.","Potencia del TEG = 72,0 W × factorTemp × caudal. factorTemp = (temperatura del escape − 100) ÷ 300, limitado entre 0 y 1.","Potencia total = turbinas + TEG. Lo máximo que alcanza es 50,6 + 72,0 = 122,6 W.","Energía diaria (Wh) = potencia total (W) × horas de operación.","Reducción de contaminantes = 70% × estadoFiltro.","estadoFiltro = (1 − 0,6 × carga²) × factorCalor. La carga son las horas de operación desde el cambio divididas entre 600 h, limitada entre 0 y 1. Sin efecto del calor, el estado baja de 1 a 0,4 en la saturación.","factorCalor = 1 cuando el gas en el cartucho está a 60 °C o menos. Por encima baja 0,6 por cada 40 °C, hasta un mínimo de 0,4."],"assumptions":"Supuestos de la demo, no datos de diseño: el rango de 100 a 400 °C del lado caliente, la vida de 600 h del cartucho y la penalización por calor. Solo sirven para animar la demo. Sustitúyelos por valores medidos cuando se pruebe el prototipo."},"economy":{"title":"Ingeniería frugal y un ciclo circular","intro":"La meta es una unidad barata que las comunidades puedan pagar y mantener funcionando.","cards":[{"t":"Depurador industrial","v":"Miles de dólares","n":"Como punto de comparación."},{"t":"Prototipo de AeroTurbine","v":"175 a 255 USD","n":"Costo estimado del prototipo."},{"t":"AeroTurbine en producción masiva","v":"70 a 90 USD por unidad","n":"Costo objetivo a gran escala."}],"costNote":"Los costos son estimaciones y objetivos, no cotizaciones.","loopTitle":"El ciclo circular","loopConcept":"Concepto","loopLabel":"Diagrama del ciclo circular. Cuatro pasos se repiten en un ciclo.","loopSteps":["Las comunidades cambian cartuchos mediante una suscripción.","Los cartuchos usados van a centros municipales de reciclaje.","Los subproductos (yeso industrial, CaSO4) se venden a fabricantes de cemento y paneles de yeso.","Los ingresos ayudan a comprar sorbente nuevo para cartuchos nuevos."],"pause":"Pausar la animación","play":"Reproducir la animación"},"gallery":{"title":"Galería de bocetos","intro":"Aquí irán los primeros bocetos y notas.","open":"Ampliar boceto","captions":["Etapa 1: Boceto inicial dibujado a mano","Etapa 1: Boceto a mano del concepto multiturbina","Etapa 2: Prototipo digital inicial","Etapa 3: Arquitectura final del sistema"],"alts":["Etapa 1: Boceto inicial dibujado a mano — dibujo a lápiz de los conductos de escape y ranura del cartucho","Etapa 1: Boceto a mano del concepto multiturbina — dibujo a lápiz de microturbinas secuenciales en un eje","Etapa 2: Prototipo digital inicial — diagrama 2D con enfriamiento, conjunto de turbinas, motores DC y sorbentes","Etapa 3: Arquitectura final del sistema — diagrama de bloques desde válvula de derivación hasta enfriamiento, cartucho 70:20:10 y ECU"]},"footer":{"authors":"Desarrollado colaborativamente por un equipo de 9 estudiantes (Team AeroTurbine) en diversas fases de investigación y competencias. | Coautores de la propuesta Harvard VISION 2026: Ahmed Shady y Lara Mohamed.","country":"Egipto","submitted":"Presentado a Harvard VISION 2026, concurso de presentación de proyectos comunitarios","disclaimer":"En desarrollo: esta es una demo del concepto de filtro, no una máquina terminada ni probada en campo.","contact":"Contacto:","top":"Volver arriba"}}</script>
+  <script defer src="../app.js"></script>
+</head>
+<body data-prerendered="1">
+<a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+<div class="top">
+  <div class="banner" id="banner" role="region" aria-labelledby="banner-text">
+    <p id="banner-text" data-i18n="banner.text">En desarrollo: esta es una demo del concepto de filtro, no una máquina terminada ni probada en campo.</p>
+    <button type="button" class="banner-x" id="banner-close" data-i18n-attr="aria-label:banner.dismiss" aria-label="Cerrar este aviso">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="#hero">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><circle cx="16" cy="16" r="4" fill="var(--copper-fill)"/><path d="M16 3v9M16 20v9M3 16h9M20 16h9" stroke="var(--mint)" stroke-width="3" stroke-linecap="round"/></svg>
+        <span data-i18n="hero.title">AeroTurbine</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Secciones de la página">
+        <ul>
+          <li><a href="#health" data-i18n="nav.health">Salud</a></li>
+          <li><a href="#blueprint" data-i18n="nav.blueprint">Plano</a></li>
+          <li><a href="#simulator" data-i18n="nav.simulator">Simulador</a></li>
+          <li><a href="#economy" data-i18n="nav.economy">Costo y ciclo</a></li>
+          <li><a href="#gallery" data-i18n="nav.gallery">Bocetos</a></li>
+        </ul>
+      </nav>
+      <div class="tools">
+        <select id="lang-select" class="select" data-i18n-attr="aria-label:lang.label" aria-label="Idioma">
+          <option value="en" lang="en">English</option>
+          <option value="ar" lang="ar">العربية</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="es" lang="es" selected>Español</option>
+        </select>
+        <button type="button" id="theme-toggle" class="icon-btn" aria-label="Cambiar al tema claro" title="Cambiar al tema claro">
+          <svg class="i-sun" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="main">
+
+<!-- 1. HERO -->
+<section id="hero" class="hero" aria-labelledby="hero-title">
+  <svg class="airflow" viewBox="0 0 1200 400" preserveAspectRatio="none" role="img" data-i18n-attr="aria-label:hero.bgLabel" aria-label="Líneas en movimiento decorativas que sugieren el flujo de aire">
+    <g fill="none" stroke-linecap="round">
+      <path class="af a1" d="M-50 80 C 250 20, 450 140, 700 80 S 1100 40, 1280 100"/>
+      <path class="af a2" d="M-50 150 C 200 100, 500 220, 760 150 S 1100 110, 1280 170"/>
+      <path class="af a3" d="M-50 220 C 300 170, 400 290, 700 220 S 1050 190, 1280 240"/>
+      <path class="af a4" d="M-50 290 C 250 240, 550 350, 800 290 S 1100 260, 1280 310"/>
+      <path class="af a5" d="M-50 350 C 300 310, 450 390, 750 350 S 1100 330, 1280 370"/>
+    </g>
+  </svg>
+  <div class="wrap hero-inner">
+    <p class="badge" data-i18n="hero.badge">Etapa: plano de ingeniería y simulación | Presentado a <bdi class="ltr" dir="ltr">Harvard VISION 2026</bdi></p>
+    <h1 id="hero-title" data-i18n="hero.title">AeroTurbine</h1>
+    <p class="lead" data-i18n="hero.summary">Aire más limpio, impulsado por el propio escape.</p>
+    <p class="hero-note" data-i18n="hero.note">AeroTurbine todavía se está diseñando. Esta página muestra una demo de la idea del filtro y un plano de ingeniería. Todos los números aquí son objetivos de diseño o valores de simulación, no resultados medidos.</p>
+    <p class="hero-target"><span class="tag tag-target" data-i18n="tag.target">Objetivo de diseño</span> <span data-i18n="hero.target">Objetivo de diseño: hasta <bdi class="ltr" dir="ltr">70%</bdi> menos contaminantes y partículas.</span></p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#blueprint"><span data-i18n="hero.cta1">Explorar el plano</span> <svg class="dir-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></a>
+      <a class="btn btn-ghost" href="#simulator" data-i18n="hero.cta2">Probar el simulador</a>
+    </div>
+  </div>
+</section>
+
+<!-- 2. HEALTH CONTEXT -->
+<section id="health" class="section" aria-labelledby="health-title">
+  <div class="wrap">
+    <h2 id="health-title" data-i18n="health.title">Por qué importa aquí</h2>
+    <p class="intro" data-i18n="health.intro">El aire contaminado enferma a la gente. Es un gran problema en zonas industriales.</p>
+
+    <div class="grid-2 gap-top">
+      <div class="card big-stat">
+        <p class="muted" data-i18n="health.globalLabel">La contaminación del aire exterior se relaciona con cerca de esta cantidad de muertes prematuras al año en el mundo:</p>
+        <p class="big-num" data-i18n="health.globalValue"><bdi class="ltr" dir="ltr">6,7</bdi> a <bdi class="ltr" dir="ltr">7,9</bdi> millones</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="health.placesTitle">Helwan y Shubra El-Kheima, Egipto</h3>
+        <p data-i18n="health.placesText">Las fábricas, el tráfico y los generadores diésel de respaldo liberan estos contaminantes:</p>
+        <ul class="sources">
+          <li>
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M2 21V11l6 4v-4l6 4V4h4v17z" fill="currentColor"/></svg>
+            <span data-i18n="health.sources.factories">Fábricas</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M3 15l2-6a2 2 0 0 1 2-1.5h10A2 2 0 0 1 19 9l2 6v3h-2.2a2.3 2.3 0 0 0-4.6 0H9.8a2.3 2.3 0 0 0-4.6 0H3z" fill="currentColor"/></svg>
+            <span data-i18n="health.sources.traffic">Tráfico</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M2 7h18v11H2zM20 10h2v5h-2z" fill="currentColor"/><path d="M11 9l-3 5h3l-1 3 4-5h-3l1-3z" fill="var(--surface)"/></svg>
+            <span data-i18n="health.sources.generators">Generadores diésel de respaldo</span>
+          </li>
+        </ul>
+        <ul class="chips" data-i18n-attr="aria-label:health.pollutants" aria-label="PM2.5, NO2, SO2, CO y COV">
+          <li data-i18n="health.pollutantList.pm"><bdi class="ltr" dir="ltr">PM<sub>2.5</sub></bdi></li>
+          <li data-i18n="health.pollutantList.no2"><bdi class="ltr" dir="ltr">NO<sub>2</sub></bdi></li>
+          <li data-i18n="health.pollutantList.so2"><bdi class="ltr" dir="ltr">SO<sub>2</sub></bdi></li>
+          <li data-i18n="health.pollutantList.co">CO</li>
+          <li data-i18n="health.pollutantList.voc">COV</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub" data-i18n="health.effectsTitle">Lo que los estudios de salud relacionan con <bdi class="ltr" dir="ltr">PM<sub>2.5</sub></bdi> y <bdi class="ltr" dir="ltr">NO<sub>2</sub></bdi></h3>
+    <div class="grid-2">
+      <div class="card">
+        <h3 class="h-sm" data-i18n="health.pmTitle"><bdi class="ltr" dir="ltr">PM<sub>2.5</sub></bdi> (partículas finas)</h3>
+        <div class="meter" role="img" data-i18n-attr="aria-label:health.pmChart" aria-label="Barra de 10% a 20% más de muertes por enfermedad cardíaca y derrame cerebral"><span class="meter-range" style="inset-inline-start:50%;inline-size:50%"></span></div>
+        <p data-i18n="health.pmText">Cada aumento de <bdi class="ltr" dir="ltr">10 µg/m³</bdi> se relaciona con un <bdi class="ltr" dir="ltr">10–20%</bdi> más de muertes por enfermedad cardíaca y derrame cerebral.</p>
+      </div>
+      <div class="card">
+        <h3 class="h-sm" data-i18n="health.no2Title"><bdi class="ltr" dir="ltr">NO<sub>2</sub></bdi> (dióxido de nitrógeno)</h3>
+        <div class="meter" role="img" data-i18n-attr="aria-label:health.no2Chart" aria-label="Riesgo relativo de 1,09 frente a la base de 1,00"><span class="meter-base"></span><span class="meter-range alt" style="inset-inline-start:0;inline-size:9%"></span></div>
+        <p class="muted small" data-i18n="health.baseline">base <bdi class="ltr" dir="ltr">1,00</bdi></p>
+        <p data-i18n="health.no2Text">Cada aumento de <bdi class="ltr" dir="ltr">10 µg/m³</bdi> se relaciona con un riesgo relativo de <bdi class="ltr" dir="ltr">1,09</bdi> de asma infantil.</p>
+      </div>
+    </div>
+    <p class="muted small" data-i18n="health.note">Son vínculos encontrados en estudios de salud. No son resultados de AeroTurbine.</p>
+
+    <h3 class="sub" data-i18n="health.failTitle">Por qué fallan aquí los depuradores comunes</h3>
+    <div class="grid-2 compare">
+      <div class="card bad">
+        <h3 class="h-sm" data-i18n="health.failColA">Depuradores comunes</h3>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg><span data-i18n="health.failA1">Consumen mucha electricidad.</span></li>
+          <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg><span data-i18n="health.failA2">Sus sorbentes dejan de funcionar bien por encima de <bdi class="ltr" dir="ltr">60 °C</bdi>. El calor hace que el gas capturado se escape.</span></li>
+        </ul>
+      </div>
+      <div class="card good">
+        <h3 class="h-sm" data-i18n="health.failColB">El enfoque de AeroTurbine</h3>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span data-i18n="health.failB1">Genera su propia energía con el escape. Objetivo de diseño: hasta <bdi class="ltr" dir="ltr">122,6 W</bdi>.</span></li>
+          <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span data-i18n="health.failB2">Las aletas de enfriamiento bajan el gas de <bdi class="ltr" dir="ltr">60 °C</bdi> antes de que llegue al cartucho filtrante. Esa es la intención del diseño.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. BLUEPRINT -->
+<section id="blueprint" class="section alt" aria-labelledby="bp-title">
+  <div class="wrap">
+    <h2 id="bp-title" data-i18n="blueprint.title">El plano de <bdi class="ltr" dir="ltr">3</bdi> zonas</h2>
+    <p class="intro" data-i18n="blueprint.intro">Elige una zona para ver qué hay dentro. La flecha muestra hacia dónde fluye el gas.</p>
+
+    <!-- 3a. Interactive SVG -->
+    <div class="diagram-scroll card">
+      <svg id="bp" viewBox="0 0 1000 350" data-i18n-attr="aria-label:blueprint.diagramLabel" aria-label="Diagrama lateral del interceptor de escape con tres zonas" role="group">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+        </defs>
+
+        <g id="bp-shapes" transform="">
+          <path class="wire" d="M790 82 H30 V166"/>
+          <path class="wire" d="M850 120 V166"/>
+          <rect class="pipe" x="10" y="172" width="980" height="36" rx="4"/>
+          <rect class="gas-line" x="14" y="188" width="972" height="4"/>
+
+          <g id="g-teg"><rect class="teg" x="150" y="134" width="130" height="112" rx="10"/>
+            <path class="teg-lines" d="M170 134v112M190 134v112M210 134v112M230 134v112M250 134v112M270 134v112"/></g>
+          <g id="g-venturi"><rect class="body" x="142" y="150" width="148" height="80" rx="6"/>
+            <path class="gas" d="M142 168 L196 178 H236 L290 168 V212 L236 202 H196 L142 212 Z"/></g>
+          <g id="g-turbines">
+            <g transform="translate(205 190)"><g class="rotor"><circle r="10" class="rotor-c"/><path d="M-10 0H10M0 -10V10M-7 -7L7 7M-7 7L7 -7"/></g></g>
+            <g transform="translate(231 190)"><g class="rotor rev"><circle r="10" class="rotor-c"/><path d="M-10 0H10M0 -10V10M-7 -7L7 7M-7 7L7 -7"/></g></g>
+          </g>
+          <g id="g-valve"><rect class="body" x="60" y="148" width="82" height="84" rx="8"/>
+            <polyline class="spring" points="74,190 82,176 92,204 102,176 112,204 122,176 130,190"/>
+            <path class="bypass" d="M100 148 V112 H134" marker-end="url(#arr)"/></g>
+
+          <g id="g-cat"><rect class="concept" x="300" y="156" width="104" height="68" rx="6"/>
+            <rect class="scr" x="306" y="164" width="46" height="52"/>
+            <rect class="ptpd" x="358" y="164" width="40" height="52"/>
+            <rect class="urea" x="326" y="146" width="6" height="18"/></g>
+
+          <g id="g-fins"><rect class="body" x="410" y="160" width="80" height="60"/>
+            <path class="fins" d="M414 130v30M424 130v30M434 130v30M444 130v30M454 130v30M464 130v30M474 130v30M484 130v30M414 220v30M424 220v30M434 220v30M444 220v30M454 220v30M464 220v30M474 220v30M484 220v30"/></g>
+
+          <g id="g-cartridge">
+            <rect class="capsule" x="498" y="150" width="268" height="80" rx="16"/>
+            <rect id="g-l1" class="l1" x="506" y="158" width="48" height="64" rx="4"/>
+            <rect id="g-l2" class="l2" x="554" y="158" width="168" height="64" rx="4"/>
+            <rect id="g-l3" class="l3" x="722" y="158" width="24" height="64" rx="4"/>
+            <rect class="rubber" x="600" y="128" width="70" height="22" rx="8"/>
+          </g>
+          <g id="g-sensors"><circle class="sensor" cx="36" cy="168" r="7"/><circle class="sensor" cx="850" cy="168" r="7"/></g>
+          <g id="g-ecu"><rect class="ecu" x="790" y="40" width="170" height="80" rx="8"/><circle class="led" cx="805" cy="52" r="3"/><circle class="led" cx="817" cy="52" r="3"/></g>
+
+          <path class="flow-arrow" d="M20 28 H110" marker-end="url(#arr)"/>
+          <circle id="flow-dot" class="dot" r="9" cx="0" cy="190" style="transform:translate(60px,0)"/>
+
+          <g class="zone" id="zone-1" role="button" tabindex="0" aria-pressed="false" data-zone="1" aria-label="Zona 1: captación de energía"><rect x="16" y="96" width="280" height="250" rx="14"/></g>
+          <g class="zone" id="zone-2" role="button" tabindex="0" aria-pressed="false" data-zone="2" aria-label="Zona 2: enfriamiento y filtración"><rect x="300" y="96" width="470" height="250" rx="14"/></g>
+          <g class="zone" id="zone-3" role="button" tabindex="0" aria-pressed="false" data-zone="3" aria-label="Zona 3: ECU inteligente"><rect x="780" y="30" width="190" height="150" rx="14"/></g>
+        </g>
+
+        <g id="bp-labels" class="dg-text">
+          <text data-x="45" data-y="262" x="45" y="262" data-i18n="blueprint.dg.inlet">Entrada de escape</text>
+          <text data-x="150" data-y="262" x="150" y="262" data-i18n="blueprint.dg.venturi">Venturi</text>
+          <text data-x="350" data-y="262" x="350" y="262" data-i18n="blueprint.dg.cat">Etapas catalíticas</text>
+          <text data-x="350" data-y="316" x="350" y="316" data-i18n="blueprint.dg.concept" class="concept-t">(concepto)</text>
+          <text data-x="534" data-y="262" x="534" y="262" data-i18n="blueprint.dg.l1">Zeolita</text>
+          <text data-x="642" data-y="262" x="642" y="262" data-i18n="blueprint.dg.l2">Cal sodada</text>
+          <text data-x="738" data-y="262" x="738" y="262" data-i18n="blueprint.dg.l3">Carbón</text>
+          <text data-x="900" data-y="262" x="900" y="262" data-i18n="blueprint.dg.outlet">Salida de gas más limpio</text>
+          <text data-x="100" data-y="290" x="100" y="290" data-i18n="blueprint.dg.valve">Válvula de derivación</text>
+          <text data-x="235" data-y="290" x="235" y="290" data-i18n="blueprint.dg.turbines">2 microturbinas</text>
+          <text data-x="450" data-y="290" x="450" y="290" data-i18n="blueprint.dg.fins">Aletas</text>
+          <text data-x="632" data-y="290" x="632" y="290" data-i18n="blueprint.dg.cartridge">Cartucho reemplazable</text>
+          <text data-x="165" data-y="104" x="165" y="104" data-i18n="blueprint.dg.bypass" class="sm">Salida de derivación</text>
+          <text data-x="240" data-y="124" x="240" y="124" data-i18n="blueprint.dg.teg" class="sm">Collar TEG</text>
+          <text data-x="875" data-y="76" x="875" y="76" data-i18n="blueprint.dg.ecu" class="strong">ECU</text>
+          <text data-x="875" data-y="104" x="875" y="104" data-i18n="blueprint.dg.battery">Batería</text>
+          <text data-x="875" data-y="148" x="875" y="148" data-i18n="blueprint.dg.sensors" class="sm">Sensores antes y después</text>
+          <text data-x="530" data-y="195" x="530" y="195" class="inbox">20%</text>
+          <text data-x="160" data-y="338" x="160" y="338" data-i18n="blueprint.dg.zone1" class="zt">Zona 1</text>
+          <text data-x="535" data-y="338" x="535" y="338" data-i18n="blueprint.dg.zone2" class="zt">Zona 2</text>
+          <text data-x="875" data-y="22" x="875" y="22" data-i18n="blueprint.dg.zone3" class="zt">Zona 3</text>
+          <text data-x="122" data-y="33" x="122" y="33" data-anchor="start" style="text-anchor:start" data-i18n="blueprint.dg.flowDir" class="sm">Dirección del flujo de gas</text>
+          <text data-x="638" data-y="195" x="638" y="195" class="inbox">70%</text>
+          <text data-x="734" data-y="195" x="734" y="195" class="inbox">10%</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="chips-row" role="group" data-i18n-attr="aria-label:blueprint.chipsLabel" aria-label="Elige una zona">
+      <button type="button" class="chip-btn" data-zone="1" aria-pressed="false"><span class="zn">1</span> <span data-i18n="zones.z1.short">Captación de energía</span></button>
+      <button type="button" class="chip-btn" data-zone="2" aria-pressed="false"><span class="zn">2</span> <span data-i18n="zones.z2.short">Enfriamiento y filtración</span></button>
+      <button type="button" class="chip-btn" data-zone="3" aria-pressed="false"><span class="zn">3</span> <span data-i18n="zones.z3.short">ECU inteligente</span></button>
+    </div>
+
+    <div class="card flow-card">
+      <h3 data-i18n="blueprint.flowTitle">Cómo fluye el gas</h3>
+      <p class="flow-step-no muted small" id="flow-no">Paso 1 de 8</p>
+      <p class="flow-text" id="flow-text" aria-live="polite">Entra el escape caliente. La válvula de derivación con resorte protege el motor.</p>
+      <div class="flow-btns">
+        <button type="button" class="btn btn-ghost" id="flow-play" aria-pressed="false">Reproducir</button>
+        <button type="button" class="btn btn-primary" id="flow-next"><span data-i18n="blueprint.next">Paso siguiente</span> <svg class="dir-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button>
+      </div>
+    </div>
+
+    <!-- 3b. Reference schematic -->
+    <h3 class="sub" data-i18n="schematic.title">Ilustración del concepto</h3>
+    <figure class="schematic">
+      <div class="img-wrap" dir="ltr">
+        <picture id="schem-pic">
+          <source type="image/webp" srcset="../assets/schematic-cutaway-800.webp 800w, ../assets/schematic-cutaway.webp 1024w" sizes="(max-width: 840px) 94vw, 1024px">
+          <img id="schem-img" src="../assets/schematic.jpg" width="1024" height="571" loading="lazy" decoding="async" alt="Ilustración 3D en corte del concepto AeroTurbine. El escape caliente entra por la izquierda a través de una válvula de derivación y un Venturi con dos microturbinas doradas, pasa por etapas catalíticas, aletas de enfriamiento y un cartucho de tres capas, y sale por la derecha. Arriba hay una caja ECU con batería." data-i18n-attr="alt:schematic.alt">
+        </picture>
+        <div id="hotspots" role="group" data-i18n-attr="aria-label:schematic.dots" aria-label="Piezas de la ilustración">
+          <button type="button" class="hs" data-num="1" data-hs="valve" style="left:12%;top:27%" aria-label="1. Válvula de derivación con resorte" title="Válvula de derivación con resorte"></button>
+          <button type="button" class="hs" data-num="2" data-hs="venturi" style="left:22%;top:36%" aria-label="2. Boquilla Venturi" title="Boquilla Venturi"></button>
+          <button type="button" class="hs" data-num="3" data-hs="turbines" style="left:29.5%;top:33%" aria-label="3. Dos microturbinas" title="Dos microturbinas"></button>
+          <button type="button" class="hs concept" data-num="4" data-hs="scr" style="left:38%;top:42%" aria-label="4. Catalizador SCR pasivo (Concepto de diseño)" title="Catalizador SCR pasivo"></button>
+          <button type="button" class="hs concept" data-num="5" data-hs="urea" style="left:48.5%;top:58%" aria-label="5. Canal de microdosificación de urea sólida (Concepto de diseño)" title="Canal de microdosificación de urea sólida"></button>
+          <button type="button" class="hs concept" data-num="6" data-hs="ptpd" style="left:46.5%;top:44%" aria-label="6. Catalizador de oxidación Pt/Pd (Concepto de diseño)" title="Catalizador de oxidación Pt/Pd"></button>
+          <button type="button" class="hs" data-num="7" data-hs="fins" style="left:58.5%;top:47%" aria-label="7. Aletas de enfriamiento" title="Aletas de enfriamiento"></button>
+          <button type="button" class="hs" data-num="8" data-hs="lime" style="left:70%;top:49%" aria-label="8. Cartucho de panal de cal" title="Cartucho de panal de cal"></button>
+          <button type="button" class="hs" data-num="9" data-hs="carbon" style="left:83%;top:52%" aria-label="9. Cartucho de carbón activado" title="Cartucho de carbón activado"></button>
+          <button type="button" class="hs" data-num="10" data-hs="ecu" style="left:78%;top:18%" aria-label="10. ECU y batería" title="ECU y batería"></button>
+        </div>
+        <button type="button" class="zoom-btn" id="schem-zoom" data-i18n-attr="aria-label:schematic.zoom;title:schematic.zoom" aria-label="Ampliar la ilustración" title="Ampliar la ilustración">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="2.4" fill="none"/><path d="M15 15l6 6M10 7v6M7 10h6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <figcaption>
+        <span class="tag tag-concept" data-i18n="tag.concept">Concepto de diseño</span>
+        <span data-i18n="schematic.caption">Ilustración del concepto de diseño. No es un prototipo construido ni probado.</span>
+      </figcaption>
+    </figure>
+    <p class="muted small" data-i18n="schematic.hint">Toca un punto numerado para conocer una pieza.</p>
+    <p class="muted small" data-i18n="schematic.englishOnly">Las palabras dentro de la imagen están solo en inglés. Usa la lista numerada de abajo en tu idioma.</p>
+    <h3 class="h-sm" data-i18n="schematic.legendTitle">Leyenda numerada</h3>
+    <ol id="legend" class="legend">
+      <li><button type="button" class="" data-hs="valve"><span class="num">1</span><span><strong data-i18n="hotspots.valve.name">Válvula de derivación con resorte</strong><span class="d" data-i18n="hotspots.valve.desc">Se abre sola si la contrapresión sube demasiado, para que el motor anfitrión nunca se cale.</span></span></button></li>
+      <li><button type="button" class="" data-hs="venturi"><span class="num">2</span><span><strong data-i18n="hotspots.venturi.name">Boquilla Venturi</strong><span class="d" data-i18n="hotspots.venturi.desc">Estrecha el conducto para acelerar el gas y hacer girar las turbinas.</span></span></button></li>
+      <li><button type="button" class="" data-hs="turbines"><span class="num">3</span><span><strong data-i18n="hotspots.turbines.name">Dos microturbinas</strong><span class="d" data-i18n="hotspots.turbines.desc">Giran una tras otra en el gas rápido. Objetivo de diseño: hasta <bdi class="ltr" dir="ltr">50,6 W</bdi>.</span></span></button></li>
+      <li><button type="button" class="concept" data-hs="scr"><span class="num">4</span><span><strong data-i18n="hotspots.scr.name">Catalizador SCR pasivo</strong><span class="d" data-i18n="hotspots.scr.desc">Reduce los <bdi class="ltr" dir="ltr">NOx</bdi> con amoníaco: <bdi class="ltr" dir="ltr">NOx + NH<sub>3</sub> → N<sub>2</sub> + H<sub>2</sub>O</bdi>. Concepto de diseño, aún sin cifras.</span> <span class="tag tag-concept" data-i18n="tag.concept">Concepto de diseño</span></span></button></li>
+      <li><button type="button" class="concept" data-hs="urea"><span class="num">5</span><span><strong data-i18n="hotspots.urea.name">Canal de microdosificación de urea sólida</strong><span class="d" data-i18n="hotspots.urea.desc">Aporta una cantidad mínima de fuente de amoníaco a la etapa SCR. Concepto de diseño.</span> <span class="tag tag-concept" data-i18n="tag.concept">Concepto de diseño</span></span></button></li>
+      <li><button type="button" class="concept" data-hs="ptpd"><span class="num">6</span><span><strong data-i18n="hotspots.ptpd.name">Catalizador de oxidación Pt/Pd</strong><span class="d" data-i18n="hotspots.ptpd.desc">Convierte CO e hidrocarburos en <bdi class="ltr" dir="ltr">CO<sub>2</sub></bdi> y agua: <bdi class="ltr" dir="ltr">CO + O<sub>2</sub> → CO<sub>2</sub></bdi> y <bdi class="ltr" dir="ltr">HC + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O</bdi>. Concepto de diseño.</span> <span class="tag tag-concept" data-i18n="tag.concept">Concepto de diseño</span></span></button></li>
+      <li><button type="button" class="" data-hs="fins"><span class="num">7</span><span><strong data-i18n="hotspots.fins.name">Aletas de enfriamiento</strong><span class="d" data-i18n="hotspots.fins.desc">Aletas de aluminio que bajan el gas de <bdi class="ltr" dir="ltr">60 °C</bdi> por convección natural.</span></span></button></li>
+      <li><button type="button" class="" data-hs="lime"><span class="num">8</span><span><strong data-i18n="hotspots.lime.name">Cartucho de panal de cal</strong><span class="d" data-i18n="hotspots.lime.desc">Capa de cal sodada. Captura <bdi class="ltr" dir="ltr">CO<sub>2</sub></bdi> y depura <bdi class="ltr" dir="ltr">SO<sub>2</sub></bdi>. Es el <bdi class="ltr" dir="ltr">70%</bdi> de la masa del cartucho.</span></span></button></li>
+      <li><button type="button" class="" data-hs="carbon"><span class="num">9</span><span><strong data-i18n="hotspots.carbon.name">Cartucho de carbón activado</strong><span class="d" data-i18n="hotspots.carbon.desc">Capa de carbón plisada. Retiene COV y toxinas en fase gaseosa. Es el <bdi class="ltr" dir="ltr">10%</bdi> de la masa del cartucho.</span></span></button></li>
+      <li><button type="button" class="" data-hs="ecu"><span class="num">10</span><span><strong data-i18n="hotspots.ecu.name">ECU y batería</strong><span class="d" data-i18n="hotspots.ecu.desc">Controlador ESP-<bdi class="ltr" dir="ltr">32</bdi> y batería <bdi class="ltr" dir="ltr">LiFePO<sub>4</sub></bdi>, aislados en una pared exterior fría.</span></span></button></li>
+    </ol>
+    <p class="note-box" data-i18n="schematic.tegNote">El collar TEG no aparece en la ilustración.</p>
+  </div>
+</section>
+
+<!-- 4. SIMULATOR -->
+<section id="simulator" class="section" aria-labelledby="sim-title">
+  <div class="wrap">
+    <h2 id="sim-title" data-i18n="sim.title">Simulador de parámetros en vivo</h2>
+    <p class="intro" data-i18n="sim.intro">Mueve los controles y mira qué cambia. Las fórmulas son simples y están más abajo.</p>
+    <p class="sim-label" role="note"><span class="tag tag-sim" data-i18n="tag.sim">Simulación</span> <strong data-i18n="sim.label">Valores teóricos de simulación a partir de objetivos de diseño, no datos medidos.</strong></p>
+
+    <div class="sim-grid">
+      <div class="card">
+        <h3 data-i18n="sim.inputs">Ajustes</h3>
+        <div class="slider"><div class="s-top"><label for="s-flow" data-i18n="sim.flow">Caudal de escape</label><output id="o-flow" for="s-flow"><bdi dir="ltr">70 %</bdi></output></div><input type="range" id="s-flow" min="0" max="100" step="1" value="70"></div>
+        <div class="slider"><div class="s-top"><label for="s-hours" data-i18n="sim.hours">Horas de operación por día</label><output id="o-hours" for="s-hours"><bdi dir="ltr">8 h</bdi></output></div><input type="range" id="s-hours" min="0" max="12" step="1" value="8"></div>
+        <div class="slider"><div class="s-top"><label for="s-texh" data-i18n="sim.texh">Temperatura del escape (lado caliente)</label><output id="o-texh" for="s-texh"><bdi dir="ltr">300 °C</bdi></output></div><input type="range" id="s-texh" min="100" max="400" step="10" value="300"></div>
+        <div class="slider"><div class="s-top"><label for="s-tcart" data-i18n="sim.tcart">Temperatura del gas en el cartucho</label><output id="o-tcart" for="s-tcart"><bdi dir="ltr">45 °C</bdi></output></div><input type="range" id="s-tcart" min="30" max="100" step="1" value="45"></div>
+        <div class="slider"><div class="s-top"><label for="s-days" data-i18n="sim.days">Días desde el último cambio de cartucho</label><output id="o-days" for="s-days">10 días</output></div><input type="range" id="s-days" min="0" max="60" step="1" value="10"></div>
+      </div>
+
+      <div class="card results" aria-live="polite">
+        <h3 data-i18n="sim.results">Resultados</h3>
+        <p class="sim-label small-label"><strong data-i18n="sim.label">Valores teóricos de simulación a partir de objetivos de diseño, no datos medidos.</strong></p>
+        <div class="bar-wrap">
+          <div class="bar-head"><span data-i18n="sim.total">Potencia total</span> <strong id="r-total"><bdi dir="ltr">63.2 W</bdi></strong></div>
+          <div class="bar" role="img" data-i18n-attr="aria-label:sim.barLabel" aria-label="Barra apilada de la potencia de turbinas y TEG. La marca indica el máximo de 122,6 W.">
+            <span class="seg turbine" id="bar-turbine" style="inline-size:24.2%"></span><span class="seg teg" id="bar-teg" style="inline-size:27.4%"></span>
+            <span class="maxmark"><i></i><b data-i18n="sim.max">Máx. <bdi class="ltr" dir="ltr">122,6 W</bdi></b></span>
+          </div>
+          <ul class="legend-dots">
+            <li><i class="d turbine"></i><span data-i18n="sim.turbine">Potencia de turbinas</span> <strong id="r-turbine"><bdi dir="ltr">29.6 W</bdi></strong></li>
+            <li><i class="d teg"></i><span data-i18n="sim.teg">Potencia del TEG</span> <strong id="r-teg"><bdi dir="ltr">33.6 W</bdi></strong></li>
+          </ul>
+        </div>
+        <dl class="stats">
+          <div><dt data-i18n="sim.energy">Energía diaria</dt><dd id="r-energy"><bdi dir="ltr">506 Wh</bdi></dd></div>
+          <div><dt data-i18n="sim.reduction">Reducción de contaminantes</dt><dd id="r-reduction" class="mint"><bdi dir="ltr">69 %</bdi></dd><dd class="muted small" data-i18n="sim.reductionNote">Objetivo de diseño: hasta <bdi class="ltr" dir="ltr">70%</bdi></dd></div>
+          <div><dt data-i18n="sim.health">Estado del filtro</dt><dd id="r-health"><bdi dir="ltr">99 %</bdi></dd></div>
+        </dl>
+        <div class="swap ok" id="swap">
+          <h3 class="h-sm" data-i18n="sim.swapTitle">Cuándo cambiar el cartucho</h3>
+          <p class="swap-state" id="swap-state">El cartucho está bien por ahora.</p>
+          <p class="small" id="swap-days">Quedan unos 65 días de uso con estos ajustes.</p>
+          <p class="small" id="swap-heat">El gas está por debajo de 60 °C en el cartucho. Bien.</p>
+        </div>
+      </div>
+    </div>
+
+    <details class="formulas">
+      <summary data-i18n="sim.formulas">Mostrar las fórmulas</summary>
+      <ol id="formula-list">
+        <li>Potencia de turbinas = <bdi class="ltr" dir="ltr">50,6 W</bdi> × caudal^<bdi class="ltr" dir="ltr">1,5</bdi>, donde el caudal va de <bdi class="ltr" dir="ltr">0</bdi> a <bdi class="ltr" dir="ltr">1</bdi>.</li>
+        <li>Potencia del TEG = <bdi class="ltr" dir="ltr">72,0 W</bdi> × factorTemp × caudal. factorTemp = (temperatura del escape − <bdi class="ltr" dir="ltr">100</bdi>) ÷ <bdi class="ltr" dir="ltr">300</bdi>, limitado entre <bdi class="ltr" dir="ltr">0</bdi> y <bdi class="ltr" dir="ltr">1</bdi>.</li>
+        <li>Potencia total = turbinas + TEG. Lo máximo que alcanza es <bdi class="ltr" dir="ltr">50,6</bdi> + <bdi class="ltr" dir="ltr">72,0</bdi> = <bdi class="ltr" dir="ltr">122,6 W</bdi>.</li>
+        <li>Energía diaria (Wh) = potencia total (W) × horas de operación.</li>
+        <li>Reducción de contaminantes = <bdi class="ltr" dir="ltr">70%</bdi> × estadoFiltro.</li>
+        <li>estadoFiltro = (<bdi class="ltr" dir="ltr">1</bdi> − <bdi class="ltr" dir="ltr">0,6</bdi> × carga²) × factorCalor. La carga son las horas de operación desde el cambio divididas entre <bdi class="ltr" dir="ltr">600 h</bdi>, limitada entre <bdi class="ltr" dir="ltr">0</bdi> y <bdi class="ltr" dir="ltr">1</bdi>. Sin efecto del calor, el estado baja de <bdi class="ltr" dir="ltr">1</bdi> a <bdi class="ltr" dir="ltr">0,4</bdi> en la saturación.</li>
+        <li>factorCalor = <bdi class="ltr" dir="ltr">1</bdi> cuando el gas en el cartucho está a <bdi class="ltr" dir="ltr">60 °C</bdi> o menos. Por encima baja <bdi class="ltr" dir="ltr">0,6</bdi> por cada <bdi class="ltr" dir="ltr">40 °C</bdi>, hasta un mínimo de <bdi class="ltr" dir="ltr">0,4</bdi>.</li>
+      </ol>
+      <p class="muted small" data-i18n="sim.assumptions">Supuestos de la demo, no datos de diseño: el rango de <bdi class="ltr" dir="ltr">100</bdi> a <bdi class="ltr" dir="ltr">400 °C</bdi> del lado caliente, la vida de <bdi class="ltr" dir="ltr">600 h</bdi> del cartucho y la penalización por calor. Solo sirven para animar la demo. Sustitúyelos por valores medidos cuando se pruebe el prototipo.</p>
+    </details>
+  </div>
+</section>
+
+<!-- 5. ECONOMY -->
+<section id="economy" class="section alt" aria-labelledby="eco-title">
+  <div class="wrap">
+    <h2 id="eco-title" data-i18n="economy.title">Ingeniería frugal y un ciclo circular</h2>
+    <p class="intro" data-i18n="economy.intro">La meta es una unidad barata que las comunidades puedan pagar y mantener funcionando.</p>
+    <div class="cost-grid" id="cost-cards">
+      <div class="card cost c0"><h3 data-i18n="economy.cards.0.t">Depurador industrial</h3><p class="cost-v" data-i18n="economy.cards.0.v">Miles de dólares</p><p class="muted small" data-i18n="economy.cards.0.n">Como punto de comparación.</p></div>
+      <div class="card cost c1"><span class="tag tag-target" data-i18n="tag.model">Estimación modelada</span><h3 data-i18n="economy.cards.1.t">Prototipo de AeroTurbine</h3><p class="cost-v" data-i18n="economy.cards.1.v"><bdi class="ltr" dir="ltr">175</bdi> a <bdi class="ltr" dir="ltr">255 USD</bdi></p><p class="muted small" data-i18n="economy.cards.1.n">Costo estimado del prototipo.</p></div>
+      <div class="card cost c2"><span class="tag tag-target" data-i18n="tag.target">Objetivo de diseño</span><h3 data-i18n="economy.cards.2.t">AeroTurbine en producción masiva</h3><p class="cost-v" data-i18n="economy.cards.2.v"><bdi class="ltr" dir="ltr">70</bdi> a <bdi class="ltr" dir="ltr">90 USD</bdi> por unidad</p><p class="muted small" data-i18n="economy.cards.2.n">Costo objetivo a gran escala.</p></div>
+    </div>
+    <p class="muted small" data-i18n="economy.costNote">Los costos son estimaciones y objetivos, no cotizaciones.</p>
+
+    <h3 class="sub"><span data-i18n="economy.loopTitle">El ciclo circular</span> <span class="tag tag-concept" data-i18n="economy.loopConcept">Concepto</span></h3>
+    <div class="loop" id="loop" role="group" data-i18n-attr="aria-label:economy.loopLabel" aria-label="Diagrama del ciclo circular. Cuatro pasos se repiten en un ciclo.">
+      <svg class="loop-ring" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" id="loop-svg">
+        <ellipse cx="50" cy="50" rx="35.4" ry="35.4" class="ring" vector-effect="non-scaling-stroke"/>
+        <circle r="2.2" class="orbit"><animateMotion dur="9s" repeatCount="indefinite" path="M50 14.6 A35.4 35.4 0 1 1 49.99 14.6"/></circle>
+      </svg>
+      <ol class="loop-steps">
+        <li class="n1"><b>1</b><span data-i18n="economy.loopSteps.0">Las comunidades cambian cartuchos mediante una suscripción.</span></li>
+        <li class="n2"><b>2</b><span data-i18n="economy.loopSteps.1">Los cartuchos usados van a centros municipales de reciclaje.</span></li>
+        <li class="n3"><b>3</b><span data-i18n="economy.loopSteps.2">Los subproductos (yeso industrial, <bdi class="ltr" dir="ltr">CaSO<sub>4</sub></bdi>) se venden a fabricantes de cemento y paneles de yeso.</span></li>
+        <li class="n4"><b>4</b><span data-i18n="economy.loopSteps.3">Los ingresos ayudan a comprar sorbente nuevo para cartuchos nuevos.</span></li>
+      </ol>
+    </div>
+    <button type="button" class="btn btn-ghost" id="loop-toggle">Pausar la animación</button>
+  </div>
+</section>
+
+<!-- 6. GALLERY -->
+<section id="gallery" class="section" aria-labelledby="gal-title">
+  <div class="wrap">
+    <h2 id="gal-title" data-i18n="gallery.title">Galería de bocetos</h2>
+    <p class="intro" data-i18n="gallery.intro">Aquí irán los primeros bocetos y notas.</p>
+    <ul class="gallery" id="gallery-grid">
+      <li>
+        <button type="button" class="tile" data-i18n-attr="title:gallery.open" title="Ampliar boceto">
+          <span class="ph">
+            <picture>
+              <source type="image/webp" srcset="../assets/sketches/sketch-stage-1-layout-800.webp 800w, ../assets/sketches/sketch-stage-1-layout.webp 768w" sizes="(max-width: 600px) 92vw, (max-width: 1024px) 45vw, 260px">
+              <img src="../assets/sketches/stage1-layout.jpg" loading="lazy" decoding="async" width="768" height="1024" alt="Etapa 1: Boceto inicial dibujado a mano — dibujo a lápiz de los conductos de escape y ranura del cartucho" data-i18n-attr="alt:gallery.alts.0">
+            </picture>
+          </span>
+          <span class="cap" data-i18n="gallery.captions.0">Etapa <bdi class="ltr" dir="ltr">1</bdi>: Boceto inicial dibujado a mano</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="tile" data-i18n-attr="title:gallery.open" title="Ampliar boceto">
+          <span class="ph">
+            <picture>
+              <source type="image/webp" srcset="../assets/sketches/sketch-stage-1-multiturbine-800.webp 800w, ../assets/sketches/sketch-stage-1-multiturbine.webp 768w" sizes="(max-width: 600px) 92vw, (max-width: 1024px) 45vw, 260px">
+              <img src="../assets/sketches/stage1-multiturbine.jpg" loading="lazy" decoding="async" width="768" height="1024" alt="Etapa 1: Boceto a mano del concepto multiturbina — dibujo a lápiz de microturbinas secuenciales en un eje" data-i18n-attr="alt:gallery.alts.1">
+            </picture>
+          </span>
+          <span class="cap" data-i18n="gallery.captions.1">Etapa <bdi class="ltr" dir="ltr">1</bdi>: Boceto a mano del concepto multiturbina</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="tile" data-i18n-attr="title:gallery.open" title="Ampliar boceto">
+          <span class="ph">
+            <picture>
+              <source type="image/webp" srcset="../assets/sketches/sketch-stage-2-digital-800.webp 800w, ../assets/sketches/sketch-stage-2-digital.webp 1024w" sizes="(max-width: 600px) 92vw, (max-width: 1024px) 45vw, 260px">
+              <img src="../assets/sketches/stage2-digital.jpg" loading="lazy" decoding="async" width="1024" height="444" alt="Etapa 2: Prototipo digital inicial — diagrama 2D con enfriamiento, conjunto de turbinas, motores DC y sorbentes" data-i18n-attr="alt:gallery.alts.2">
+            </picture>
+          </span>
+          <span class="cap" data-i18n="gallery.captions.2">Etapa <bdi class="ltr" dir="ltr">2</bdi>: Prototipo digital inicial</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="tile" data-i18n-attr="title:gallery.open" title="Ampliar boceto">
+          <span class="ph">
+            <picture>
+              <source type="image/webp" srcset="../assets/sketches/sketch-stage-3-final-800.webp 800w, ../assets/sketches/sketch-stage-3-final.webp 1024w" sizes="(max-width: 600px) 92vw, (max-width: 1024px) 45vw, 260px">
+              <img src="../assets/sketches/stage3-final.jpg" loading="lazy" decoding="async" width="1024" height="579" alt="Etapa 3: Arquitectura final del sistema — diagrama de bloques desde válvula de derivación hasta enfriamiento, cartucho 70:20:10 y ECU" data-i18n-attr="alt:gallery.alts.3">
+            </picture>
+          </span>
+          <span class="cap" data-i18n="gallery.captions.3">Etapa <bdi class="ltr" dir="ltr">3</bdi>: Arquitectura final del sistema</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Secciones de la página">
+      <ul class="f-links">
+        <li><a href="#health" data-i18n="nav.health">Salud</a></li>
+        <li><a href="#blueprint" data-i18n="nav.blueprint">Plano</a></li>
+        <li><a href="#simulator" data-i18n="nav.simulator">Simulador</a></li>
+        <li><a href="#economy" data-i18n="nav.economy">Costo y ciclo</a></li>
+        <li><a href="#gallery" data-i18n="nav.gallery">Bocetos</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Idioma">
+      <ul class="f-links f-langs">
+      <li><a href="../en/" lang="en" hreflang="en" data-lang="en">English</a></li>
+      <li><a href="../ar/" lang="ar" hreflang="ar" data-lang="ar">العربية</a></li>
+      <li><a href="../fr/" lang="fr" hreflang="fr" data-lang="fr">Français</a></li>
+      <li><a href="../es/" lang="es" hreflang="es" data-lang="es" aria-current="page">Español</a></li>
+      </ul>
+    </nav>
+    <p class="f-authors" data-i18n="footer.authors">Desarrollado colaborativamente por un equipo de <bdi class="ltr" dir="ltr">9</bdi> estudiantes (<bdi class="ltr" dir="ltr">Team AeroTurbine</bdi>) en diversas fases de investigación y competencias. | <span class="f-co">Coautores de la propuesta <bdi class="ltr" dir="ltr">Harvard VISION 2026</bdi>: Ahmed Shady y Lara Mohamed.</span></p>
+    <p data-i18n="footer.country">Egipto</p>
+    <p data-i18n="footer.submitted">Presentado a <bdi class="ltr" dir="ltr">Harvard VISION 2026</bdi>, concurso de presentación de proyectos comunitarios</p>
+    <p class="f-disc" data-i18n="footer.disclaimer">En desarrollo: esta es una demo del concepto de filtro, no una máquina terminada ni probada en campo.</p>
+    <p class="muted f-contact"><span data-i18n="footer.contact">Contacto:</span> <a id="contact-email" href="mailto:ahmedshadysaad12@gmail.com"><span class="ltr" dir="ltr">ahmedshadysaad12@gmail.com</span></a></p>
+    <p class="f-top"><a href="#hero" data-i18n="footer.top">Volver arriba</a></p>
+  </div>
+</footer>
+
+<!-- Details panel: bottom sheet on mobile, side panel on desktop -->
+<aside id="panel" class="panel" role="dialog" aria-modal="false" aria-labelledby="panel-title" data-i18n-attr="aria-label:panel.label" aria-label="Detalles">
+  <div class="panel-head">
+    <h3 id="panel-title" tabindex="-1">Zona 1: captación de energía</h3>
+    <button type="button" class="icon-btn" id="panel-close" data-i18n-attr="aria-label:panel.close;title:panel.close" aria-label="Cerrar detalles" title="Cerrar detalles">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </div>
+  <div id="panel-body" class="panel-body"></div>
+</aside>
+
+<!-- Lightbox -->
+<dialog id="lightbox" class="lightbox" data-i18n-attr="aria-label:lightbox.label" aria-label="Imagen ampliada">
+  <button type="button" class="icon-btn lb-close" id="lb-close" data-i18n-attr="aria-label:lightbox.close;title:lightbox.close" aria-label="Cerrar imagen ampliada" title="Cerrar imagen ampliada">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+  </button>
+  <img id="lb-img" width="1024" height="571" alt="Ilustración 3D en corte del concepto AeroTurbine. El escape caliente entra por la izquierda a través de una válvula de derivación y un Venturi con dos microturbinas doradas, pasa por etapas catalíticas, aletas de enfriamiento y un cartucho de tres capas, y sale por la derecha. Arriba hay una caja ECU con batería." src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
+  <p id="lb-cap"></p>
+</dialog>
+
+</body>
+</html>

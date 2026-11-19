@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AeroTurbine: مفهوم مرشح عادم مستقل عن الشبكة (عرض تصميمي)</title>
+  <meta name="description" content="مشروع AeroTurbine مفهوم هندسي قيد التطوير لمرشح عادم يولد طاقته ذاتيًا ويحجز الملوثات. استكشف العرض التجريبي لفكرة المرشح ومخطط المناطق الثلاث والمحاكي.">
+  <meta name="google-site-verification" content="KA3-D2_kJrgQopulkS2aWoSZgjs3Lr6LJp8BxyAy610">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://aeroturbin.vercel.app/ar/">
+  <link rel="alternate" hreflang="en" href="https://aeroturbin.vercel.app/en/">
+  <link rel="alternate" hreflang="ar" href="https://aeroturbin.vercel.app/ar/">
+  <link rel="alternate" hreflang="fr" href="https://aeroturbin.vercel.app/fr/">
+  <link rel="alternate" hreflang="es" href="https://aeroturbin.vercel.app/es/">
+  <link rel="alternate" hreflang="x-default" href="https://aeroturbin.vercel.app/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AeroTurbine">
+  <meta property="og:title" content="AeroTurbine: مفهوم مرشح عادم مستقل عن الشبكة (عرض تصميمي)">
+  <meta property="og:description" content="مشروع AeroTurbine مفهوم هندسي قيد التطوير لمرشح عادم يولد طاقته ذاتيًا ويحجز الملوثات. استكشف العرض التجريبي لفكرة المرشح ومخطط المناطق الثلاث والمحاكي.">
+  <meta property="og:url" content="https://aeroturbin.vercel.app/ar/">
+  <meta property="og:image" content="https://aeroturbin.vercel.app/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="رسم ثلاثي الأبعاد مقطوع لمفهوم AeroTurbine. يدخل العادم الساخن من اليسار عبر صمام تحويل وفنتوري فيه توربينتان صغيرتان ذهبيتان، ثم يمر بمراحل حفز وزعانف تبريد وخرطوشة من ثلاث طبقات، ويخرج من اليمين. وفي الأعلى صندوق التحكم ECU مع بطارية.">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AeroTurbine: مفهوم مرشح عادم مستقل عن الشبكة (عرض تصميمي)">
+  <meta name="twitter:description" content="مشروع AeroTurbine مفهوم هندسي قيد التطوير لمرشح عادم يولد طاقته ذاتيًا ويحجز الملوثات. استكشف العرض التجريبي لفكرة المرشح ومخطط المناطق الثلاث والمحاكي.">
+  <meta name="twitter:image" content="https://aeroturbin.vercel.app/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="رسم ثلاثي الأبعاد مقطوع لمفهوم AeroTurbine. يدخل العادم الساخن من اليسار عبر صمام تحويل وفنتوري فيه توربينتان صغيرتان ذهبيتان، ثم يمر بمراحل حفز وزعانف تبريد وخرطوشة من ثلاث طبقات، ويخرج من اليمين. وفي الأعلى صندوق التحكم ECU مع بطارية.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A1628'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23D9822B'/%3E%3Cpath d='M16 4v8M16 20v8M4 16h8M20 16h8' stroke='%233DDBB0' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap"></noscript>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://aeroturbin.vercel.app/#website","url":"https://aeroturbin.vercel.app/","name":"AeroTurbine","inLanguage":["en","ar","fr","es"]},{"@type":"WebPage","@id":"https://aeroturbin.vercel.app/ar/#webpage","url":"https://aeroturbin.vercel.app/ar/","name":"AeroTurbine: مفهوم مرشح عادم مستقل عن الشبكة (عرض تصميمي)","description":"مشروع AeroTurbine مفهوم هندسي قيد التطوير لمرشح عادم يولد طاقته ذاتيًا ويحجز الملوثات. استكشف العرض التجريبي لفكرة المرشح ومخطط المناطق الثلاث والمحاكي.","inLanguage":"ar","isPartOf":{"@id":"https://aeroturbin.vercel.app/#website"},"about":{"@id":"https://aeroturbin.vercel.app/ar/#project"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://aeroturbin.vercel.app/assets/og-image.jpg","width":1200,"height":630,"caption":"رسم توضيحي لمفهوم التصميم. وليس نموذجًا أوليًا مبنيًا أو مجرَّبًا."}},{"@type":"CreativeWork","@id":"https://aeroturbin.vercel.app/ar/#project","name":"AeroTurbine","headline":"هواء أنظف، بطاقة يولّدها العادم نفسه.","description":"ما زال AeroTurbine قيد التصميم. تعرض هذه الصفحة نموذجًا تجريبيًا لفكرة المرشّح ومخططًا هندسيًا. كل رقم هنا هو هدف تصميمي أو قيمة من المحاكاة، وليس نتيجة قياس.","creativeWorkStatus":"قيد التطوير: هذا عرض تجريبي لفكرة المرشّح، وليس آلة جاهزة أو مجرَّبة في الميدان.","inLanguage":"ar","author":[{"@type":"Person","name":"Ahmed Shady"},{"@type":"Person","name":"Lara Mohamed"}]}]}</script>
+  <style>:root{color-scheme:dark;--bg:#0A1628;--surface:#12233B;--surface-2:#0E1D33;--border:#1F3556;--line:#4A6A93;--text:#EAF1F8;--muted:#9FB3C8;--copper:#D9822B;--copper-fill:#D9822B;--on-copper:#0A1628;--mint:#3DDBB0;--coral:#E5604D}:root[data-theme="light"]{color-scheme:light;--bg:#F6EFE3;--surface:#FFFFFF;--surface-2:#FBF7EF;--border:#E2D6C0;--line:#8A7A5C;--text:#14213A;--muted:#5B6B82;--copper:#9A5410;--copper-fill:#D9822B;--on-copper:#14213A;--mint:#0B6B50;--coral:#B5301F}*,*::before,*::after{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:1.0625rem;line-height:1.65;overflow-x:hidden}.wrap{inline-size:100%;max-inline-size:1120px;margin-inline:auto;padding-inline:16px}.top{position:sticky;inset-block-start:0;z-index:50}.banner{display:flex;align-items:center;gap:8px;justify-content:space-between;background:var(--copper-fill);color:var(--on-copper);min-block-size:52px;padding:6px 12px;padding-inline-start:16px;font-weight:700;font-size:.95rem}</style>
+  <script>
+  (function(){try{var s=localStorage.getItem('aero-theme');
+  var t=s||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');
+  document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+  </script>
+  <link rel="stylesheet" href="../styles.css">
+  <script id="page-i18n" type="application/json">{"meta":{"title":"AeroTurbine: مفهوم مرشح عادم مستقل عن الشبكة (عرض تصميمي)","description":"مشروع AeroTurbine مفهوم هندسي قيد التطوير لمرشح عادم يولد طاقته ذاتيًا ويحجز الملوثات. استكشف العرض التجريبي لفكرة المرشح ومخطط المناطق الثلاث والمحاكي."},"skip":"تخطَّ إلى المحتوى","lang":{"label":"اللغة"},"theme":{"toLight":"التبديل إلى السمة الفاتحة","toDark":"التبديل إلى السمة الداكنة"},"banner":{"text":"قيد التطوير: هذا عرض تجريبي لفكرة المرشّح، وليس آلة جاهزة أو مجرَّبة في الميدان.","dismiss":"إخفاء هذا التنبيه"},"nav":{"label":"أقسام الصفحة","health":"الصحة","blueprint":"المخطط","simulator":"المحاكي","economy":"التكلفة والدورة","gallery":"الرسومات"},"tag":{"target":"هدف تصميمي","concept":"مفهوم تصميمي","model":"تقدير نموذجي","sim":"محاكاة"},"hero":{"title":"AeroTurbine","summary":"هواء أنظف، بطاقة يولّدها العادم نفسه.","badge":"المرحلة: مخطط التصميم الهندسي والمحاكاة | قُدِّم إلى مؤتمر هارفارد VISION 2026","note":"ما زال AeroTurbine قيد التصميم. تعرض هذه الصفحة نموذجًا تجريبيًا لفكرة المرشّح ومخططًا هندسيًا. كل رقم هنا هو هدف تصميمي أو قيمة من المحاكاة، وليس نتيجة قياس.","cta1":"استكشف المخطط","cta2":"جرّب المحاكي","target":"هدف تصميمي: خفض الملوثات والجسيمات بنسبة تصل إلى 70%.","bgLabel":"خطوط متحركة للزينة توحي بتدفق الهواء"},"health":{"title":"لماذا يهمنا هذا محليًا","intro":"الهواء الملوث يُمرض الناس، وهو مشكلة كبيرة في المناطق الصناعية.","globalLabel":"يرتبط تلوث الهواء الخارجي بنحو هذا العدد من الوفيات المبكرة كل عام في العالم:","globalValue":"6.7 إلى 7.9 مليون","placesTitle":"حلوان وشبرا الخيمة، مصر","placesText":"تُطلق المصانع وحركة السيارات ومولدات الديزل الاحتياطية هذه الملوثات:","sources":{"factories":"المصانع","traffic":"حركة السيارات","generators":"مولدات الديزل الاحتياطية"},"pollutants":"PM2.5 وNO2 وSO2 وCO والمركبات العضوية المتطايرة (VOCs)","pollutantList":{"pm":"PM2.5","no2":"NO2","so2":"SO2","co":"CO","voc":"VOCs"},"effectsTitle":"ما تربطه الدراسات الصحية بـ PM2.5 وNO2","pmTitle":"PM2.5 (الجسيمات الدقيقة)","pmText":"كل زيادة قدرها 10 µg/m³ ترتبط بارتفاع وفيات أمراض القلب والسكتة الدماغية بنحو 10–20%.","pmChart":"شريط من 10% إلى 20% زيادة في وفيات أمراض القلب والسكتة الدماغية","no2Title":"NO2 (ثاني أكسيد النيتروجين)","no2Text":"كل زيادة قدرها 10 µg/m³ ترتبط بخطر نسبي قدره 1.09 للإصابة بالربو عند الأطفال.","no2Chart":"خطر نسبي 1.09 مقارنةً بخط الأساس 1.00","baseline":"خط الأساس 1.00","note":"هذه روابط وجدتها الدراسات الصحية، وليست نتائج من AeroTurbine.","failTitle":"لماذا تفشل أجهزة الغسل الشائعة هنا","failColA":"أجهزة الغسل الشائعة","failColB":"طريقة AeroTurbine","failA1":"تستهلك كهرباء كثيرة.","failA2":"تتوقف المواد الماصّة فيها عن العمل جيدًا فوق 60 °C، إذ تجعل الحرارة الغاز المحجوز يتسرب.","failB1":"يولّد طاقته بنفسه من العادم. هدف تصميمي: حتى 122.6 W.","failB2":"تخفض زعانف التبريد حرارة الغاز إلى أقل من 60 °C قبل أن يصل إلى خرطوشة الترشيح. هذا هو المقصود في التصميم."},"blueprint":{"title":"المخطط ذو المناطق الثلاث","intro":"اختر منطقة لترى ما بداخلها. يوضح السهم اتجاه جريان الغاز.","diagramLabel":"رسم جانبي لجهاز اعتراض العادم بمناطقه الثلاث","chipsLabel":"اختر منطقة","flowTitle":"كيف يجري الغاز","play":"تشغيل","pause":"إيقاف مؤقت","next":"الخطوة التالية","stepOf":"الخطوة {n} من {total}","steps":["يدخل العادم الساخن. وتحمي صمام التحويل النابضي المحرك.","تُسرّع فوهة فنتوري الغاز، فتدور توربينتان صغيرتان، ويضيف طوق TEG مزيدًا من الطاقة.","مراحل حفز إضافية تعالج NOx وCO والهيدروكربونات (مفهوم تصميمي).","تخفض زعانف التبريد حرارة الغاز إلى أقل من 60 °C.","الطبقة 1، الزيوليت، تحتجز الرطوبة.","الطبقة 2، خلية النحل من الجير الصودي، تمتص CO2 وSO2.","الطبقة 3، الكربون المنشَّط، تلتقط VOCs والسموم الغازية الأخرى.","يخرج غاز أنظف. وتقارن المستشعرات الهواء قبل الترشيح وبعده."],"dg":{"zone1":"المنطقة 1","zone2":"المنطقة 2","zone3":"المنطقة 3","inlet":"دخول العادم","outlet":"خروج غاز أنظف","valve":"صمام التحويل","bypass":"مخرج التحويل","venturi":"فنتوري","turbines":"توربينتان صغيرتان","teg":"طوق TEG","cat":"مراحل الحفز","concept":"(مفهوم تصميمي)","fins":"زعانف التبريد","cartridge":"خرطوشة قابلة للتبديل","l1":"زيوليت","l2":"جير صودي","l3":"كربون","handle":"المقبض","ecu":"ECU","battery":"البطارية","sensors":"مستشعرات قبل وبعد","flowDir":"اتجاه جريان الغاز"}},"panel":{"label":"التفاصيل","close":"إغلاق التفاصيل","components":"المكوّنات","numbers":"الأرقام","partOf":"جزء من","ratioTitle":"الخرطوشة: ترتيب الجريان والحصة بالكتلة","ratioOrder":"يمر الغاز عبر الطبقات بهذا الترتيب:","ratioText":"نسبة الكتلة، جير صودي : زيوليت : كربون = 70:20:10","catTitle":"مراحل حفز إضافية (مفهوم تصميمي)","catNote":"تظهر في المخطط المرجعي فقط. لا تتوفر أرقام أداء لها.","intent":"المقصود في التصميم: تمتلئ كل الطبقات في الوقت نفسه تقريبًا، فتكفي عملية تبديل صيانة واحدة."},"zones":{"z1":{"title":"المنطقة 1: توليد الطاقة","short":"توليد الطاقة","plain":"يُدير العادم توربينات صغيرة ويسخّن طوقًا حول الجهاز. كلاهما يولّد كهرباء، فلا يحتاج الجهاز إلى طاقة من محرك المصدر.","components":["صمام تحويل نابضي. إذا ارتفع الضغط الخلفي فوق الحد الآمن (dP > dP_crit) ينفتح من تلقاء نفسه كي لا يتوقف محرك المصدر.","فوهة فنتوري تُسرّع الغاز.","توربينتان صغيرتان على التتابع.","طوق مولّد كهرحراري (TEG) يعمل بتأثير سيبك.","الهيكل: مفاعل من الفولاذ المقاوم للصدأ 316L."],"stats":[{"l":"توربينتان صغيرتان","v":"حتى 50.6 W"},{"l":"طوق TEG","v":"72.0 W"},{"l":"المجموع: 50.6 + 72.0","v":"122.6 W"}],"statsNote":"كل قيم الطاقة أهداف تصميمية وليست نتائج قياس. المقصود أن يكفي المجموع لتشغيل الإلكترونيات دون أي طاقة من محرك المصدر."},"z2":{"title":"المنطقة 2: التبريد والترشيح","short":"التبريد والترشيح","plain":"تبرّد الزعانف الغاز أولًا، ثم يمر عبر خرطوشة قابلة للتبديل من ثلاث طبقات.","components":["زعانف تبريد خارجية من الألمنيوم تخفض حرارة الغاز إلى أقل من 60 °C بالحمل الحراري الطبيعي.","خرطوشة قابلة للتبديل من 3 طبقات داخل علبة من الألمنيوم.","مقبض من المطاط الأسود معزول حراريًا يتيح التبديل دون أدوات."],"layers":[{"n":"الطبقة 1","name":"زيوليت صناعي","pct":"20%","role":"تحتجز الرطوبة."},{"n":"الطبقة 2","name":"خلية نحل من الجير الصودي","pct":"70%","role":"تفاعل CO2: Ca(OH)2 + CO2 → CaCO3 + H2O. وتزيل SO2 أيضًا."},{"n":"الطبقة 3","name":"كربون منشَّط مطوي","pct":"10%","role":"VOCs والسموم الغازية."}],"stats":[{"l":"هدف التبريد","v":"أقل من 60 °C"},{"l":"نسبة الكتلة (جير صودي : زيوليت : كربون)","v":"70:20:10"},{"l":"هدف تصميمي للملوثات والجسيمات","v":"خفض يصل إلى 70%"}],"statsNote":"نسبة 70% هدف تصميمي. ويقدّر نموذج حسابي أيضًا انخفاض زيارات الطوارئ بسبب الربو بنسبة 15–22% في المجتمعات القريبة. هذا تقدير نموذجي وليس نتيجة قياس."},"z3":{"title":"المنطقة 3: وحدة التحكم الذكية","short":"وحدة التحكم الذكية","plain":"حاسوب صغير وبطارية على جدار خارجي بارد. وتتيح له المستشعرات قبل المرشّح وبعده معرفة مدى كفاءة المرشّح.","components":["متحكم ESP-32.","حزمة بطاريات LiFePO4 (طراز APR18650M1B).","مجموعتا مستشعرات قبل المرشّح وبعده (BME680 + مستشعر الجسيمات Bosch BMV080) لحساب كفاءة الترشيح لحظيًا.","معزولة على جدار خارجي بارد."],"stats":[],"statsNote":"حساب الكفاءة لحظيًا ميزة تصميمية، ولم تُجرَّب في الميدان."}},"hotspots":{"valve":{"name":"صمام التحويل النابضي","desc":"ينفتح من تلقاء نفسه إذا ارتفع الضغط الخلفي أكثر من اللازم، فلا يتوقف محرك المصدر."},"venturi":{"name":"فوهة فنتوري","desc":"تضيّق المجرى لتُسرّع الغاز فيدير التوربينات."},"turbines":{"name":"توربينتان صغيرتان","desc":"تدوران واحدة بعد الأخرى في الغاز السريع. هدف تصميمي: حتى 50.6 W."},"scr":{"name":"حفّاز SCR السلبي","desc":"يخفض NOx بالأمونيا: NOx + NH3 → N2 + H2O. مفهوم تصميمي بلا أرقام بعد."},"urea":{"name":"قناة جرعات اليوريا الصلبة","desc":"تمدّ مرحلة SCR بكمية صغيرة جدًا من مصدر الأمونيا. مفهوم تصميمي."},"ptpd":{"name":"حفّاز أكسدة Pt/Pd","desc":"يحوّل CO والهيدروكربونات إلى CO2 وماء: CO + O2 → CO2 وHC + O2 → CO2 + H2O. مفهوم تصميمي."},"fins":{"name":"زعانف التبريد","desc":"زعانف من الألمنيوم تخفض حرارة الغاز إلى أقل من 60 °C بالحمل الحراري الطبيعي."},"lime":{"name":"خرطوشة خلية نحل الجير","desc":"طبقة الجير الصودي. تحتجز CO2 وتزيل SO2. وتمثل 70% من كتلة الخرطوشة."},"carbon":{"name":"خرطوشة الكربون المنشَّط","desc":"طبقة كربون مطوية. تلتقط VOCs والسموم الغازية. وتمثل 10% من كتلة الخرطوشة."},"ecu":{"name":"وحدة التحكم ECU والبطارية","desc":"متحكم ESP-32 وبطارية LiFePO4 معزولان على جدار خارجي بارد."}},"schematic":{"title":"رسم توضيحي للمفهوم","caption":"رسم توضيحي لمفهوم التصميم. وليس نموذجًا أوليًا مبنيًا أو مجرَّبًا.","alt":"رسم ثلاثي الأبعاد مقطوع لمفهوم AeroTurbine. يدخل العادم الساخن من اليسار عبر صمام تحويل وفنتوري فيه توربينتان صغيرتان ذهبيتان، ثم يمر بمراحل حفز وزعانف تبريد وخرطوشة من ثلاث طبقات، ويخرج من اليمين. وفي الأعلى صندوق التحكم ECU مع بطارية.","hint":"المس نقطة مرقّمة لتعرف المزيد عن أحد الأجزاء.","englishOnly":"الكلمات داخل الصورة بالإنجليزية فقط. استخدم القائمة المرقّمة أدناه بلغتك.","legendTitle":"دليل الأرقام","tegNote":"طوق TEG غير ظاهر في الرسم التوضيحي.","zoom":"تكبير الرسم التوضيحي","dots":"أجزاء الرسم التوضيحي"},"lightbox":{"close":"إغلاق الصورة المكبّرة","label":"صورة مكبّرة"},"sim":{"title":"محاكي المعاملات المباشر","intro":"حرّك المؤشرات وراقب ما يتغير. المعادلات بسيطة وموضحة في الأسفل.","label":"قيم نظرية من المحاكاة مبنية على أهداف تصميمية، وليست بيانات مقيسة.","inputs":"الإعدادات","results":"النتائج","flow":"معدل تدفق العادم","hours":"ساعات التشغيل يوميًا","texh":"حرارة العادم (الجانب الساخن)","tcart":"حرارة الغاز عند الخرطوشة","days":"الأيام منذ آخر تبديل للخرطوشة","unitPct":"%","unitH":"س","unitC":"°C","unitD":"يوم","unitW":"W","unitWh":"Wh","turbine":"طاقة التوربينات","teg":"طاقة TEG","total":"الطاقة الإجمالية","max":"الحد الأقصى 122.6 W","barLabel":"شريط مكدّس لطاقة التوربينات وطاقة TEG. العلامة تبيّن الحد الأقصى 122.6 W.","energy":"الطاقة اليومية","reduction":"خفض الملوثات","reductionNote":"هدف تصميمي: حتى 70%","health":"سلامة المرشّح","swapTitle":"متى نبدّل الخرطوشة","swapOk":"الخرطوشة بحالة جيدة حاليًا.","swapSoon":"خطّط للتبديل قريبًا.","swapNow":"بدّلها الآن.","swapDays":"يتبقى نحو {d} يومًا من الاستخدام بهذه الإعدادات.","swapNoUse":"لا استخدام بهذه الإعدادات، فلا تتآكل الخرطوشة.","swapHot":"حرارة الغاز عند الخرطوشة فوق 60 °C. تضعف المادة الماصّة وقد يتسرب الغاز. لهذا يهم التبريد.","swapCool":"حرارة الغاز عند الخرطوشة أقل من 60 °C. وهذا جيد.","formulas":"أظهر المعادلات","formulaList":["طاقة التوربينات = 50.6 W × التدفق^1.5، والتدفق بين 0 و1.","طاقة TEG = 72.0 W × عامل الحرارة × التدفق. عامل الحرارة = (حرارة العادم − 100) ÷ 300، ويبقى بين 0 و1.","الطاقة الإجمالية = التوربينات + TEG. وأقصى ما تبلغه 50.6 + 72.0 = 122.6 W.","الطاقة اليومية (Wh) = الطاقة الإجمالية (W) × ساعات التشغيل.","خفض الملوثات = 70% × سلامة المرشّح.","سلامة المرشّح = (1 − 0.6 × الحِمل²) × عامل الحرارة. الحِمل هو ساعات التشغيل منذ التبديل مقسومة على 600 ساعة، ويبقى بين 0 و1. فبدون أثر الحرارة تنخفض السلامة من 1 إلى 0.4 عند التشبّع.","عامل الحرارة = 1 عندما تكون حرارة غاز الخرطوشة 60 °C أو أقل. وفوق ذلك ينقص 0.6 عن كل 40 °C، بحد أدنى 0.4."],"assumptions":"افتراضات للعرض فقط وليست حقائق تصميمية: مدى 100 إلى 400 °C للجانب الساخن، وعمر الخرطوشة 600 ساعة، وأثر الحرارة. وُضعت لتتحرك المحاكاة فقط. استبدلها بقيم مقيسة بعد اختبار النموذج الأولي."},"economy":{"title":"هندسة مقتصدة ودورة مغلقة","intro":"الهدف وحدة منخفضة التكلفة تستطيع المجتمعات تحمّلها وتشغيلها باستمرار.","cards":[{"t":"جهاز الغسل الصناعي","v":"آلاف الدولارات","n":"للمقارنة فقط."},{"t":"النموذج الأولي لـ AeroTurbine","v":"175 إلى 255 دولارًا أمريكيًا","n":"تكلفة تقديرية للنموذج الأولي."},{"t":"AeroTurbine بالإنتاج الكبير","v":"70 إلى 90 دولارًا أمريكيًا للوحدة","n":"التكلفة المستهدفة عند التصنيع الواسع."}],"costNote":"التكاليف تقديرات وأهداف، وليست عروض أسعار.","loopTitle":"الدورة المغلقة","loopConcept":"مفهوم","loopLabel":"رسم الدورة المغلقة. أربع خطوات تتكرر في حلقة.","loopSteps":["تبدّل المجتمعات الخراطيش عبر اشتراك.","تذهب الخراطيش المستهلكة إلى مراكز إعادة التدوير البلدية.","تُباع النواتج الثانوية (الجبس الصناعي، CaSO4) لمصنّعي الإسمنت وألواح الجدران.","يساعد العائد على شراء مادة ماصّة جديدة لخراطيش جديدة."],"pause":"إيقاف الحركة مؤقتًا","play":"تشغيل الحركة"},"gallery":{"title":"معرض الرسومات","intro":"ستوضع هنا الرسومات والملاحظات الأولى.","open":"تكبير الرسم","captions":["المرحلة الأولى: الرسم اليدوي الأولي للمسارات","المرحلة الأولى: اسكتش يدوي لفكرة التوربينات المتتالية","المرحلة الثانية: المخطط الرقمي الأولي","المرحلة الثالثة: المعمارية الهندسية النهائية"],"alts":["المرحلة الأولى: الرسم اليدوي الأولي للمسارات — رسم بالقلم الرصاص لمسارات تدفق العادم وموضع الخرطوشة","المرحلة الأولى: اسكتش يدوي لفكرة التوربينات المتتالية — رسم بالقلم الرصاص لتوربينات صغيرة متتالية على محور","المرحلة الثانية: المخطط الرقمي الأولي — مخطط ثنائي الأبعاد يوضح التبريد ومصفوفة التوربينات وطبقات الامتصاص","المرحلة الثالثة: المعمارية الهندسية النهائية — مخطط انسيابي من صمام التحويل والحفز إلى التبريد وخرطوشة 70:20:10 ووحدة ECU"]},"footer":{"authors":"تم تطوير المشروع بشكل جماعي بواسطة فريق مكون من 9 طلاب (Team AeroTurbine) عبر مراحل البحث والمسابقات المختلفة. | معدّو مقترح مسابقة Harvard VISION 2026: أحمد شادي ولارا محمد.","country":"مصر","submitted":"قُدِّم إلى مؤتمر هارفارد VISION 2026، مسابقة عرض المشاريع المجتمعية","disclaimer":"قيد التطوير: هذا عرض تجريبي لفكرة المرشّح، وليس آلة جاهزة أو مجرَّبة في الميدان.","contact":"للتواصل:","top":"العودة إلى الأعلى"}}</script>
+  <script defer src="../app.js"></script>
+</head>
+<body data-prerendered="1">
+<a class="skip" href="#main" data-i18n="skip">تخطَّ إلى المحتوى</a>
+
+<div class="top">
+  <div class="banner" id="banner" role="region" aria-labelledby="banner-text">
+    <p id="banner-text" data-i18n="banner.text">قيد التطوير: هذا عرض تجريبي لفكرة المرشّح، وليس آلة جاهزة أو مجرَّبة في الميدان.</p>
+    <button type="button" class="banner-x" id="banner-close" data-i18n-attr="aria-label:banner.dismiss" aria-label="إخفاء هذا التنبيه">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="#hero">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><circle cx="16" cy="16" r="4" fill="var(--copper-fill)"/><path d="M16 3v9M16 20v9M3 16h9M20 16h9" stroke="var(--mint)" stroke-width="3" stroke-linecap="round"/></svg>
+        <span data-i18n="hero.title">AeroTurbine</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="أقسام الصفحة">
+        <ul>
+          <li><a href="#health" data-i18n="nav.health">الصحة</a></li>
+          <li><a href="#blueprint" data-i18n="nav.blueprint">المخطط</a></li>
+          <li><a href="#simulator" data-i18n="nav.simulator">المحاكي</a></li>
+          <li><a href="#economy" data-i18n="nav.economy">التكلفة والدورة</a></li>
+          <li><a href="#gallery" data-i18n="nav.gallery">الرسومات</a></li>
+        </ul>
+      </nav>
+      <div class="tools">
+        <select id="lang-select" class="select" data-i18n-attr="aria-label:lang.label" aria-label="اللغة">
+          <option value="en" lang="en">English</option>
+          <option value="ar" lang="ar" selected>العربية</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="es" lang="es">Español</option>
+        </select>
+        <button type="button" id="theme-toggle" class="icon-btn" aria-label="التبديل إلى السمة الفاتحة" title="التبديل إلى السمة الفاتحة">
+          <svg class="i-sun" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="main">
+
+<!-- 1. HERO -->
+<section id="hero" class="hero" aria-labelledby="hero-title">
+  <svg class="airflow" viewBox="0 0 1200 400" preserveAspectRatio="none" role="img" data-i18n-attr="aria-label:hero.bgLabel" aria-label="خطوط متحركة للزينة توحي بتدفق الهواء">
+    <g fill="none" stroke-linecap="round">
+      <path class="af a1" d="M-50 80 C 250 20, 450 140, 700 80 S 1100 40, 1280 100"/>
+      <path class="af a2" d="M-50 150 C 200 100, 500 220, 760 150 S 1100 110, 1280 170"/>
+      <path class="af a3" d="M-50 220 C 300 170, 400 290, 700 220 S 1050 190, 1280 240"/>
+      <path class="af a4" d="M-50 290 C 250 240, 550 350, 800 290 S 1100 260, 1280 310"/>
+      <path class="af a5" d="M-50 350 C 300 310, 450 390, 750 350 S 1100 330, 1280 370"/>
+    </g>
+  </svg>
+  <div class="wrap hero-inner">
+    <p class="badge" data-i18n="hero.badge">المرحلة: مخطط التصميم الهندسي والمحاكاة | قُدِّم إلى مؤتمر هارفارد VISION <bdi class="ltr" dir="ltr">2026</bdi></p>
+    <h1 id="hero-title" data-i18n="hero.title">AeroTurbine</h1>
+    <p class="lead" data-i18n="hero.summary">هواء أنظف، بطاقة يولّدها العادم نفسه.</p>
+    <p class="hero-note" data-i18n="hero.note">ما زال AeroTurbine قيد التصميم. تعرض هذه الصفحة نموذجًا تجريبيًا لفكرة المرشّح ومخططًا هندسيًا. كل رقم هنا هو هدف تصميمي أو قيمة من المحاكاة، وليس نتيجة قياس.</p>
+    <p class="hero-target"><span class="tag tag-target" data-i18n="tag.target">هدف تصميمي</span> <span data-i18n="hero.target">هدف تصميمي: خفض الملوثات والجسيمات بنسبة تصل إلى <bdi class="ltr" dir="ltr">70%</bdi>.</span></p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#blueprint"><span data-i18n="hero.cta1">استكشف المخطط</span> <svg class="dir-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></a>
+      <a class="btn btn-ghost" href="#simulator" data-i18n="hero.cta2">جرّب المحاكي</a>
+    </div>
+  </div>
+</section>
+
+<!-- 2. HEALTH CONTEXT -->
+<section id="health" class="section" aria-labelledby="health-title">
+  <div class="wrap">
+    <h2 id="health-title" data-i18n="health.title">لماذا يهمنا هذا محليًا</h2>
+    <p class="intro" data-i18n="health.intro">الهواء الملوث يُمرض الناس، وهو مشكلة كبيرة في المناطق الصناعية.</p>
+
+    <div class="grid-2 gap-top">
+      <div class="card big-stat">
+        <p class="muted" data-i18n="health.globalLabel">يرتبط تلوث الهواء الخارجي بنحو هذا العدد من الوفيات المبكرة كل عام في العالم:</p>
+        <p class="big-num" data-i18n="health.globalValue"><bdi class="ltr" dir="ltr">6.7</bdi> إلى <bdi class="ltr" dir="ltr">7.9</bdi> مليون</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="health.placesTitle">حلوان وشبرا الخيمة، مصر</h3>
+        <p data-i18n="health.placesText">تُطلق المصانع وحركة السيارات ومولدات الديزل الاحتياطية هذه الملوثات:</p>
+        <ul class="sources">
+          <li>
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M2 21V11l6 4v-4l6 4V4h4v17z" fill="currentColor"/></svg>
+            <span data-i18n="health.sources.factories">المصانع</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M3 15l2-6a2 2 0 0 1 2-1.5h10A2 2 0 0 1 19 9l2 6v3h-2.2a2.3 2.3 0 0 0-4.6 0H9.8a2.3 2.3 0 0 0-4.6 0H3z" fill="currentColor"/></svg>
+            <span data-i18n="health.sources.traffic">حركة السيارات</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M2 7h18v11H2zM20 10h2v5h-2z" fill="currentColor"/><path d="M11 9l-3 5h3l-1 3 4-5h-3l1-3z" fill="var(--surface)"/></svg>
+            <span data-i18n="health.sources.generators">مولدات الديزل الاحتياطية</span>
+          </li>
+        </ul>
+        <ul class="chips" data-i18n-attr="aria-label:health.pollutants" aria-label="PM2.5 وNO2 وSO2 وCO والمركبات العضوية المتطايرة (VOCs)">
+          <li data-i18n="health.pollutantList.pm"><bdi class="ltr" dir="ltr">PM<sub>2.5</sub></bdi></li>
+          <li data-i18n="health.pollutantList.no2"><bdi class="ltr" dir="ltr">NO<sub>2</sub></bdi></li>
+          <li data-i18n="health.pollutantList.so2"><bdi class="ltr" dir="ltr">SO<sub>2</sub></bdi></li>
+          <li data-i18n="health.pollutantList.co">CO</li>
+          <li data-i18n="health.pollutantList.voc">VOCs</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub" data-i18n="health.effectsTitle">ما تربطه الدراسات الصحية بـ <bdi class="ltr" dir="ltr">PM<sub>2.5</sub></bdi> و<bdi class="ltr" dir="ltr">NO<sub>2</sub></bdi></h3>
+    <div class="grid-2">
+      <div class="card">
+        <h3 class="h-sm" data-i18n="health.pmTitle"><bdi class="ltr" dir="ltr">PM<sub>2.5</sub></bdi> (الجسيمات الدقيقة)</h3>
+        <div class="meter" role="img" data-i18n-attr="aria-label:health.pmChart" aria-label="شريط من 10% إلى 20% زيادة في وفيات أمراض القلب والسكتة الدماغية"><span class="meter-range" style="inset-inline-start:50%;inline-size:50%"></span></div>
+        <p data-i18n="health.pmText">كل زيادة قدرها <bdi class="ltr" dir="ltr">10 µg/m³</bdi> ترتبط بارتفاع وفيات أمراض القلب والسكتة الدماغية بنحو <bdi class="ltr" dir="ltr">10–20%</bdi>.</p>
+      </div>
+      <div class="card">
+        <h3 class="h-sm" data-i18n="health.no2Title"><bdi class="ltr" dir="ltr">NO<sub>2</sub></bdi> (ثاني أكسيد النيتروجين)</h3>
+        <div class="meter" role="img" data-i18n-attr="aria-label:health.no2Chart" aria-label="خطر نسبي 1.09 مقارنةً بخط الأساس 1.00"><span class="meter-base"></span><span class="meter-range alt" style="inset-inline-start:0;inline-size:9%"></span></div>
+        <p class="muted small" data-i18n="health.baseline">خط الأساس <bdi class="ltr" dir="ltr">1.00</bdi></p>
+        <p data-i18n="health.no2Text">كل زيادة قدرها <bdi class="ltr" dir="ltr">10 µg/m³</bdi> ترتبط بخطر نسبي قدره <bdi class="ltr" dir="ltr">1.09</bdi> للإصابة بالربو عند الأطفال.</p>
+      </div>
+    </div>
+    <p class="muted small" data-i18n="health.note">هذه روابط وجدتها الدراسات الصحية، وليست نتائج من AeroTurbine.</p>
+
+    <h3 class="sub" data-i18n="health.failTitle">لماذا تفشل أجهزة الغسل الشائعة هنا</h3>
+    <div class="grid-2 compare">
+      <div class="card bad">
+        <h3 class="h-sm" data-i18n="health.failColA">أجهزة الغسل الشائعة</h3>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg><span data-i18n="health.failA1">تستهلك كهرباء كثيرة.</span></li>
+          <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg><span data-i18n="health.failA2">تتوقف المواد الماصّة فيها عن العمل جيدًا فوق <bdi class="ltr" dir="ltr">60 °C</bdi>، إذ تجعل الحرارة الغاز المحجوز يتسرب.</span></li>
+        </ul>
+      </div>
+      <div class="card good">
+        <h3 class="h-sm" data-i18n="health.failColB">طريقة AeroTurbine</h3>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span data-i18n="health.failB1">يولّد طاقته بنفسه من العادم. هدف تصميمي: حتى <bdi class="ltr" dir="ltr">122.6 W</bdi>.</span></li>
+          <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span data-i18n="health.failB2">تخفض زعانف التبريد حرارة الغاز إلى أقل من <bdi class="ltr" dir="ltr">60 °C</bdi> قبل أن يصل إلى خرطوشة الترشيح. هذا هو المقصود في التصميم.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. BLUEPRINT -->
+<section id="blueprint" class="section alt" aria-labelledby="bp-title">
+  <div class="wrap">
+    <h2 id="bp-title" data-i18n="blueprint.title">المخطط ذو المناطق الثلاث</h2>
+    <p class="intro" data-i18n="blueprint.intro">اختر منطقة لترى ما بداخلها. يوضح السهم اتجاه جريان الغاز.</p>
+
+    <!-- 3a. Interactive SVG -->
+    <div class="diagram-scroll card">
+      <svg id="bp" viewBox="0 0 1000 350" data-i18n-attr="aria-label:blueprint.diagramLabel" aria-label="رسم جانبي لجهاز اعتراض العادم بمناطقه الثلاث" role="group">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+        </defs>
+
+        <g id="bp-shapes" transform="translate(1000 0) scale(-1 1)">
+          <path class="wire" d="M790 82 H30 V166"/>
+          <path class="wire" d="M850 120 V166"/>
+          <rect class="pipe" x="10" y="172" width="980" height="36" rx="4"/>
+          <rect class="gas-line" x="14" y="188" width="972" height="4"/>
+
+          <g id="g-teg"><rect class="teg" x="150" y="134" width="130" height="112" rx="10"/>
+            <path class="teg-lines" d="M170 134v112M190 134v112M210 134v112M230 134v112M250 134v112M270 134v112"/></g>
+          <g id="g-venturi"><rect class="body" x="142" y="150" width="148" height="80" rx="6"/>
+            <path class="gas" d="M142 168 L196 178 H236 L290 168 V212 L236 202 H196 L142 212 Z"/></g>
+          <g id="g-turbines">
+            <g transform="translate(205 190)"><g class="rotor"><circle r="10" class="rotor-c"/><path d="M-10 0H10M0 -10V10M-7 -7L7 7M-7 7L7 -7"/></g></g>
+            <g transform="translate(231 190)"><g class="rotor rev"><circle r="10" class="rotor-c"/><path d="M-10 0H10M0 -10V10M-7 -7L7 7M-7 7L7 -7"/></g></g>
+          </g>
+          <g id="g-valve"><rect class="body" x="60" y="148" width="82" height="84" rx="8"/>
+            <polyline class="spring" points="74,190 82,176 92,204 102,176 112,204 122,176 130,190"/>
+            <path class="bypass" d="M100 148 V112 H134" marker-end="url(#arr)"/></g>
+
+          <g id="g-cat"><rect class="concept" x="300" y="156" width="104" height="68" rx="6"/>
+            <rect class="scr" x="306" y="164" width="46" height="52"/>
+            <rect class="ptpd" x="358" y="164" width="40" height="52"/>
+            <rect class="urea" x="326" y="146" width="6" height="18"/></g>
+
+          <g id="g-fins"><rect class="body" x="410" y="160" width="80" height="60"/>
+            <path class="fins" d="M414 130v30M424 130v30M434 130v30M444 130v30M454 130v30M464 130v30M474 130v30M484 130v30M414 220v30M424 220v30M434 220v30M444 220v30M454 220v30M464 220v30M474 220v30M484 220v30"/></g>
+
+          <g id="g-cartridge">
+            <rect class="capsule" x="498" y="150" width="268" height="80" rx="16"/>
+            <rect id="g-l1" class="l1" x="506" y="158" width="48" height="64" rx="4"/>
+            <rect id="g-l2" class="l2" x="554" y="158" width="168" height="64" rx="4"/>
+            <rect id="g-l3" class="l3" x="722" y="158" width="24" height="64" rx="4"/>
+            <rect class="rubber" x="600" y="128" width="70" height="22" rx="8"/>
+          </g>
+          <g id="g-sensors"><circle class="sensor" cx="36" cy="168" r="7"/><circle class="sensor" cx="850" cy="168" r="7"/></g>
+          <g id="g-ecu"><rect class="ecu" x="790" y="40" width="170" height="80" rx="8"/><circle class="led" cx="805" cy="52" r="3"/><circle class="led" cx="817" cy="52" r="3"/></g>
+
+          <path class="flow-arrow" d="M20 28 H110" marker-end="url(#arr)"/>
+          <circle id="flow-dot" class="dot" r="9" cx="0" cy="190" style="transform:translate(60px,0)"/>
+
+          <g class="zone" id="zone-1" role="button" tabindex="0" aria-pressed="false" data-zone="1" aria-label="المنطقة 1: توليد الطاقة"><rect x="16" y="96" width="280" height="250" rx="14"/></g>
+          <g class="zone" id="zone-2" role="button" tabindex="0" aria-pressed="false" data-zone="2" aria-label="المنطقة 2: التبريد والترشيح"><rect x="300" y="96" width="470" height="250" rx="14"/></g>
+          <g class="zone" id="zone-3" role="button" tabindex="0" aria-pressed="false" data-zone="3" aria-label="المنطقة 3: وحدة التحكم الذكية"><rect x="780" y="30" width="190" height="150" rx="14"/></g>
+        </g>
+
+        <g id="bp-labels" class="dg-text">
+          <text data-x="45" data-y="262" x="955" y="262" data-i18n="blueprint.dg.inlet">دخول العادم</text>
+          <text data-x="150" data-y="262" x="850" y="262" data-i18n="blueprint.dg.venturi">فنتوري</text>
+          <text data-x="350" data-y="262" x="650" y="262" data-i18n="blueprint.dg.cat">مراحل الحفز</text>
+          <text data-x="350" data-y="316" x="650" y="316" data-i18n="blueprint.dg.concept" class="concept-t">(مفهوم تصميمي)</text>
+          <text data-x="534" data-y="262" x="466" y="262" data-i18n="blueprint.dg.l1">زيوليت</text>
+          <text data-x="642" data-y="262" x="358" y="262" data-i18n="blueprint.dg.l2">جير صودي</text>
+          <text data-x="738" data-y="262" x="262" y="262" data-i18n="blueprint.dg.l3">كربون</text>
+          <text data-x="900" data-y="262" x="100" y="262" data-i18n="blueprint.dg.outlet">خروج غاز أنظف</text>
+          <text data-x="100" data-y="290" x="900" y="290" data-i18n="blueprint.dg.valve">صمام التحويل</text>
+          <text data-x="235" data-y="290" x="765" y="290" data-i18n="blueprint.dg.turbines">توربينتان صغيرتان</text>
+          <text data-x="450" data-y="290" x="550" y="290" data-i18n="blueprint.dg.fins">زعانف التبريد</text>
+          <text data-x="632" data-y="290" x="368" y="290" data-i18n="blueprint.dg.cartridge">خرطوشة قابلة للتبديل</text>
+          <text data-x="165" data-y="104" x="835" y="104" data-i18n="blueprint.dg.bypass" class="sm">مخرج التحويل</text>
+          <text data-x="240" data-y="124" x="760" y="124" data-i18n="blueprint.dg.teg" class="sm">طوق TEG</text>
+          <text data-x="875" data-y="76" x="125" y="76" data-i18n="blueprint.dg.ecu" class="strong">ECU</text>
+          <text data-x="875" data-y="104" x="125" y="104" data-i18n="blueprint.dg.battery">البطارية</text>
+          <text data-x="875" data-y="148" x="125" y="148" data-i18n="blueprint.dg.sensors" class="sm">مستشعرات قبل وبعد</text>
+          <text data-x="530" data-y="195" x="470" y="195" class="inbox">20%</text>
+          <text data-x="160" data-y="338" x="840" y="338" data-i18n="blueprint.dg.zone1" class="zt">المنطقة 1</text>
+          <text data-x="535" data-y="338" x="465" y="338" data-i18n="blueprint.dg.zone2" class="zt">المنطقة 2</text>
+          <text data-x="875" data-y="22" x="125" y="22" data-i18n="blueprint.dg.zone3" class="zt">المنطقة 3</text>
+          <text data-x="122" data-y="33" x="878" y="33" data-anchor="start" style="text-anchor:end" data-i18n="blueprint.dg.flowDir" class="sm">اتجاه جريان الغاز</text>
+          <text data-x="638" data-y="195" x="362" y="195" class="inbox">70%</text>
+          <text data-x="734" data-y="195" x="266" y="195" class="inbox">10%</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="chips-row" role="group" data-i18n-attr="aria-label:blueprint.chipsLabel" aria-label="اختر منطقة">
+      <button type="button" class="chip-btn" data-zone="1" aria-pressed="false"><span class="zn">1</span> <span data-i18n="zones.z1.short">توليد الطاقة</span></button>
+      <button type="button" class="chip-btn" data-zone="2" aria-pressed="false"><span class="zn">2</span> <span data-i18n="zones.z2.short">التبريد والترشيح</span></button>
+      <button type="button" class="chip-btn" data-zone="3" aria-pressed="false"><span class="zn">3</span> <span data-i18n="zones.z3.short">وحدة التحكم الذكية</span></button>
+    </div>
+
+    <div class="card flow-card">
+      <h3 data-i18n="blueprint.flowTitle">كيف يجري الغاز</h3>
+      <p class="flow-step-no muted small" id="flow-no">الخطوة 1 من 8</p>
+      <p class="flow-text" id="flow-text" aria-live="polite">يدخل العادم الساخن. وتحمي صمام التحويل النابضي المحرك.</p>
+      <div class="flow-btns">
+        <button type="button" class="btn btn-ghost" id="flow-play" aria-pressed="false">تشغيل</button>
+        <button type="button" class="btn btn-primary" id="flow-next"><span data-i18n="blueprint.next">الخطوة التالية</span> <svg class="dir-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button>
+      </div>
+    </div>
+
+    <!-- 3b. Reference schematic -->
+    <h3 class="sub" data-i18n="schematic.title">رسم توضيحي للمفهوم</h3>
+    <figure class="schematic">
+      <div class="img-wrap" dir="ltr">
+        <picture id="schem-pic">
+          <source type="image/webp" srcset="../assets/schematic-cutaway-800.webp 800w, ../assets/schematic-cutaway.webp 1024w" sizes="(max-width: 840px) 94vw, 1024px">
+          <img id="schem-img" src="../assets/schematic.jpg" width="1024" height="571" loading="lazy" decoding="async" alt="رسم ثلاثي الأبعاد مقطوع لمفهوم AeroTurbine. يدخل العادم الساخن من اليسار عبر صمام تحويل وفنتوري فيه توربينتان صغيرتان ذهبيتان، ثم يمر بمراحل حفز وزعانف تبريد وخرطوشة من ثلاث طبقات، ويخرج من اليمين. وفي الأعلى صندوق التحكم ECU مع بطارية." data-i18n-attr="alt:schematic.alt">
+        </picture>
+        <div id="hotspots" role="group" data-i18n-attr="aria-label:schematic.dots" aria-label="أجزاء الرسم التوضيحي">
+          <button type="button" class="hs" data-num="1" data-hs="valve" style="left:12%;top:27%" aria-label="1. صمام التحويل النابضي" title="صمام التحويل النابضي"></button>
+          <button type="button" class="hs" data-num="2" data-hs="venturi" style="left:22%;top:36%" aria-label="2. فوهة فنتوري" title="فوهة فنتوري"></button>
+          <button type="button" class="hs" data-num="3" data-hs="turbines" style="left:29.5%;top:33%" aria-label="3. توربينتان صغيرتان" title="توربينتان صغيرتان"></button>
+          <button type="button" class="hs concept" data-num="4" data-hs="scr" style="left:38%;top:42%" aria-label="4. حفّاز SCR السلبي (مفهوم تصميمي)" title="حفّاز SCR السلبي"></button>
+          <button type="button" class="hs concept" data-num="5" data-hs="urea" style="left:48.5%;top:58%" aria-label="5. قناة جرعات اليوريا الصلبة (مفهوم تصميمي)" title="قناة جرعات اليوريا الصلبة"></button>
+          <button type="button" class="hs concept" data-num="6" data-hs="ptpd" style="left:46.5%;top:44%" aria-label="6. حفّاز أكسدة Pt/Pd (مفهوم تصميمي)" title="حفّاز أكسدة Pt/Pd"></button>
+          <button type="button" class="hs" data-num="7" data-hs="fins" style="left:58.5%;top:47%" aria-label="7. زعانف التبريد" title="زعانف التبريد"></button>
+          <button type="button" class="hs" data-num="8" data-hs="lime" style="left:70%;top:49%" aria-label="8. خرطوشة خلية نحل الجير" title="خرطوشة خلية نحل الجير"></button>
+          <button type="button" class="hs" data-num="9" data-hs="carbon" style="left:83%;top:52%" aria-label="9. خرطوشة الكربون المنشَّط" title="خرطوشة الكربون المنشَّط"></button>
+          <button type="button" class="hs" data-num="10" data-hs="ecu" style="left:78%;top:18%" aria-label="10. وحدة التحكم ECU والبطارية" title="وحدة التحكم ECU والبطارية"></button>
+        </div>
+        <button type="button" class="zoom-btn" id="schem-zoom" data-i18n-attr="aria-label:schematic.zoom;title:schematic.zoom" aria-label="تكبير الرسم التوضيحي" title="تكبير الرسم التوضيحي">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="2.4" fill="none"/><path d="M15 15l6 6M10 7v6M7 10h6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <figcaption>
+        <span class="tag tag-concept" data-i18n="tag.concept">مفهوم تصميمي</span>
+        <span data-i18n="schematic.caption">رسم توضيحي لمفهوم التصميم. وليس نموذجًا أوليًا مبنيًا أو مجرَّبًا.</span>
+      </figcaption>
+    </figure>
+    <p class="muted small" data-i18n="schematic.hint">المس نقطة مرقّمة لتعرف المزيد عن أحد الأجزاء.</p>
+    <p class="muted small" data-i18n="schematic.englishOnly">الكلمات داخل الصورة بالإنجليزية فقط. استخدم القائمة المرقّمة أدناه بلغتك.</p>
+    <h3 class="h-sm" data-i18n="schematic.legendTitle">دليل الأرقام</h3>
+    <ol id="legend" class="legend">
+      <li><button type="button" class="" data-hs="valve"><span class="num">1</span><span><strong data-i18n="hotspots.valve.name">صمام التحويل النابضي</strong><span class="d" data-i18n="hotspots.valve.desc">ينفتح من تلقاء نفسه إذا ارتفع الضغط الخلفي أكثر من اللازم، فلا يتوقف محرك المصدر.</span></span></button></li>
+      <li><button type="button" class="" data-hs="venturi"><span class="num">2</span><span><strong data-i18n="hotspots.venturi.name">فوهة فنتوري</strong><span class="d" data-i18n="hotspots.venturi.desc">تضيّق المجرى لتُسرّع الغاز فيدير التوربينات.</span></span></button></li>
+      <li><button type="button" class="" data-hs="turbines"><span class="num">3</span><span><strong data-i18n="hotspots.turbines.name">توربينتان صغيرتان</strong><span class="d" data-i18n="hotspots.turbines.desc">تدوران واحدة بعد الأخرى في الغاز السريع. هدف تصميمي: حتى <bdi class="ltr" dir="ltr">50.6 W</bdi>.</span></span></button></li>
+      <li><button type="button" class="concept" data-hs="scr"><span class="num">4</span><span><strong data-i18n="hotspots.scr.name">حفّاز SCR السلبي</strong><span class="d" data-i18n="hotspots.scr.desc">يخفض <bdi class="ltr" dir="ltr">NOx</bdi> بالأمونيا: <bdi class="ltr" dir="ltr">NOx + NH<sub>3</sub> → N<sub>2</sub> + H<sub>2</sub>O</bdi>. مفهوم تصميمي بلا أرقام بعد.</span> <span class="tag tag-concept" data-i18n="tag.concept">مفهوم تصميمي</span></span></button></li>
+      <li><button type="button" class="concept" data-hs="urea"><span class="num">5</span><span><strong data-i18n="hotspots.urea.name">قناة جرعات اليوريا الصلبة</strong><span class="d" data-i18n="hotspots.urea.desc">تمدّ مرحلة SCR بكمية صغيرة جدًا من مصدر الأمونيا. مفهوم تصميمي.</span> <span class="tag tag-concept" data-i18n="tag.concept">مفهوم تصميمي</span></span></button></li>
+      <li><button type="button" class="concept" data-hs="ptpd"><span class="num">6</span><span><strong data-i18n="hotspots.ptpd.name">حفّاز أكسدة Pt/Pd</strong><span class="d" data-i18n="hotspots.ptpd.desc">يحوّل CO والهيدروكربونات إلى <bdi class="ltr" dir="ltr">CO<sub>2</sub></bdi> وماء: <bdi class="ltr" dir="ltr">CO + O<sub>2</sub> → CO<sub>2</sub></bdi> و<bdi class="ltr" dir="ltr">HC + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O</bdi>. مفهوم تصميمي.</span> <span class="tag tag-concept" data-i18n="tag.concept">مفهوم تصميمي</span></span></button></li>
+      <li><button type="button" class="" data-hs="fins"><span class="num">7</span><span><strong data-i18n="hotspots.fins.name">زعانف التبريد</strong><span class="d" data-i18n="hotspots.fins.desc">زعانف من الألمنيوم تخفض حرارة الغاز إلى أقل من <bdi class="ltr" dir="ltr">60 °C</bdi> بالحمل الحراري الطبيعي.</span></span></button></li>
+      <li><button type="button" class="" data-hs="lime"><span class="num">8</span><span><strong data-i18n="hotspots.lime.name">خرطوشة خلية نحل الجير</strong><span class="d" data-i18n="hotspots.lime.desc">طبقة الجير الصودي. تحتجز <bdi class="ltr" dir="ltr">CO<sub>2</sub></bdi> وتزيل <bdi class="ltr" dir="ltr">SO<sub>2</sub></bdi>. وتمثل <bdi class="ltr" dir="ltr">70%</bdi> من كتلة الخرطوشة.</span></span></button></li>
+      <li><button type="button" class="" data-hs="carbon"><span class="num">9</span><span><strong data-i18n="hotspots.carbon.name">خرطوشة الكربون المنشَّط</strong><span class="d" data-i18n="hotspots.carbon.desc">طبقة كربون مطوية. تلتقط VOCs والسموم الغازية. وتمثل <bdi class="ltr" dir="ltr">10%</bdi> من كتلة الخرطوشة.</span></span></button></li>
+      <li><button type="button" class="" data-hs="ecu"><span class="num">10</span><span><strong data-i18n="hotspots.ecu.name">وحدة التحكم ECU والبطارية</strong><span class="d" data-i18n="hotspots.ecu.desc">متحكم ESP-<bdi class="ltr" dir="ltr">32</bdi> وبطارية <bdi class="ltr" dir="ltr">LiFePO<sub>4</sub></bdi> معزولان على جدار خارجي بارد.</span></span></button></li>
+    </ol>
+    <p class="note-box" data-i18n="schematic.tegNote">طوق TEG غير ظاهر في الرسم التوضيحي.</p>
+  </div>
+</section>
+
+<!-- 4. SIMULATOR -->
+<section id="simulator" class="section" aria-labelledby="sim-title">
+  <div class="wrap">
+    <h2 id="sim-title" data-i18n="sim.title">محاكي المعاملات المباشر</h2>
+    <p class="intro" data-i18n="sim.intro">حرّك المؤشرات وراقب ما يتغير. المعادلات بسيطة وموضحة في الأسفل.</p>
+    <p class="sim-label" role="note"><span class="tag tag-sim" data-i18n="tag.sim">محاكاة</span> <strong data-i18n="sim.label">قيم نظرية من المحاكاة مبنية على أهداف تصميمية، وليست بيانات مقيسة.</strong></p>
+
+    <div class="sim-grid">
+      <div class="card">
+        <h3 data-i18n="sim.inputs">الإعدادات</h3>
+        <div class="slider"><div class="s-top"><label for="s-flow" data-i18n="sim.flow">معدل تدفق العادم</label><output id="o-flow" for="s-flow"><bdi dir="ltr">70 %</bdi></output></div><input type="range" id="s-flow" min="0" max="100" step="1" value="70"></div>
+        <div class="slider"><div class="s-top"><label for="s-hours" data-i18n="sim.hours">ساعات التشغيل يوميًا</label><output id="o-hours" for="s-hours"><bdi dir="ltr">8 س</bdi></output></div><input type="range" id="s-hours" min="0" max="12" step="1" value="8"></div>
+        <div class="slider"><div class="s-top"><label for="s-texh" data-i18n="sim.texh">حرارة العادم (الجانب الساخن)</label><output id="o-texh" for="s-texh"><bdi dir="ltr">300 °C</bdi></output></div><input type="range" id="s-texh" min="100" max="400" step="10" value="300"></div>
+        <div class="slider"><div class="s-top"><label for="s-tcart" data-i18n="sim.tcart">حرارة الغاز عند الخرطوشة</label><output id="o-tcart" for="s-tcart"><bdi dir="ltr">45 °C</bdi></output></div><input type="range" id="s-tcart" min="30" max="100" step="1" value="45"></div>
+        <div class="slider"><div class="s-top"><label for="s-days" data-i18n="sim.days">الأيام منذ آخر تبديل للخرطوشة</label><output id="o-days" for="s-days">10 يوم</output></div><input type="range" id="s-days" min="0" max="60" step="1" value="10"></div>
+      </div>
+
+      <div class="card results" aria-live="polite">
+        <h3 data-i18n="sim.results">النتائج</h3>
+        <p class="sim-label small-label"><strong data-i18n="sim.label">قيم نظرية من المحاكاة مبنية على أهداف تصميمية، وليست بيانات مقيسة.</strong></p>
+        <div class="bar-wrap">
+          <div class="bar-head"><span data-i18n="sim.total">الطاقة الإجمالية</span> <strong id="r-total"><bdi dir="ltr">63.2 W</bdi></strong></div>
+          <div class="bar" role="img" data-i18n-attr="aria-label:sim.barLabel" aria-label="شريط مكدّس لطاقة التوربينات وطاقة TEG. العلامة تبيّن الحد الأقصى 122.6 W.">
+            <span class="seg turbine" id="bar-turbine" style="inline-size:24.2%"></span><span class="seg teg" id="bar-teg" style="inline-size:27.4%"></span>
+            <span class="maxmark"><i></i><b data-i18n="sim.max">الحد الأقصى <bdi class="ltr" dir="ltr">122.6 W</bdi></b></span>
+          </div>
+          <ul class="legend-dots">
+            <li><i class="d turbine"></i><span data-i18n="sim.turbine">طاقة التوربينات</span> <strong id="r-turbine"><bdi dir="ltr">29.6 W</bdi></strong></li>
+            <li><i class="d teg"></i><span data-i18n="sim.teg">طاقة TEG</span> <strong id="r-teg"><bdi dir="ltr">33.6 W</bdi></strong></li>
+          </ul>
+        </div>
+        <dl class="stats">
+          <div><dt data-i18n="sim.energy">الطاقة اليومية</dt><dd id="r-energy"><bdi dir="ltr">506 Wh</bdi></dd></div>
+          <div><dt data-i18n="sim.reduction">خفض الملوثات</dt><dd id="r-reduction" class="mint"><bdi dir="ltr">69 %</bdi></dd><dd class="muted small" data-i18n="sim.reductionNote">هدف تصميمي: حتى <bdi class="ltr" dir="ltr">70%</bdi></dd></div>
+          <div><dt data-i18n="sim.health">سلامة المرشّح</dt><dd id="r-health"><bdi dir="ltr">99 %</bdi></dd></div>
+        </dl>
+        <div class="swap ok" id="swap">
+          <h3 class="h-sm" data-i18n="sim.swapTitle">متى نبدّل الخرطوشة</h3>
+          <p class="swap-state" id="swap-state">الخرطوشة بحالة جيدة حاليًا.</p>
+          <p class="small" id="swap-days">يتبقى نحو 65 يومًا من الاستخدام بهذه الإعدادات.</p>
+          <p class="small" id="swap-heat">حرارة الغاز عند الخرطوشة أقل من 60 °C. وهذا جيد.</p>
+        </div>
+      </div>
+    </div>
+
+    <details class="formulas">
+      <summary data-i18n="sim.formulas">أظهر المعادلات</summary>
+      <ol id="formula-list">
+        <li>طاقة التوربينات = <bdi class="ltr" dir="ltr">50.6 W</bdi> × التدفق^<bdi class="ltr" dir="ltr">1.5</bdi>، والتدفق بين <bdi class="ltr" dir="ltr">0</bdi> و<bdi class="ltr" dir="ltr">1</bdi>.</li>
+        <li>طاقة TEG = <bdi class="ltr" dir="ltr">72.0 W</bdi> × عامل الحرارة × التدفق. عامل الحرارة = (حرارة العادم − <bdi class="ltr" dir="ltr">100</bdi>) ÷ <bdi class="ltr" dir="ltr">300</bdi>، ويبقى بين <bdi class="ltr" dir="ltr">0</bdi> و<bdi class="ltr" dir="ltr">1</bdi>.</li>
+        <li>الطاقة الإجمالية = التوربينات + TEG. وأقصى ما تبلغه <bdi class="ltr" dir="ltr">50.6</bdi> + <bdi class="ltr" dir="ltr">72.0</bdi> = <bdi class="ltr" dir="ltr">122.6 W</bdi>.</li>
+        <li>الطاقة اليومية (Wh) = الطاقة الإجمالية (W) × ساعات التشغيل.</li>
+        <li>خفض الملوثات = <bdi class="ltr" dir="ltr">70%</bdi> × سلامة المرشّح.</li>
+        <li>سلامة المرشّح = (<bdi class="ltr" dir="ltr">1</bdi> − <bdi class="ltr" dir="ltr">0.6</bdi> × الحِمل²) × عامل الحرارة. الحِمل هو ساعات التشغيل منذ التبديل مقسومة على <bdi class="ltr" dir="ltr">600</bdi> ساعة، ويبقى بين <bdi class="ltr" dir="ltr">0</bdi> و<bdi class="ltr" dir="ltr">1</bdi>. فبدون أثر الحرارة تنخفض السلامة من <bdi class="ltr" dir="ltr">1</bdi> إلى <bdi class="ltr" dir="ltr">0.4</bdi> عند التشبّع.</li>
+        <li>عامل الحرارة = <bdi class="ltr" dir="ltr">1</bdi> عندما تكون حرارة غاز الخرطوشة <bdi class="ltr" dir="ltr">60 °C</bdi> أو أقل. وفوق ذلك ينقص <bdi class="ltr" dir="ltr">0.6</bdi> عن كل <bdi class="ltr" dir="ltr">40 °C</bdi>، بحد أدنى <bdi class="ltr" dir="ltr">0.4</bdi>.</li>
+      </ol>
+      <p class="muted small" data-i18n="sim.assumptions">افتراضات للعرض فقط وليست حقائق تصميمية: مدى <bdi class="ltr" dir="ltr">100</bdi> إلى <bdi class="ltr" dir="ltr">400 °C</bdi> للجانب الساخن، وعمر الخرطوشة <bdi class="ltr" dir="ltr">600</bdi> ساعة، وأثر الحرارة. وُضعت لتتحرك المحاكاة فقط. استبدلها بقيم مقيسة بعد اختبار النموذج الأولي.</p>
+    </details>
+  </div>
+</section>
+
+<!-- 5. ECONOMY -->
+<section id="economy" class="section alt" aria-labelledby="eco-title">
+  <div class="wrap">
+    <h2 id="eco-title" data-i18n="economy.title">هندسة مقتصدة ودورة مغلقة</h2>
+    <p class="intro" data-i18n="economy.intro">الهدف وحدة منخفضة التكلفة تستطيع المجتمعات تحمّلها وتشغيلها باستمرار.</p>
+    <div class="cost-grid" id="cost-cards">
+      <div class="card cost c0"><h3 data-i18n="economy.cards.0.t">جهاز الغسل الصناعي</h3><p class="cost-v" data-i18n="economy.cards.0.v">آلاف الدولارات</p><p class="muted small" data-i18n="economy.cards.0.n">للمقارنة فقط.</p></div>
+      <div class="card cost c1"><span class="tag tag-target" data-i18n="tag.model">تقدير نموذجي</span><h3 data-i18n="economy.cards.1.t">النموذج الأولي لـ AeroTurbine</h3><p class="cost-v" data-i18n="economy.cards.1.v"><bdi class="ltr" dir="ltr">175</bdi> إلى <bdi class="ltr" dir="ltr">255</bdi> دولارًا أمريكيًا</p><p class="muted small" data-i18n="economy.cards.1.n">تكلفة تقديرية للنموذج الأولي.</p></div>
+      <div class="card cost c2"><span class="tag tag-target" data-i18n="tag.target">هدف تصميمي</span><h3 data-i18n="economy.cards.2.t">AeroTurbine بالإنتاج الكبير</h3><p class="cost-v" data-i18n="economy.cards.2.v"><bdi class="ltr" dir="ltr">70</bdi> إلى <bdi class="ltr" dir="ltr">90</bdi> دولارًا أمريكيًا للوحدة</p><p class="muted small" data-i18n="economy.cards.2.n">التكلفة المستهدفة عند التصنيع الواسع.</p></div>
+    </div>
+    <p class="muted small" data-i18n="economy.costNote">التكاليف تقديرات وأهداف، وليست عروض أسعار.</p>
+
+    <h3 class="sub"><span data-i18n="economy.loopTitle">الدورة المغلقة</span> <span class="tag tag-concept" data-i18n="economy.loopConcept">مفهوم</span></h3>
+    <div class="loop" id="loop" role="group" data-i18n-attr="aria-label:economy.loopLabel" aria-label="رسم الدورة المغلقة. أربع خطوات تتكرر في حلقة.">
+      <svg class="loop-ring" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" id="loop-svg">
+        <ellipse cx="50" cy="50" rx="35.4" ry="35.4" class="ring" vector-effect="non-scaling-stroke"/>
+        <circle r="2.2" class="orbit"><animateMotion dur="9s" repeatCount="indefinite" path="M50 14.6 A35.4 35.4 0 1 1 49.99 14.6"/></circle>
+      </svg>
+      <ol class="loop-steps">
+        <li class="n1"><b>1</b><span data-i18n="economy.loopSteps.0">تبدّل المجتمعات الخراطيش عبر اشتراك.</span></li>
+        <li class="n2"><b>2</b><span data-i18n="economy.loopSteps.1">تذهب الخراطيش المستهلكة إلى مراكز إعادة التدوير البلدية.</span></li>
+        <li class="n3"><b>3</b><span data-i18n="economy.loopSteps.2">تُباع النواتج الثانوية (الجبس الصناعي، <bdi class="ltr" dir="ltr">CaSO<sub>4</sub></bdi>) لمصنّعي الإسمنت وألواح الجدران.</span></li>
+        <li class="n4"><b>4</b><span data-i18n="economy.loopSteps.3">يساعد العائد على شراء مادة ماصّة جديدة لخراطيش جديدة.</span></li>
+      </ol>
+    </div>
+    <button type="button" class="btn btn-ghost" id="loop-toggle">إيقاف الحركة مؤقتًا</button>
+  </div>
+</section>
+
+<!-- 6. GALLERY -->
+<section id="gallery" class="section" aria-labelledby="gal-title">
+  <div class="wrap">
+    <h2 id="gal-title" data-i18n="gallery.title">معرض الرسومات</h2>
+    <p class="intro" data-i18n="gallery.intro">ستوضع هنا الرسومات والملاحظات الأولى.</p>
+    <ul class="gallery" id="gallery-grid">
+      <li>
+        <button type="button" class="tile" data-i18n-attr="title:gallery.open" title="تكبير الرسم">
+          <span class="ph">
+            <picture>
+              <source type="image/webp" srcset="../assets/sketches/sketch-stage-1-layout-800.webp 800w, ../assets/sketches/sketch-stage-1-layout.webp 768w" sizes="(max-width: 600px) 92vw, (max-width: 1024px) 45vw, 260px">
+              <img src="../assets/sketches/stage1-layout.jpg" loading="lazy" decoding="async" width="768" height="1024" alt="المرحلة الأولى: الرسم اليدوي الأولي للمسارات — رسم بالقلم الرصاص لمسارات تدفق العادم وموضع الخرطوشة" data-i18n-attr="alt:gallery.alts.0">
+            </picture>
+          </span>
+          <span class="cap" data-i18n="gallery.captions.0">المرحلة الأولى: الرسم اليدوي الأولي للمسارات</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="tile" data-i18n-attr="title:gallery.open" title="تكبير الرسم">
+          <span class="ph">
+            <picture>
+              <source type="image/webp" srcset="../assets/sketches/sketch-stage-1-multiturbine-800.webp 800w, ../assets/sketches/sketch-stage-1-multiturbine.webp 768w" sizes="(max-width: 600px) 92vw, (max-width: 1024px) 45vw, 260px">
+              <img src="../assets/sketches/stage1-multiturbine.jpg" loading="lazy" decoding="async" width="768" height="1024" alt="المرحلة الأولى: اسكتش يدوي لفكرة التوربينات المتتالية — رسم بالقلم الرصاص لتوربينات صغيرة متتالية على محور" data-i18n-attr="alt:gallery.alts.1">
+            </picture>
+          </span>
+          <span class="cap" data-i18n="gallery.captions.1">المرحلة الأولى: اسكتش يدوي لفكرة التوربينات المتتالية</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="tile" data-i18n-attr="title:gallery.open" title="تكبير الرسم">
+          <span class="ph">
+            <picture>
+              <source type="image/webp" srcset="../assets/sketches/sketch-stage-2-digital-800.webp 800w, ../assets/sketches/sketch-stage-2-digital.webp 1024w" sizes="(max-width: 600px) 92vw, (max-width: 1024px) 45vw, 260px">
+              <img src="../assets/sketches/stage2-digital.jpg" loading="lazy" decoding="async" width="1024" height="444" alt="المرحلة الثانية: المخطط الرقمي الأولي — مخطط ثنائي الأبعاد يوضح التبريد ومصفوفة التوربينات وطبقات الامتصاص" data-i18n-attr="alt:gallery.alts.2">
+            </picture>
+          </span>
+          <span class="cap" data-i18n="gallery.captions.2">المرحلة الثانية: المخطط الرقمي الأولي</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="tile" data-i18n-attr="title:gallery.open" title="تكبير الرسم">
+          <span class="ph">
+            <picture>
+              <source type="image/webp" srcset="../assets/sketches/sketch-stage-3-final-800.webp 800w, ../assets/sketches/sketch-stage-3-final.webp 1024w" sizes="(max-width: 600px) 92vw, (max-width: 1024px) 45vw, 260px">
+              <img src="../assets/sketches/stage3-final.jpg" loading="lazy" decoding="async" width="1024" height="579" alt="المرحلة الثالثة: المعمارية الهندسية النهائية — مخطط انسيابي من صمام التحويل والحفز إلى التبريد وخرطوشة 70:20:10 ووحدة ECU" data-i18n-attr="alt:gallery.alts.3">
+            </picture>
+          </span>
+          <span class="cap" data-i18n="gallery.captions.3">المرحلة الثالثة: المعمارية الهندسية النهائية</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="أقسام الصفحة">
+      <ul class="f-links">
+        <li><a href="#health" data-i18n="nav.health">الصحة</a></li>
+        <li><a href="#blueprint" data-i18n="nav.blueprint">المخطط</a></li>
+        <li><a href="#simulator" data-i18n="nav.simulator">المحاكي</a></li>
+        <li><a href="#economy" data-i18n="nav.economy">التكلفة والدورة</a></li>
+        <li><a href="#gallery" data-i18n="nav.gallery">الرسومات</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="اللغة">
+      <ul class="f-links f-langs">
+      <li><a href="../en/" lang="en" hreflang="en" data-lang="en">English</a></li>
+      <li><a href="../ar/" lang="ar" hreflang="ar" data-lang="ar" aria-current="page">العربية</a></li>
+      <li><a href="../fr/" lang="fr" hreflang="fr" data-lang="fr">Français</a></li>
+      <li><a href="../es/" lang="es" hreflang="es" data-lang="es">Español</a></li>
+      </ul>
+    </nav>
+    <p class="f-authors" data-i18n="footer.authors">تم تطوير المشروع بشكل جماعي بواسطة فريق مكون من <bdi class="ltr" dir="ltr">9</bdi> طلاب (<bdi class="ltr" dir="ltr">Team AeroTurbine</bdi>) عبر مراحل البحث والمسابقات المختلفة. | <span class="f-co">معدّو مقترح مسابقة <bdi class="ltr" dir="ltr">Harvard VISION 2026</bdi>: أحمد شادي ولارا محمد.</span></p>
+    <p data-i18n="footer.country">مصر</p>
+    <p data-i18n="footer.submitted">قُدِّم إلى مؤتمر هارفارد VISION <bdi class="ltr" dir="ltr">2026</bdi>، مسابقة عرض المشاريع المجتمعية</p>
+    <p class="f-disc" data-i18n="footer.disclaimer">قيد التطوير: هذا عرض تجريبي لفكرة المرشّح، وليس آلة جاهزة أو مجرَّبة في الميدان.</p>
+    <p class="muted f-contact"><span data-i18n="footer.contact">للتواصل:</span> <a id="contact-email" href="mailto:ahmedshadysaad12@gmail.com"><span class="ltr" dir="ltr">ahmedshadysaad12@gmail.com</span></a></p>
+    <p class="f-top"><a href="#hero" data-i18n="footer.top">العودة إلى الأعلى</a></p>
+  </div>
+</footer>
+
+<!-- Details panel: bottom sheet on mobile, side panel on desktop -->
+<aside id="panel" class="panel" role="dialog" aria-modal="false" aria-labelledby="panel-title" data-i18n-attr="aria-label:panel.label" aria-label="التفاصيل">
+  <div class="panel-head">
+    <h3 id="panel-title" tabindex="-1">المنطقة 1: توليد الطاقة</h3>
+    <button type="button" class="icon-btn" id="panel-close" data-i18n-attr="aria-label:panel.close;title:panel.close" aria-label="إغلاق التفاصيل" title="إغلاق التفاصيل">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </div>
+  <div id="panel-body" class="panel-body"></div>
+</aside>
+
+<!-- Lightbox -->
+<dialog id="lightbox" class="lightbox" data-i18n-attr="aria-label:lightbox.label" aria-label="صورة مكبّرة">
+  <button type="button" class="icon-btn lb-close" id="lb-close" data-i18n-attr="aria-label:lightbox.close;title:lightbox.close" aria-label="إغلاق الصورة المكبّرة" title="إغلاق الصورة المكبّرة">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+  </button>
+  <img id="lb-img" width="1024" height="571" alt="رسم ثلاثي الأبعاد مقطوع لمفهوم AeroTurbine. يدخل العادم الساخن من اليسار عبر صمام تحويل وفنتوري فيه توربينتان صغيرتان ذهبيتان، ثم يمر بمراحل حفز وزعانف تبريد وخرطوشة من ثلاث طبقات، ويخرج من اليمين. وفي الأعلى صندوق التحكم ECU مع بطارية." src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
+  <p id="lb-cap"></p>
+</dialog>
+
+</body>
+</html>

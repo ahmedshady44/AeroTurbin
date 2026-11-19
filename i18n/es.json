@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "AeroTurbine | Aire más limpio, impulsado por el propio escape (demo de diseño)",
-    "description": "AeroTurbine es un concepto de interceptor de escape autónomo. Genera su energía con los gases y filtra contaminantes. Demo de ingeniería, no un producto terminado."
+    "title": "AeroTurbine: Concepto de filtro de escape autónomo (Demo)",
+    "description": "AeroTurbine es un concepto en desarrollo de filtro de escape autónomo que capta energía. Explora la demo de diseño en 3 zonas y el simulador interactivo."
   },
   "skip": "Saltar al contenido",
   "lang": {
@@ -368,10 +368,10 @@
       "Etapa 3: Arquitectura final del sistema"
     ],
     "alts": [
-      "Etapa 1: Boceto inicial dibujado a mano",
-      "Etapa 1: Boceto a mano del concepto multiturbina",
-      "Etapa 2: Prototipo digital inicial",
-      "Etapa 3: Arquitectura final del sistema"
+      "Etapa 1: Boceto inicial dibujado a mano — dibujo a lápiz de los conductos de escape y ranura del cartucho",
+      "Etapa 1: Boceto a mano del concepto multiturbina — dibujo a lápiz de microturbinas secuenciales en un eje",
+      "Etapa 2: Prototipo digital inicial — diagrama 2D con enfriamiento, conjunto de turbinas, motores DC y sorbentes",
+      "Etapa 3: Arquitectura final del sistema — diagrama de bloques desde válvula de derivación hasta enfriamiento, cartucho 70:20:10 y ECU"
     ]
   },
   "footer": {

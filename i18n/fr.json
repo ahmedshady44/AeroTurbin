@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "AeroTurbine | De l'air plus propre, alimenté par l'échappement (démo de conception)",
-    "description": "AeroTurbine est un concept d'intercepteur d'échappement autonome. Il produit son énergie à partir des gaz et filtre les polluants. Démo d'ingénierie, pas un produit fini."
+    "title": "AeroTurbine : Concept de filtre d'échappement (Démo)",
+    "description": "AeroTurbine est un concept de filtre d'échappement autonome en cours de développement. Explorez la démo de conception en 3 zones et le simulateur en direct."
   },
   "skip": "Aller au contenu",
   "lang": {
@@ -368,10 +368,10 @@
       "Étape 3 : Architecture finale du système"
     ],
     "alts": [
-      "Étape 1 : Croquis initial dessiné à la main",
-      "Étape 1 : Croquis à la main du concept multiturbine",
-      "Étape 2 : Prototype numérique initial",
-      "Étape 3 : Architecture finale du système"
+      "Étape 1 : Croquis initial dessiné à la main — dessin au crayon des conduits d'échappement et du logement de cartouche",
+      "Étape 1 : Croquis à la main du concept multiturbine — dessin au crayon de micro-turbines en série sur un axe",
+      "Étape 2 : Prototype numérique initial — schéma 2D montrant le refroidissement, les turbines, moteurs CC et sorbants",
+      "Étape 3 : Architecture finale du système — schéma bloc de la soupape de dérivation au refroidissement, cartouche 70:20:10 et ECU"
     ]
   },
   "footer": {
